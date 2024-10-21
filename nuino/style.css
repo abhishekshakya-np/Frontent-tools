@@ -1,0 +1,7 @@
+.valid-class {
+    color: blue;
+}
+
+.invalid-class {
+    colr: red; /* This is intentionally incorrect */
+}
