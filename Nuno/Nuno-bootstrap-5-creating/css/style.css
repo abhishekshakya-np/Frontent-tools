@@ -129,33 +129,40 @@ button, a, a.btn,
 }
 
 /*-- Bouncing Down Arrow --*/
+/* Bouncing Down Arrow */
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+       transform: translateY(0);
+   }
+   40% {
+       transform: translateY(-10px);
+   }
+   60% {
+       transform: translateY(-5px);
+   }
+}
+
 .arrow {
    position: absolute;
-   bottom: 0;
+   bottom: 10px;
    width: 100%;
    animation: bounce 2s infinite;
-   -webkit-animation: bounce 2s infinite;
 }
-.down-arrow .svg-inline--fa {
+
+.down-arrow i {
    color: white;
    font-size: 2.2rem;
-   opacity: .3;
+   opacity: 0.3;
+   transition: opacity 0.3s;
 }
-.down-arrow .svg-inline--fa:hover {
-   opacity: .8;
+
+.down-arrow i:hover {
+   opacity: 0.8;
 }
 
 /*============= FEATURES SECTION =============*/
 
 /*============= Theme Heading SECTION =============*/
-/* .btn-sm {
-   border-width: medium;
-   border-radius: 0;
-   padding: .5rem 1.1rem;
-   text-transform: uppercase;
-   font-size: .9rem;
-   margin: 1rem;
-} */
 
 .btn-sm {
    padding: .5rem 1.1rem !important; /* Adjust padding */
@@ -177,6 +184,13 @@ button, a, a.btn,
 
 
 /*============= Jumbotron SECTION =============*/
+.jumbotron{
+   margin-bottom: 0;
+   padding: 2rem 0rem 3.5rem;
+  border-radius: 0;
+  background-color: #e9ecef;
+ }
+
 h3.heading {
    text-transform: uppercase;
    font-weight: 700;
@@ -217,6 +231,8 @@ h3.heading {
    left: 0;
    z-index: -9999;
 }
+
+
 .fixed-dark {
    background-image: url('../img/fixed/apple.jpg');
    position: fixed;
