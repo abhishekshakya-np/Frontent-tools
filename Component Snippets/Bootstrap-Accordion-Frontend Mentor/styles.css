@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    background-color: hsl(275, 100%, 97%);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Iframe optimization for landing page display */
+body.iframe-mode {
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%;
+    height: 125%;
+}
+
+/* Ensure proper display in iframe */
+@media (max-width: 768px) {
+    body.iframe-mode {
+        transform: scale(0.6);
+        width: 167%;
+        height: 167%;
+    }
+}
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 150vh;
+}
+
+.bg-main {
+    position: absolute;
+    width: 100%;
+}
+
+.card {
+    position: absolute;
+    width: 42vw;
+    max-width: 600px;
+    top: 20vh;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    font-size: 16px;
+    box-shadow: 0 5px 50px 1px hsla(295, 15%, 66%, 0.595);
+    border: none;
+}
+
+.title-accordion {
+    font-size: 2.9rem;
+    font-weight: 700;
+}
+
+.accordion-item {
+    border-color: hsl(0, 0%, 100%);
+}
+
+.accordion-header {
+    font-weight: 600;
+}
+
+.star {
+    transform: translateY(-0.3rem);
+    margin-right: 1rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.accordion-button {
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    padding-left: 0;
+    padding-top: 23px;
+    padding-right: 0;
+    padding-bottom: 23px;
+    box-shadow: none !important;
+}
+
+.accordion-button:hover {
+    color: #9d37ca !important;
+}
+
+h2:hover {
+    color: hsl(292, 16%, 49%);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-item:nth-child(-n + 3) {
+    border: none;
+    position: relative;
+    border-bottom: 0.5px solid #f0f0f0;
+}
+
+.accordion-button::after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"><path fill="%23AD28EB" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"/></svg>');
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"><path fill="%23301534" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"/></svg>');
+}
+
+.accordion-body {
+    font-size: 13.1px;
+    color: #999;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        position: absolute;
+        width: 85vw;
+        top: 20vh;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 12px;
+        padding: 1.5rem;
+        font-size: 16px;
+        box-shadow: 0 5px 50px 1px hsla(295, 15%, 66%, 0.595);
+    }
+
+    .title-accordion {
+        font-size: 2.2rem;
+    }
+
+    .accordion-button {
+        font-size: 14px;
+    }
+
+    .bg-main {
+        background-image: url('./assets/images/background-pattern-mobile.svg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 31vh;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        position: absolute;
+        width: 42vw;
+        max-width: 600px;
+        top: 20vh;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 12px;
+        padding: 2.5rem;
+        font-size: 16px;
+        box-shadow: 0 5px 50px 1px hsla(295, 15%, 66%, 0.595);
+    }
+
+    .bg-main {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: calc((320 / 1440) * 100vw);
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 1439px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .card {
+        position: absolute;
+        width: 80vw;
+        max-width: 600px;
+        top: 20vh;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 12px;
+        padding: 2rem;
+        font-size: 16px;
+        box-shadow: 0 5px 50px 1px hsla(295, 15%, 66%, 0.595);
+    }
+
+    .bg-main {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: calc((320 / 1440) * 100vw);
+        min-height: 200px;
+    }
+}
