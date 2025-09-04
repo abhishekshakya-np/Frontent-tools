@@ -1,0 +1,832 @@
+// =============================================================================
+// HOME PAGE
+// =============================================================================
+.home-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: #fff;
+}
+.home {
+    display: flex;
+    min-height: 100vh;
+    background: color(blue-gray, 50);
+
+    &__sidebar {
+        /*width: 270px;
+        width: 320px;*/
+        min-height: 100vh;
+        min-width: 220px;
+        gap: 24px;
+        background: #f4f3ee;
+        border-right: 1px solid #efefef;
+        padding: 0 0 0 0;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        /*z-index: 2;
+        z-index: 1000;*/
+        background: color(cream, 000);
+        color: color(blue-gray, 900);
+        border-right: 1px solid color(blue-gray, 200);
+        font-family: inherit;
+
+        //transition: all 0.2s;
+        transition:
+        transform 0.3s,
+        width 0.3s;
+
+        &.collapsed {
+            transform: translateX(-100%);
+            width: 0;
+            min-width: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        &.open {
+            transform: translateX(0);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            img {
+                width: 48px;
+                height: 48px;
+            }
+            .logo-text {
+                font-weight: 700;
+                font-size: 20px;
+                color: color(blue-gray, 900);
+            }
+        }
+
+        .start-chat-btn {
+            background: color(greenish, 600);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px color(blue-gray, 200);
+            padding: 12px 0;
+            width: 100%;
+            margin-bottom: 16px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background 0.2s;
+            &:hover {
+                background: color(greenish, 700);
+            }
+        }
+
+        .progress-bar {
+            font-size: 1rem;
+            margin-bottom: 32px;
+            height: auto;
+            border-radius: 12px;
+            //background-color: color(blue-gray, 900);
+            background: rgba(227, 235, 229, 1);
+            padding: 12px 16px;
+            text-align: center;
+            &__label {
+                font-size: 14px;
+                color: color(blue-gray, 900);
+                margin-bottom: 4px;
+                display: flex;
+                justify-content: flex-start;
+
+            }
+            &__track {
+                //background: color(mustard, 200);
+                //background: rgba(234, 183, 70, 1);
+                border-radius: 8px;
+                //border-radius: 10px;
+                overflow: hidden;
+                color: #2b2b2b;
+                border: none;
+                font-weight: 600;
+                font-size: 1rem;
+                padding: 8px 4px;
+                margin: auto;
+                margin-top: 8px;
+                cursor: pointer;
+                box-shadow: 0 1px 2px #ffd95025;
+                transition: filter 0.18s;
+            }
+            &__labell    {
+                font-size: 14px;
+                background: rgba(234, 183, 70, 1);
+                margin-bottom: 4px;
+                border-radius: 8px;
+                padding: 8px 20px;
+            }
+            &__fill {
+                width: 100%;
+                background: color(greenish, 600);
+                height: 8px;
+                border-radius: 8px;
+            }
+        }
+
+        .history {
+            font-size: 14px;
+            .section-title {
+                color: color(blue-gray, 500);
+                font-size: 12px;
+                margin: 16px 0 4px 0;
+            }
+            .question {
+                color: color(blue-gray, 900);
+                font-size: 14px;
+                margin-bottom: 4px;
+                cursor: pointer;
+                transition: color 0.2s;
+                &:hover {
+                    text-decoration: underline;
+                    color: color(greenish, 600);
+                }
+            }
+        }
+
+        @media (max-width: 900px) {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 240px;
+            min-width: 0;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+            background: color(cream, 000);
+            transition:
+                transform 0.3s,
+                width 0.3s;
+            .logo {
+                margin-bottom: 0;
+            }
+            .start-chat-btn {
+                margin-bottom: 0;
+            }
+            .progress-bar {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: spacing("2xl");
+        background: color(cream, 000);
+
+        @media (max-width: 900px) {
+            padding: spacing(md);
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: spacing(xl);
+    }
+
+    &__welcome {
+        font-size: font-size("4xl");
+        font-weight: font-weight(bold);
+        color: color(greenish, 900);
+        text-align: center;
+        margin-bottom: spacing("2xl");
+    }
+
+    &__chat-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__disclaimer {
+        margin-top: spacing(lg);
+        background: color(success);
+        color: white;
+        border-radius: border-radius(base);
+        padding: spacing(md);
+        font-size: font-size(sm);
+    }
+
+    // Hero section
+    &__hero {
+        background: linear-gradient(135deg, color(greenish, 600) 0%, color(greenish, 800) 100%);
+        color: white;
+        padding: spacing("3xl") 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+    }
+
+    &__hero-content {
+        @include container;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__hero-title {
+        @include typography("4xl", bold, tight);
+        margin-bottom: spacing(lg);
+
+        @include respond-to(md) {
+            @include typography("5xl", bold, tight);
+        }
+
+        @include respond-to(lg) {
+            @include typography("6xl", bold, tight);
+        }
+    }
+
+    &__hero-subtitle {
+        @include typography(xl, normal, relaxed);
+        margin-bottom: spacing(xl);
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include respond-to(md) {
+            @include typography("2xl", normal, relaxed);
+        }
+    }
+
+    &__hero-actions {
+        display: flex;
+        gap: spacing(md);
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include respond-below(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__hero-cta {
+        @include button-base;
+        @include button-variant(white, color(greenish, 600));
+        @include button-size(lg);
+        font-weight: font-weight(semibold);
+    }
+
+    &__hero-secondary {
+        @include button-base;
+        @include button-variant(transparent, white);
+        @include button-size(lg);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+    }
+
+    // Features section
+    &__features {
+        padding: spacing("3xl") 0;
+        background-color: color(blue-gray, 50);
+    }
+
+    &__features-content {
+        @include container;
+    }
+
+    &__features-header {
+        text-align: center;
+        margin-bottom: spacing("3xl");
+    }
+
+    &__features-title {
+        @include typography("3xl", bold, tight);
+        color: color(blue-gray, 900);
+        margin-bottom: spacing(lg);
+
+        @include respond-to(md) {
+            @include typography("4xl", bold, tight);
+        }
+    }
+
+    &__features-subtitle {
+        @include typography(lg, normal, relaxed);
+        color: color(blue-gray, 600);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: spacing(xl);
+
+        @include respond-to(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond-to(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__feature {
+        background-color: color(cream, 000);
+        padding: spacing(xl);
+        border-radius: border-radius(xl);
+        box-shadow: shadow(sm);
+        text-align: center;
+        transition:
+            transform map-get($transitions, base),
+            box-shadow map-get($transitions, base);
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: shadow(lg);
+        }
+    }
+
+    &__feature-icon {
+        width: 64px;
+        height: 64px;
+        background-color: color(greenish, 100);
+        color: color(greenish, 600);
+        border-radius: border-radius(lg);
+        @include flex-center;
+        margin: 0 auto spacing(lg);
+    }
+
+    &__feature-title {
+        @include typography(lg, semibold, tight);
+        color: color(blue-gray, 900);
+        margin-bottom: spacing(md);
+    }
+
+    &__feature-description {
+        @include typography(base, normal, relaxed);
+        color: color(blue-gray, 600);
+        line-height: map-get($line-heights, relaxed);
+    }
+
+    // Stats section
+    &__stats {
+        padding: spacing("3xl") 0;
+        background-color: color(blue-gray, 900);
+        color: white;
+    }
+
+    &__stats-content {
+        @include container;
+    }
+
+    &__stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: spacing(xl);
+
+        @include respond-to(md) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__stat {
+        text-align: center;
+    }
+
+    &__stat-number {
+        @include typography("3xl", bold, tight);
+        color: color(greenish, 400);
+        margin-bottom: spacing(sm);
+
+        @include respond-to(md) {
+            @include typography("4xl", bold, tight);
+        }
+    }
+
+    &__stat-label {
+        @include typography(sm, medium, normal);
+        color: color(blue-gray, 300);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    // Testimonials section
+    &__testimonials {
+        padding: spacing("3xl") 0;
+        background-color: color(cream, 000);
+    }
+
+    &__testimonials-content {
+        @include container;
+    }
+
+    &__testimonials-header {
+        text-align: center;
+        margin-bottom: spacing("3xl");
+    }
+
+    &__testimonials-title {
+        @include typography("3xl", bold, tight);
+        color: color(blue-gray, 900);
+        margin-bottom: spacing(lg);
+
+        @include respond-to(md) {
+            @include typography("4xl", bold, tight);
+        }
+    }
+
+    &__testimonials-subtitle {
+        @include typography(lg, normal, relaxed);
+        color: color(blue-gray, 600);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__testimonials-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: spacing(lg);
+
+        @include respond-to(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond-to(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__testimonial {
+        background-color: color(blue-gray, 50);
+        padding: spacing(xl);
+        border-radius: border-radius(lg);
+        border-left: 4px solid color(greenish, 500);
+    }
+
+    &__testimonial-quote {
+        @include typography(base, normal, relaxed);
+        color: color(blue-gray, 700);
+        margin-bottom: spacing(lg);
+        font-style: italic;
+        line-height: map-get($line-heights, relaxed);
+    }
+
+    &__testimonial-author {
+        @include flex-center;
+        gap: spacing(sm);
+    }
+
+    &__testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: color(greenish, 100);
+        @include flex-center;
+        color: color(greenish, 600);
+        font-weight: font-weight(semibold);
+    }
+
+    &__testimonial-info {
+        flex: 1;
+    }
+
+    &__testimonial-name {
+        @include typography(sm, semibold, normal);
+        color: color(blue-gray, 900);
+        margin: 0;
+    }
+
+    &__testimonial-role {
+        @include typography(xs, normal, normal);
+        color: color(blue-gray, 600);
+        margin: 0;
+    }
+
+    // CTA section
+    &__cta {
+        padding: spacing("3xl") 0;
+        background: linear-gradient(135deg, color(blue-gray, 900) 0%, color(blue-gray, 800) 100%);
+        color: white;
+        text-align: center;
+    }
+
+    &__cta-content {
+        @include container;
+    }
+
+    &__cta-title {
+        @include typography("3xl", bold, tight);
+        margin-bottom: spacing(lg);
+
+        @include respond-to(md) {
+            @include typography("4xl", bold, tight);
+        }
+    }
+
+    &__cta-description {
+        @include typography(lg, normal, relaxed);
+        margin-bottom: spacing(xl);
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__cta-actions {
+        display: flex;
+        gap: spacing(md);
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include respond-below(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__cta-primary {
+        @include button-base;
+        @include button-variant(color(greenish, 600), white);
+        @include button-size(lg);
+        font-weight: font-weight(semibold);
+    }
+
+    &__cta-secondary {
+        @include button-base;
+        @include button-variant(transparent, white);
+        @include button-size(lg);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+    }
+
+    // Newsletter section
+    &__newsletter {
+        padding: spacing("2xl") 0;
+        background-color: color(greenish, 50);
+    }
+
+    &__newsletter-content {
+        @include container;
+        text-align: center;
+    }
+
+    &__newsletter-title {
+        @include typography("2xl", bold, tight);
+        color: color(blue-gray, 900);
+        margin-bottom: spacing(md);
+    }
+
+    &__newsletter-description {
+        @include typography(base, normal, relaxed);
+        color: color(blue-gray, 600);
+        margin-bottom: spacing(lg);
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__newsletter-form {
+        display: flex;
+        gap: spacing(sm);
+        max-width: 400px;
+        margin: 0 auto;
+
+        @include respond-below(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__newsletter-input {
+        flex: 1;
+        @include input-base;
+        border-color: color(blue-gray, 300);
+
+        &:focus {
+            border-color: color(greenish, 500);
+        }
+    }
+
+    &__newsletter-button {
+        @include button-base;
+        @include button-variant(color(greenish, 600), white);
+        white-space: nowrap;
+
+        @include respond-below(sm) {
+            width: 100%;
+        }
+    }
+}
+
+// Dark mode support
+@include dark-mode {
+    .home {
+        &__features {
+            background-color: color(blue-gray, 900);
+        }
+
+        &__features-title {
+            color: color(blue-gray, 100);
+        }
+
+        &__features-subtitle {
+            color: color(blue-gray, 400);
+        }
+
+        &__feature {
+            background-color: color(blue-gray, 800);
+            border: 1px solid color(blue-gray, 700);
+        }
+
+        &__feature-title {
+            color: color(blue-gray, 100);
+        }
+
+        &__feature-description {
+            color: color(blue-gray, 400);
+        }
+
+        &__testimonials {
+            background-color: color(blue-gray, 900);
+        }
+
+        &__testimonials-title {
+            color: color(blue-gray, 100);
+        }
+
+        &__testimonials-subtitle {
+            color: color(blue-gray, 400);
+        }
+
+        &__testimonial {
+            background-color: color(blue-gray, 800);
+            border-left-color: color(greenish, 400);
+        }
+
+        &__testimonial-quote {
+            color: color(blue-gray, 300);
+        }
+
+        &__testimonial-name {
+            color: color(blue-gray, 100);
+        }
+
+        &__testimonial-role {
+            color: color(blue-gray, 500);
+        }
+
+        &__newsletter {
+            background-color: color(greenish, 900);
+        }
+
+        &__newsletter-title {
+            color: color(blue-gray, 100);
+        }
+
+        &__newsletter-description {
+            color: color(blue-gray, 400);
+        }
+
+        &__newsletter-input {
+            background-color: color(blue-gray, 800);
+            border-color: color(blue-gray, 600);
+            color: color(blue-gray, 100);
+
+            &:focus {
+                border-color: color(greenish, 400);
+            }
+
+            &::placeholder {
+                color: color(blue-gray, 500);
+            }
+        }
+    }
+}
+
+// High contrast mode support
+@include high-contrast {
+    .home {
+        &__hero {
+            border-bottom: 2px solid color(blue-gray, 900);
+        }
+
+        &__feature {
+            border: 2px solid color(blue-gray, 300);
+        }
+
+        &__testimonial {
+            border: 2px solid color(blue-gray, 300);
+        }
+    }
+}
+
+// Reduced motion support
+@include reduced-motion {
+    .home {
+        &__feature {
+            transition: none;
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
+// Hamburger button styles
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1100;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+
+    .hamburger {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: color(blue-gray, 900);
+        border-radius: 2px;
+        position: relative;
+        transition: background 0.3s;
+    }
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: color(blue-gray, 900);
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        transition: transform 0.3s;
+    }
+    .hamburger::before {
+        top: -10px;
+    }
+    .hamburger::after {
+        top: 10px;
+    }
+    // Optionally animate hamburger to X when open
+}
+
+@media (max-width: 900px) {
+    .sidebar-toggle {
+        display: block;
+    }
+}
+
+/* style for off-canvas menu*/
+@media screen and (max-width: 991px) {
+    .sidebar-offcanvas {
+        position: fixed;
+        max-height: calc(100vh - 70px);
+        top: 70px;
+        bottom: 0;
+        overflow: auto;
+        right: 260px;
+        -webkit-transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        &.active {
+            right: 0;
+        }
+    }
+    .sidebar-brand-wrapper {
+        width: 75px;
+
+        .brand-logo-mini {
+            display: inline-block;
+        }
+    }
+}

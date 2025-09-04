@@ -1,0 +1,92 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="" />
+    <title>{{ config('app.name') }}</title>
+    <style>
+        body {
+            background-color: #e0ffb4;
+            font-family: 'Intel', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 660px;
+            margin: auto;
+            background-color: #e0ffb4;
+        }
+        .header, .footer {
+            background-color: #005b49;
+            color: #fff;
+            text-align: center;
+            padding: 15px 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        .table th, .table td {
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .logo{
+            display: block;
+            margin: 20px auto;
+            width: 100px;
+        }
+        .project-image {
+            display: block;
+            margin: 20px auto;
+            width: 600px;
+        }
+        .project-details p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <div class="container">
+        <div class="header">
+            <h2>Thank you for your support of {{ config('app.name') }}!</h2>
+        </div>
+        <div class="content">
+            <img class="logo" src="{{ public_path('site/assets/image/sticker.webp') }}" alt="Logo">
+            <p>Your {{ config('app.name') }} subscription works to retire carbon credits produced via sustainable practices within the agriculture industry. By retiring these carbon credits you are offsetting your unavoidable, individual carbon footprint and investing back into the growth of sustainable agriculture. You’re helping fund carbon removal and emissions avoidance farming projects to get us to our carbon goals, faster.</p>
+            <p>All carbon credits purchased via {{ config('app.name') }} have been produced through sustainable farming practices. Each {{ config('app.name') }} credit is 100% verified and retired on your behalf via the {{ config('app.name') }} entity.</p>
+            <table class="table">
+                <tr>
+                    <th colspan="2">YOUR {{ strtoupper(config('app.name')) }} PROJECTS</th>
+                </tr>
+                <tr>
+                    <td>{{ config('app.name') }} ID</td>
+                    <td>{{ $token }}</td>
+                </tr>
+                <tr>
+                    <td>Project ID</td>
+                    <td>{{ $erfNumber }} - {{ $carbonOffsetProjectName }}</td>
+                </tr>
+                <tr>
+                    <td>Project Proponent</td>
+                    <td>{{ $carbonCreditSellerName }}</td>
+                </tr>
+                <tr>
+                    <td>Method Type</td>
+                    <td><strong>{{ $carbonOffsetProjectType }}</strong></td>
+                </tr>
+            </table>
+        </div>
+        <div class="content">
+            <img class="project-image" src="{{ public_path('site/assets/image/logo-dark-green.webp') }}" alt="{{ config('app.name') }} logo">
+        </div>
+        <div class="footer">
+            <a href="{{ route('home') }}" target="_blank">www.clevercow.com</a>
+        </div>
+    </div>
+</center>
+</body>
+</html>
