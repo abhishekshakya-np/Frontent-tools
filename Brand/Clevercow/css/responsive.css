@@ -1,0 +1,231 @@
+/* Responsive Styles */
+
+@media (min-width: 1600px) {
+   
+
+}
+
+@media (min-width: 1200px) {
+
+   
+    .about-desc{
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .p5 {
+        padding: 0;
+    }
+    .nav-text{
+        font-size: 0.675rem;
+
+    }
+    
+    .banner .img-fluid {
+        max-width: 1000px;
+    }
+
+    .banner h1 {
+        font-size: 5.25rem;
+    }
+
+    .banner p {
+        font-size: 1.6rem;
+    }
+
+    .clip1,
+    .clip2
+    {
+        width: 132px;
+        height: 132px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-shrink {
+        height: 70px;
+    }
+    .offcanvas-collapse {
+        position: fixed;
+        top: 70px; /* Height of navbar */
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: #fff;
+        transition:
+            transform 0.3s ease-in-out,
+            visibility 0.3s ease-in-out;
+    }
+    .offcanvas-collapse.open {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+    .navbar-light .navbar-nav .nav-item .nav-link {
+        color: #005c4a;
+        font-weight: 600;
+        text-align: end;
+        padding: 1rem;
+    }
+    .login-icon i, .cart i {
+        font-size: 2.375rem;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 1);
+    }
+    .navbar-light .navbar-nav .nav-item .nav-link:hover,
+    .navbar-light .navbar-nav .nav-item .nav-link:focus {
+        color: #bfeb5b;
+    }
+    .cart img {
+        max-width: 34px !important;
+    }
+
+    .business-banner-section,
+    .shop,
+    .about-banner-section,
+    .works-banner-section,
+    .productDetail-page {
+        margin-top: 5rem;
+    }
+    .count {
+        top: -18px;
+        left: 8px;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        font-size: 1rem;
+    }
+    .navbar-brand img {
+        max-width: 150px;
+    }
+    .cookie-section {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        position: relative;
+        padding: 3rem 0;
+    }
+    .navbar-collapse {
+        text-align: left;
+    }
+    .nav-list.left-menu ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+    .nav-logo {
+        width: 150px;
+    }
+    .banner h1 {
+        font-size: 3rem;
+    }
+
+    .banner p {
+        font-size: 1.5rem;
+    }
+
+
+    
+    .display-sm {
+        display: none;
+    }
+    .display-lg {
+        display: block;
+    }
+    .about-desc .title,
+    .business-desc .title,
+    .farmer-section .title,
+    .company-img .title {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2rem;
+    }
+    .products-detail {
+        padding-bottom: 5rem;
+    }
+    .custom-col-6 {
+        padding: 8px; 
+    }
+    .footer-links{
+        padding: 8px; 
+    }
+    .hide-border-sm {
+        border: none !important; 
+    }
+    
+    
+
+
+
+}
+
+@media (min-width: 768px) {
+
+    
+
+    .display-sm {
+        display: block;
+    }
+    .display-lg {
+        display: none;
+        margin-bottom: 3rem;
+    }
+   
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .clip2 {
+        bottom: 80px;
+    }
+   
+}
+
+@media (min-width: 530px) and (max-width: 768px) {
+    .gap-5 {
+        gap: 1rem !important;
+    }
+    .about-img{
+        width: 100%; 
+        height: auto;
+    }
+    
+}
+
+@media (max-width: 530px) {
+   
+    .nav-logo {
+        display: none;
+    }
+    .nav-small-logo {
+        display: block;
+    }
+
+    .banner {
+        background-image: url("/image/CleverCow_hero_small.png") no-repeat center center;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+}
+
+@media all and (max-width: 398px) {
+    .join-btn h4 {
+        font-size: 1rem;
+    }
+}
