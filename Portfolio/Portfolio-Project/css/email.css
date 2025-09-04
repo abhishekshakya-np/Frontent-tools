@@ -1,0 +1,74 @@
+ /* General styles for the body and container */
+ body, table, td, a {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+table, td {
+    mso-table-rspace: 0pt;
+    mso-table-lspace: 0pt;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    height: 100% !important;
+    line-height: 100%;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+}
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4CAF50;
+    color: white;
+}
+.content {
+    padding: 20px;
+}
+.content h2 {
+    color: #333333;
+}
+.content p {
+    color: #666666;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;
+    color: white;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    .header, .footer {
+        padding: 15px;
+    }
+    .button {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        font-size: 18px;
+    }
+}

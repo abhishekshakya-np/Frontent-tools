@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Xabickx portfolio</title>
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+    <link rel="stylesheet" type="text/css" href="icons/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="heading">
+        Xabickx portfolio
+        <span class="heading-subtext"> Abhishek Shakya</span>
+      </h1>
+    </header>
+    <a data-scroll class="fixed-button" href="#rsvp" id="rsvpButton">Below</a>
+    <section class="section">
+      <h2 class="sub-heading">Overview</h2>
+      <p>
+        A recent Business Marketing graduate seeking for a challenging position
+        in an organization that offers an opportunity to explore the field of
+        marketing and branding while accomplishing personal, professional as
+        well as organizational goal. I am dynamic, creative, result driven and
+        possess positive attitude to bring the changes in the work.
+      </p>
+    </section>
+    <section class="section">
+      <h2 class="sub-heading">The Portfolio</h2>
+      <div class="details">
+        <i class="fas fa-calendar-check"></i>
+        <h3 class="details-heading">Last Update</h3>
+        <p>January 7, 2022</p>
+        <a
+          title="View My blog"
+          rel="noopener"
+          href="https://www.behance.net/1besake"
+          target="_blank"
+          rel="nofollow" >
+          <b>====>Click ME <==== </b><br>
+        </a>
+        <img class="abhi-image" src="img/abhi.jpg" alt="abhi" />
+      </div>
+      <div class="details">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3 class="details-heading">Location</h3>
+        <p>
+          <a
+            rel="noopener"
+            href="https://www.google.com/maps/place/Purbeli+kirana+pasal/@27.7415083,85.3090739,68m/data=!3m1!1e3!4m8!1m2!7m1!2e1!3m4!1s0x39eb19804a8e9c5b:0x24be87f504586186!8m2!3d27.7413383!4d85.3088768"
+            >tarkeshor</a
+          >, manamaiju, Kathmandu
+        </p>
+        <img class="resort-image" src="img/resort.jpg" alt="Resort" />
+      </div>
+      <div class="details">
+        <i class="fas fa-suitcase"></i>
+        <h3 class="details-heading">Experience</h3>
+        <p>
+          <b>UI/UX designer VAROSA TECHNOLOGY</b><br>
+          Feb 2022 - May 2022 <br>
+          Ensure smooth internal operation Collaboration across team & departments
+          Marketing & branding for clients
+          Content creation and execution
+         Client communication & Coordination
+         Stay up to date with latest market trends
+         Quality Assurance (QA) of graphic designs
+         Develop creative design for digital marketing, printing,
+         & corporate branding.
+        </p>
+        <p>
+          <b>Monika decoration PVT LTD</b><br>
+          Aug 2021 - Dec 2021<br>
+          Worked for “Promotion of digital marketing” project.
+          Promoted the webpage“servicenmaterial” new e-commerce for all types of hardware.
+        </p>
+        <p>
+          <b>FREELANCING WORKS</b><br>
+          GRAPHIC DESIGNER<br>
+          Digital content creation & designing.
+          Web page designing
+        </p>
+        <p>
+          <b>FREELANCING WORKS AVOCADO TECH</b><br>
+          Aug 2021 - 2022<br>
+          Started From Digital content creation & designing..
+          Prepared App design & made report based on the
+          interaction with User.
+        </p>
+      </div>
+      <div class="details">
+        <i class="fas fa-plane-departure"></i>
+        <h3 class="details-heading">GENERAL SKILLS</h3>
+        <p>
+        <br>Strategic Planning
+          <br>Communication
+            <br>UI design
+              <br>App Design
+                <br>Problem Solving
+                  <br>Social Media Marketing
+                    <br>Content Creation
+                      <br>Graphic Designing
+        </p>
+      </div>
+      <div class="details">
+        <i class="fas fa-asterisk"></i>
+        <h3 class="details-heading">TECHNICAL SKILLS</h3>
+        <p>
+          <br> Photoshop
+          <br>Adobe Illustrator
+          <br>Adobe Indesign
+          <br>Adobe XD
+          <br>Figma
+          <br>Workpress design
+          <br>Html & CSS
+        </p>
+        
+      </div>
+      <div class="details">
+        <i class="fas fa-reply"></i>
+        <h3 class="details-heading" id="rsvp">RSVP</h3>
+        <p>[Embed your RSVP form here]</p>
+        <!-- Include Embedded link of Google Form here in place of # -->
+        <!-- <iframe title="RSVP" src="" style="width:100%;" height="960" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+      </div>
+    </section>
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
+    <script defer>
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var rsvpButton = document.getElementById("rsvpButton");
+      rsvpButton.addEventListener("click", hideButton, false);
+
+      function hideButton() {
+        rsvpButton.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
