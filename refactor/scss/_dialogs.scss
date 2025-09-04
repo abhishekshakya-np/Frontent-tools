@@ -1,0 +1,328 @@
+// =============================================================================
+// CARD COMPONENTS
+// =============================================================================
+
+
+.feedback-dialog {
+    // Modal Panel
+    background-color: color(cream, 000);
+    border-radius: border-radius(lg);
+    box-shadow: 0 8px 32px rgba(60, 60, 60, 0.09);
+    padding: spacing(lg);
+    //min-width: 340px;
+    //max-width: 96vw;
+
+
+    h2 {
+        font-size: map-get($font-sizes, xl);
+        //font-size: 1.37rem;
+        font-weight: 700;
+        color: color('blue-gray', 900);
+        margin-bottom: map-get($spacing, lg);
+        letter-spacing: 0;
+        line-height: 1.2;
+    }
+
+
+    .feedback-form {
+        display: flex;
+        flex-direction: column;
+        gap: map-get($spacing, md);
+
+        .sentiment-row {
+            display: flex;
+            align-items: center;
+            gap: map-get($spacing, lg);
+
+
+            .vaadin-select{
+                //width: 100%;
+                flex: 1;
+                margin: .5rem;
+                //padding: 0 1rem;
+
+
+                min-height: 44px;
+                transition: border 0.14s;
+
+                &:focus, &:active {
+                    border-color: color('greenish', 400);
+                    border-color: #4882f7;
+                    background: #fff;
+                }
+            }
+            label {
+                font-size: 1.03rem;
+                font-weight: 500;
+                margin-bottom: 0.28em;
+                color: #232d3f;
+                //display: inline-block;
+            }
+
+            select {
+                //width: 100%;
+                //border-radius: map-get($border-radius, lg);
+                //border: 1.5px solid #e5e7ef;
+                //border: 1.5px solid color('blue-gray', 200);
+                //background: #f9fafc;
+                //background: color('cream', 0);
+                //font-size: 1.08em;
+                //font-weight: 500;
+                //height: 2.8rem;
+            }
+
+        }
+
+        .feedback-area {
+            position: relative;
+            margin-bottom: 0.7rem;
+
+            textarea,
+            .vaadin-text-area {
+                width: 100%;
+                padding: map-get($spacing, sm) map-get($spacing, md);
+                border-radius: map-get($border-radius, lg);
+                border: 1.5px solid color('blue-gray', 200);
+
+                //min-height: 70px;
+                //min-height: 90px;
+                /*
+                border-radius: 11px;
+                border: 1.5px solid #e5e7ef;
+
+                */
+
+
+                background: color('cream', 0);
+                font-size: 1.09em;
+                box-shadow: 0 1px 4px rgba(60,60,60,0.04);
+                color: color('blue-gray', 900);
+                resize: vertical;
+                transition: border 0.14s;
+
+
+                &::placeholder {
+                    color: color('blue-gray', 400);
+                    color: #b3bace;
+                    opacity: 1;
+                }
+                &:focus, &:active {
+                    border-color: color('greenish', 400);
+                    border-color: #4882f7;
+                    background: #fff;
+                }
+
+               /* .vaadin-text-area-container {
+                    // Label styling
+                    label,
+                    .vaadin-text-area-label, // for custom or slotted labels
+                    [part='label'] {
+                        font-size: 1.04rem;
+                        font-weight: 600;
+                        color: #232d3f;
+                        margin-bottom: 0.18em;
+                        letter-spacing: 0.01em;
+                        line-height: 1.18;
+                        display: inline-block;
+                    }
+
+                    // Input container styling
+                    .vaadin-input-container,
+                    [part='input-field'] {
+                        background: #f9fafc !important;
+                        border-radius: 11px !important;
+                        border: 1.5px solid #e5e7ef !important;
+                        padding: 0 !important;
+                        transition: border 0.15s, box-shadow 0.13s;
+                        box-shadow: none !important;
+                        min-height: 86px;
+
+                        &:focus-within,
+                        &:focus,
+                        &:active {
+                            border-color: #4882f7 !important;
+                            background: #fff !important;
+                            box-shadow: 0 0 0 2px #dbeafe;
+                        }
+
+                        textarea {
+                            background: transparent !important;
+                            font-size: 1.09em;
+                            color: #212d41;
+                            border: none;
+                            outline: none;
+                            padding: 1.1rem 1rem !important;
+                            box-shadow: none !important;
+                            resize: vertical;
+
+                            &::placeholder {
+                                color: #b3bace !important;
+                            }
+                        }
+                    }
+
+                }*/
+            }
+
+            // Feedback icons/buttons in lower right of textarea
+            .feedback-icons {
+                position: absolute;
+                bottom: 12px;
+                right: 14px;
+                display: flex;
+                gap: 0.37rem;
+                align-items: center;
+
+                .icon-btn {
+                    background: #e0faea;
+                    border-radius: 999px;
+                    width: 2.1rem;
+                    height: 2.1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.15em;
+                    color: #19bc7d;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: 0 1px 6px #cdeee2;
+                    transition: background 0.13s;
+                    &:hover {
+                        background: #bcf7d6;
+                    }
+                }
+            }
+
+            .helper-text {
+                font-size: map-get($font-sizes, sm);
+                color: color('blue-gray', 400);
+                margin-top: 3px;
+
+
+                font-size: 0.96em;
+                color: #98a1b2;
+                margin-top: 6px;
+                margin-left: 2px;
+                display: inline-block;
+            }
+            .char-count {
+                font-size: map-get($font-sizes, xs);
+                color: color('blue-gray', 300);
+                position: absolute;
+                bottom: 8px;
+                right: 14px;
+
+
+                font-size: 0.95em;
+                color: #b4bacd;
+                position: absolute;
+                bottom: 5px;
+                right: 10px;
+                margin-left: 1em;
+                background: #fff;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+        }
+    }
+
+    .dialog-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: map-get($spacing, sm);
+        margin-top: map-get($spacing, lg);
+
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+
+            .vaadin-button, button {
+            min-width: 100px;
+            border-radius: map-get($border-radius, lg);
+            font-weight: 600;
+            font-size: 1.09em;
+            padding: map-get($spacing, sm) map-get($spacing, md);
+            box-shadow: 0 2px 12px rgba(60,60,60,0.05);
+
+                min-width: 104px;
+                border-radius: 11px;
+                font-weight: 600;
+                font-size: 1.08em;
+                padding: 0.68rem 0;
+                box-shadow: none;
+                border: none;
+                transition: background 0.15s, color 0.13s;
+
+
+                &.primary {
+                    background: #2563eb;
+                    color: #fff;
+                    &:hover, &:focus {
+                        background: #1e51bb;
+                    }
+                }
+                &.tertiary {
+                    background: none;
+                    color: #444d5c;
+                    &:hover, &:focus {
+                        color: #1e51bb;
+                        background: #f6f8fa;
+                    }
+                }
+
+            &.primary {
+                background: color('greenish', 400);
+                color: #fff;
+                &:hover, &:focus {
+                    background: color('greenish', 600);
+                }
+            }
+            &.tertiary {
+                background: none;
+                color: color('blue-gray', 700);
+                border: 1.5px solid color('blue-gray', 200);
+                &:hover, &:focus {
+                    background: color('cream', 100);
+                    border-color: color('greenish', 400);
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .feedback-dialog {
+        min-width: 0;
+        max-width: 99vw;
+        padding: map-get($spacing, md) map-get($spacing, sm);
+        h2 {
+            font-size: map-get($font-sizes, lg);
+        }
+    }
+}
+
+// Responsive adjustments
+@include respond-to(md) {
+    .card--horizontal {
+        flex-direction: column;
+        
+        .card__header {
+            flex: none;
+            border-right: none;
+            border-bottom: 1px solid color(blue-gray, 200);
+        }
+    }
+    
+    .card-grid--2,
+    .card-grid--3,
+    .card-grid--4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include respond-to(sm) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+} 
