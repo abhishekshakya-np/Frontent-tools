@@ -1,0 +1,29 @@
+:root {
+  /* fonts */
+  --font-source-sans-pro: "Source Sans Pro";
+
+  /* font sizes */
+  --font-size-sm: 0.75rem;
+  --font-size-base: 0.88rem;
+
+  /* Colors */
+  --white1: #fff;
+  --color-mediumseagreen: #47c363;
+  --border-grey-200: #e5e7eb;
+  --foxglove: #d40058;
+  --moss: #74955b;
+  --warning: #ffb000;
+  --berry: #453c90;
+  --rock: #999;
+  --charcoal: #333;
+  --stone: #666;
+  --bg-grey-50: #f9fafc;
+
+  /* Paddings */
+  --padding-md: 0.63rem;
+
+  /* border radiuses */
+  --br-sm: 6px;
+  --br-md: 8px;
+  --br-lg: 14px;
+}

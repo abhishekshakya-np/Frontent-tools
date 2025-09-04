@@ -1,0 +1,39 @@
+.modal-success {
+  padding-top: size(180px);
+
+  @include vp-1023 {
+    padding-top: 100px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: size(16px);
+    font-weight: 400;
+    font-size: size(42px);
+    line-height: size(48px);
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 24px;
+      line-height: 27px;
+    }
+  }
+
+  &__description {
+    font-size: size(16px);
+    line-height: size(21px);
+    text-align: center;
+
+    @include vp-1023 {
+      margin: 0 auto;
+      max-width: 280px;
+      padding-right: 2px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

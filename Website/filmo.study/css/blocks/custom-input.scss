@@ -1,0 +1,102 @@
+.custom-input {
+  position: relative;
+  display: flex;
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    input,
+    textarea {
+      flex-grow: 1;
+      width: 100%;
+      min-height: size(44px);
+      padding: size(14px) size(24px);
+      font-size: size(16px);
+      line-height: size(18px);
+      border: 1px solid $color-whisper-2;
+      border-radius: size(12px);
+      outline: none;
+      transition: border $trans-default;
+      background-color: $color-transparent;
+
+      &:focus {
+        & ~ .custom-input__label {
+          transform: scale(0.8) translateX(-10%) translateY(-165%) translateZ(0);
+
+          @include vp-1023 {
+            transform: scale(0.8) translateX(-10%) translateY(-180%) translateZ(0);
+          }
+        }
+      }
+
+      @include vp-1023 {
+        padding: 15px 24px;
+        min-height: 46px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    padding: 0 size(8px);
+    left: size(16px);
+    top: size(15px);
+    font-size: size(16px);
+    line-height: size(18px);
+    color: $color-silver;
+    background-color: $color-default-white;
+    pointer-events: none;
+    transition: transform $trans-default;
+
+    @include vp-1023 {
+      top: 16px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    bottom: size(-16px);
+    font-size: size(14px);
+    line-height: 131%;
+    color: $color-salmon;
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  &.is-valid,
+  &.not-empty {
+    .custom-input__label {
+      transform: scale(0.8) translateX(-10%) translateY(-165%) translateZ(0);
+
+      @include vp-1023 {
+        transform: scale(0.8) translateX(-10%) translateY(-180%) translateZ(0);
+      }
+    }
+  }
+
+  &.is-invalid {
+    input {
+      border: 1px solid $color-salmon;
+
+      &:focus,
+      &:hover {
+        border: 1px solid rgba($color-salmon, 0.5);
+      }
+    }
+
+    .custom-input__label {
+      color: $color-salmon;
+    }
+
+    .custom-input__error {
+      opacity: 1;
+    }
+  }
+}

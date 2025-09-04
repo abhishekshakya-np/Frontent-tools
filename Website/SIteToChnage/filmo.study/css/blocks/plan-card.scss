@@ -1,0 +1,152 @@
+.plan-card {
+  padding: size(24px);
+  border-radius: size(24px);
+  background-color: $color-default-white;
+
+  @include vp-1023 {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  &__img {
+    position: relative;
+    width: size(356px);
+    min-height: size(120px);
+    margin: 0 0 size(16px) 0;
+    border-radius: size(16px);
+    overflow: hidden;
+
+    @include vp-1023 {
+      width: 100%;
+      min-height: 14vw;
+      margin: 0 0 13px 0;
+    }
+
+    @include vp-767 {
+      min-height: 27.5vw;
+    }
+
+    @include vp-359 {
+      min-height: 27vw;
+    }
+
+    svg {
+      fill: none;
+      position: absolute;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0 0 size(8px) 0;
+    font-weight: normal;
+    font-size: size(32px);
+    line-height: size(37px);
+
+    @include vp-1023 {
+      margin: 0 0 6px 0;
+    }
+  }
+
+  &__description {
+    margin: 0 0 size(32px) 0;
+    font-size: size(16px);
+    line-height: size(18px);
+
+    @include vp-1023 {
+      margin: 0 0 26px 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 size(32px) 0;
+
+    @include vp-1023 {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: size(8px);
+
+    @include vp-1023 {
+      margin-bottom: 6.5px;
+    }
+  }
+
+  &__bullet {
+    margin-right: size(8px);
+    width: size(24px);
+    height: size(24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: $color-cream-brulee;
+
+    @include vp-1023 {
+      width: 19.49px;
+      height: 19.49px;
+    }
+
+    svg {
+      width: size(18px);
+      height: size(18px);
+
+      @include vp-1023 {
+        width: 14.61px;
+        height: 14.61px;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-right: auto;
+    font-size: size(16px);
+    line-height: size(18px);
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__value {
+    min-width: size(80px);
+    padding: size(8px) size(12px);
+    display: flex;
+    justify-content: center;
+    font-size: size(16px);
+    line-height: size(18px);
+    border-radius: size(8px);
+    background-color: $color-karry;
+
+    @include vp-1023 {
+      padding: 6.5px;
+      min-width: 64px;
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+
+  &__price {
+    font-size: size(40px);
+    line-height: size(46px);
+
+    @include vp-1023 {
+      font-size: 32px;
+      line-height: 37px;
+    }
+  }
+}

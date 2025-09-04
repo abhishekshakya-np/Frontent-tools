@@ -1,0 +1,186 @@
+.video {
+  position: relative;
+  width: 100%;
+  min-height: 120vh;
+  /* stylelint-disable-next-line */
+  min-height: calc(120 * var(--vh, 1vh));
+
+  @include vp-1023 {
+    min-height: 120vh;
+  }
+
+  &__wrapper {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    min-height: 100vh;
+    /* stylelint-disable-next-line */
+    min-height: calc(100 * var(--vh, 1vh));
+
+    @include tablet {
+      top: 0;
+    }
+
+    @include vp-1023 {
+      top: 0;
+      min-height: 100vh;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    width: size(420px);
+    height: size(680px);
+
+    border-radius: size(999px);
+    overflow: hidden;
+    transform: translateY(size(50px)) translateZ(0);
+
+
+    @media (max-height: 768px) and (min-width: 1024px) {
+      width: size(336px);
+      height: size(544px);
+    }
+
+    @include vp-767 {
+      width: 260px;
+      height: 420px;
+      transform: translateZ(0);
+    }
+
+    video {
+      position: relative;
+      z-index: 1;
+      object-fit: cover;
+      min-width: 104%;
+      min-height: 104%;
+      transform: translate(-0.5, -0.5%);
+      pointer-events: none;
+      border-radius: size(999px);
+    }
+  }
+
+  &__bg {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, $color-transparent 0, $color-transparent 70%, $color-snow 70%, $color-snow 100%);
+
+    @include vp-767 {
+      background: linear-gradient(to bottom, $color-transparent 0, $color-transparent 60%, $color-snow 60%, $color-snow 100%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: size(420px);
+      height: size(680px);
+      transform: translateY(size(50px));
+
+      border-radius: size(999px);
+      background: $color-default-white;
+      border: 1px solid $color-whisper;
+
+      @media (max-height: 768px) and (min-width: 1024px) {
+        width: size(336px);
+        height: size(544px);
+      }
+
+      @include vp-767 {
+        transform: translateY(0);
+        width: 260px;
+        height: 420px;
+      }
+    }
+  }
+
+  &__poster {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    img {
+      min-width: 104%;
+      min-height: 104%;
+      transform: translate(-0.5, -0.5%);
+      object-fit: cover;
+    }
+  }
+
+  &__control {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    will-change: transform;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: size(104px);
+    height: size(104px);
+    padding: 0;
+    z-index: 2;
+
+    border: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-transparent;
+    cursor: pointer;
+
+    transition: opacity $trans-default, visibility $trans-default;
+
+    @include vp-767 {
+      width: 88px;
+      height: 88px;
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 0;
+
+      background-color: rgba($color-default-white, 0.8);
+
+      transition: transform 0.3s cubic-bezier(0.34,1.61,0.7,1);
+    }
+
+    svg {
+      width: size(24px);
+      height: size(28px);
+
+      transform: translateX(2px);
+
+      @include vp-767 {
+        width: 21px;
+        height: 24px;
+      }
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        span {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}

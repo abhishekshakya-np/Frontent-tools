@@ -1,0 +1,365 @@
+.segments {
+  padding: size(80px) 0;
+  background-color: $color-snow;
+  position: relative;
+  z-index: 2;
+
+  @include vp-767 {
+    padding: 40px 0 44px 0;
+  }
+
+  &__bg {
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    overflow: hidden;
+    transform: translateY(100%);
+
+   svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin: 0 0 size(48px) 0;
+
+    font-weight: 400;
+    font-size: size(60px);
+    line-height: 95%;
+    text-align: center;
+
+    @include vp-767 {
+      margin: 0 0 16px 0;
+
+      font-size: 40px;
+      line-height: 95%;
+    }
+  }
+
+  &__slider-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__controls {
+    margin: 0 auto size(32px) auto;
+    padding: size(8px);
+
+    background-color: $color-default-white;
+    border-radius: size(99px);
+
+    @include vp-767 {
+      margin: 0 auto 16px auto;
+
+      border-radius: 24px;
+    }
+  }
+
+  &__control {
+    margin-right: size(8px);
+    padding: size(11px) size(47px);
+
+    font-weight: 400;
+    font-size: size(20px);
+    line-height: size(23px);
+    width: size(220px);
+    color: $color-grey;
+
+    background-color: $color-transparent;
+    border: none;
+    border-radius: size(99px);
+    cursor: pointer;
+
+    transition: background-color $trans-default, color $trans-default;
+
+    @include vp-767 {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 6px;
+      padding: 14px 47px;
+
+      font-size: 16px;
+      line-height: 18px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-snow;
+      }
+    }
+
+    &.is-active {
+      color: $color-nero;
+
+      background-color: $color-cream-brulee;
+
+      pointer-events: none;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          background-color: $color-cream-brulee;
+        }
+      }
+    }
+  }
+
+  &__slider-wrapper {
+    display: flex;
+  }
+
+  &__slide {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: size(1200px);
+    height: auto;
+    min-height: size(400px);
+    padding: size(115px) 0 size(115px) size(160px);
+    overflow: hidden;
+
+    background-color: $color-default-white;
+    border-radius: 999px;
+
+    transition: opacity $trans-default;
+
+    @include vp-1023 {
+      width: 100%;
+      max-width: 720px;
+      min-height: 300px;
+      padding: 60px 0 60px 80px;
+    }
+
+    @include vp-767 {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      max-width: 328px;
+      padding: 0;
+
+      border-radius: 24px;
+    }
+
+    @include vp-359 {
+      max-width: 288px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      background-color: $color-cream-brulee;
+
+      clip-path: polygon(68.7% 0, 100% 0%, 100% 100%, 57.2% 100%);
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &--mandys-pink::before {
+      background-color: $color-mandys-pink;
+    }
+
+    &.swiper-slide,
+    &.swiper-slide-prev,
+    &.swiper-slide-duplicate-prev,
+    &.swiper-slide-next,
+    &.swiper-slide-duplicate-next {
+      opacity: 0.4;
+    }
+
+    &.swiper-slide-duplicate-active,
+    &.swiper-slide-active {
+      opacity: 1;
+    }
+  }
+
+  &__slide-content {
+    max-width: size(310px);
+
+    @include vp-1023 {
+      max-width: 270px;
+    }
+    @include vp-767 {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 24px 32px 24px;
+    }
+  }
+
+  &__slide-img {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    @include vp-767 {
+      position: relative;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 262px;
+      margin-bottom: 30px;
+
+      transform: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      display: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      background-color: $color-cream-brulee;
+
+      clip-path: polygon(50% 0, 100% 0%, 100% 100%, 23% 100%);
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    &--beginners {
+      right: size(55px);
+
+      @include vp-1023 {
+        right: 30px;
+      }
+
+      svg {
+        width: size(537px);
+        height: size(326px);
+
+        @include vp-1023 {
+          width: 322px;
+          height: 196px;
+        }
+        @include vp-767 {
+          transform: translate(35px, -6px) scale(1.1);
+        }
+      }
+    }
+
+    &--experts {
+      right: size(87px);
+
+      @include vp-1023 {
+        right: 40px;
+      }
+
+      svg {
+        width: size(542px);
+        height: size(312px);
+
+        @include vp-1023 {
+          width: 325px;
+          height: 187px;
+        }
+        @include vp-767 {
+          transform: translate(35px, -6px) scale(1.1);
+        }
+      }
+
+      &::before {
+        background-color: $color-mandys-pink;
+      }
+    }
+
+    &--schools {
+      right: size(140px);
+
+      @include vp-1023 {
+        right: 50px;
+      }
+
+      svg {
+        width: size(517px);
+        height: size(291px);
+
+        @include vp-1023 {
+          width: 310px;
+          height: 175px;
+        }
+        @include vp-767 {
+          transform: translate(35px, -6px) scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__slide-title {
+    margin: 0 0 size(16px) 0;
+
+    font-weight: 400;
+    font-size: size(32px);
+    line-height: 95%;
+
+    @include vp-1679 {
+      font-size: 32px;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+    }
+  }
+
+  &__slide-subtitle {
+    margin: 0 0 size(8px) 0;
+
+    font-weight: 400;
+    font-size: size(16px);
+    line-height: size(18px);
+
+    @include vp-1679 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__slide-text {
+    margin: 0;
+
+    font-size: size(14px);
+    line-height: size(16px);
+    color: $color-suva-grey;
+
+    @include vp-1679 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

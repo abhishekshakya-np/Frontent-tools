@@ -1,0 +1,25 @@
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include vp-767 {
+    align-items: center;
+  }
+
+  &__item {
+    margin-bottom: size(8px);
+
+    @include vp-1023 {
+      margin-bottom: 0;
+      margin-right: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

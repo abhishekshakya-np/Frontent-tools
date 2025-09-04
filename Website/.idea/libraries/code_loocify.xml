@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="code loocify">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/code loocify/tailwind.zip!/" />
+      <root url="jar://$PROJECT_DIR$/code loocify/dashboard.zip!/" />
+      <root url="jar://$PROJECT_DIR$/code loocify/CopyCatExport.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

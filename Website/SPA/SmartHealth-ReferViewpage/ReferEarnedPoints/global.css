@@ -1,0 +1,16 @@
+:root {
+  /* fonts */
+  --font-poppins: Poppins;
+  --font-roboto: Roboto;
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 30px;
+
+  /* Colors */
+  --color-white: #fff;
+  --logo2: #29b2a1;
+  --gift1: #df1515;
+  --logo1: #26637f;
+}

@@ -1,0 +1,315 @@
+.steps {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  width: 100%;
+  padding: 0 0 size(80px) 0;
+
+  .container {
+    position: relative;
+  }
+
+  @include vp-767 {
+    padding: 0 0 56px 0;
+  }
+
+  &__bg {
+    position: absolute;
+    background-color: $color-snow;
+    border-radius: size(80px) size(80px) 0px 0px;
+    top: size(-85px);
+    left: 0;
+
+    width: 100%;
+    height: calc(100% + 85px);
+
+    @media (max-height: 768px) and (min-width: 1024px) {
+      height: 100%;
+      height: calc(100% + 45px);
+      top: -45px;
+    }
+
+    @include vp-1023 {
+      border-radius: 40px 40px 0px 0px;
+      height: calc(100% + 45px);
+      top: -45px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    width: 100%;
+  }
+
+  &__content-wrapper {
+    min-height: 400vh;
+    /* stylelint-disable-next-line */
+    min-height: calc(400 * var(--vh, 1vh));
+    overflow: hidden;
+
+    @include tablet {
+      min-height: 100%;
+    }
+
+    @include vp-1023 {
+      min-height: 100%;
+    }
+
+    .container {
+      display: flex;
+    }
+  }
+
+  &__header {
+    max-width: size(480px);
+    margin: 0 0 size(80px) 0;
+
+    @include vp-767 {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 size(16px) 0;
+
+    font-weight: 400;
+    font-size: size(60px);
+    line-height: 95%;
+
+    @include vp-767 {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: size(16px);
+    line-height: size(18px);
+
+    @include vp-1679 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include vp-1023 {
+      padding-right: 60px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    right: size(80px);
+    width: size(320px);
+    height: 100%;
+    padding-top: 100vh;
+    padding-top: calc(100 * var(--vh, 1vh));
+
+    @include vp-1279 {
+      width: size(280px);
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &__description-item {
+    min-height: 100vh;
+    /* stylelint-disable-next-line */
+    min-height: calc(100 * var(--vh, 1vh));
+  }
+
+  &__content {
+    top: 0;
+    position: sticky;
+    min-height: 100vh;
+    /* stylelint-disable-next-line */
+    min-height: calc(100 * var(--vh, 1vh));
+
+    width: 100%;
+
+    @include tablet {
+      position: static;
+      min-height: 100vh;
+    }
+
+    @include vp-1023 {
+      position: static;
+      min-height: 100vh;
+    }
+  }
+
+  &__step-wrapper {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    /* stylelint-disable-next-line */
+    height: calc(100 * var(--vh, 1vh));
+
+    gap: size(80px);
+    grid-auto-columns: 1fr;
+
+    @include tablet {
+      height: auto;
+      gap: 64px;
+    }
+
+    @include vp-1023 {
+      height: auto;
+      gap: 64px;
+    }
+    @include vp-767 {
+      gap: 32px;
+    }
+  }
+
+  &__step {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+
+    .step__step-image {
+      opacity: 0;
+
+      @include tablet {
+        opacity: 1;
+      }
+
+      @include vp-1023 {
+        opacity: 1;
+      }
+    }
+
+    &:first-of-type {
+      z-index: 1;
+      .step__step-image {
+        opacity: 1;
+      }
+    }
+
+    @include tablet {
+      position: static;
+      display: grid;
+      gap: 32px;
+      grid-template-columns: 1fr;
+      .step__step-image {
+        opacity: 1;
+      }
+    }
+
+    @include vp-1023 {
+      position: static;
+      display: grid;
+      gap: 32px;
+      grid-template-columns: 1fr;
+      .step__step-image {
+        opacity: 1;
+      }
+    }
+
+    @include vp-767 {
+      gap: 16px;
+    }
+  }
+
+  &__step-image {
+    width: size(1200px);
+    height: size(673px);
+
+    pointer-events: none;
+
+    @media (max-height: 768px) and (min-width: 1024px) {
+      width: size(1020px);
+      height: size(572px);
+    }
+
+    @include tablet {
+      width: 100%;
+      height: auto;
+    }
+
+    @include vp-1023 {
+      width: 100%;
+      height: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      object-fit: cover;
+    }
+  }
+
+  &__step-content {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+
+  &__step-counter {
+    margin: 0 0 size(12px) 0;
+
+    font-weight: 400;
+    font-size: size(22px);
+    line-height: size(25px);
+    color: $color-silver-2;
+
+    @include vp-767 {
+      margin: 0 0 8px 0;
+
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__step-title {
+    margin: 0 0 size(12px) 0;
+
+    font-weight: 400;
+    font-size: size(32px);
+    line-height: size(37px);
+
+    @include vp-767 {
+      margin: 0 0 8px 0;
+
+      font-size: 24px;
+      line-height: 27px;
+    }
+  }
+
+  &__step-text {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: size(16px);
+    line-height: size(18px);
+
+    @include vp-1679 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<DOCTYPE html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Gaming Website Page - Easy Tutorials</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="images/logo.png" class="logo">
+                <nav>
+                    <ul id="menulist">
+                        <li><a href="">Game controller </a></li>
+                        <li><a href="">VR Accessories </a></li>
+                        <li><a href="">Media Remotes </a></li>
+                        <li><a href="">Other </a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon" onclick="togglemenu()">
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <h2>Ps4 V2 <br>Dual sock 4 </h2>
+                    <h3>wireless controller for play station 4 </h3>
+                    <p>(Compatible/Generic)</p>
+                    <h4>RS 32.825</h4>
+                    <button type="button">Buy Now <img src="images/arrow.png">
+                    </button>
+                </div>
+                <div class="col-2">
+                    <img src="images/controller.png" class="controller">
+                    <div class="color-box"></div>
+                    <div class="add-btn">
+                        <img src="images/add.png">
+                        <p> <small>Add to Cart</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social-links">
+            <img src="images/fb.png">
+            <img src="images/tw.png">
+            <img src="images/ig.png">
+        </div>
+        <script>
+            var menulist = document.getElementById("menulist");
+            menulist.style.maxHeight = "0px";
+
+            function togglemenu() {
+                if (menulist.style.maxHeight == "0px") {
+                    menulist.style.maxHeight = "130px"
+                } else {
+                    menulist.style.maxHeight = "130px"
+                }
+            }
+        </script>
+
+    </body>
+
+    </html>

@@ -1,0 +1,115 @@
+.application {
+  padding: size(80px) 0;
+  background-color: $color-cream-brulee;
+  position: relative;
+  z-index: 1;
+
+  @include vp-1023 {
+    padding: 40px 0;
+  }
+
+  .container {
+    position: relative;
+
+    @include vp-1023 {
+      padding-top: 211px;
+      overflow: hidden;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: size(16px);
+    font-weight: 400;
+    font-size: size(48px);
+    max-width: size(607px);
+    line-height: 95%;
+
+    @include vp-1023 {
+      font-size: 28px;
+      line-height: 98%;
+    }
+  }
+
+  &__description {
+    max-width: size(486px);
+    margin-bottom: size(32px);
+    font-size: size(20px);
+    line-height: size(23px);
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 31px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    right: size(40px);
+    width: size(714px);
+    height: size(278px);
+    transform: translateY(-50%);
+
+    @include vp-1279 {
+      width: 500px;
+    }
+
+    @include vp-1023 {
+      width: 500px;
+      height: 160px;
+      top: 0;
+      left: 20px;
+      right: unset;
+      transform: none;
+    }
+
+    @include vp-767 {
+      left: 16px;
+      width: calc(100% - 32px);
+      max-width: 439px;
+      height: 171px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &--import {
+    padding: size(67px) 0;
+
+    .container {
+      @include vp-1023 {
+        padding-top: 147px;
+      }
+    }
+
+    .application__img {
+      width: size(704px);
+      height: size(225px);
+
+      @include vp-1279 {
+        width: 450px;
+      }
+
+      @include vp-1023 {
+        height: 120px;
+      }
+
+      @include vp-767 {
+        // width: 100%;
+        width: auto;
+        height: 107px;
+        margin-right: 16px;
+      }
+    }
+  }
+}

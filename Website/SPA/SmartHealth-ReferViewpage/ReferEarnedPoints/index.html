@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="../ReferEarnedThanksPoints/global.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="div" data-animate-on-scroll>
+      <img class="vector-icon" alt="" src="../ReferEarnedThanksPoints/public/vector.svg" /><img
+        class="vector-icon"
+        alt=""
+        src="../ReferEarnedThanksPoints/public/blur-bg.svg"
+      /><button class="submit">
+        <div class="notify-back">Notify & Back Home</div>
+        <img class="chevron-right-icon" alt="" src="../ReferEarnedThanksPoints/public/chevron-right.svg" />
+      </button>
+      <div class="thank-you-parent">
+        <div class="thank-you">Thank You!</div>
+        <div class="you-have-earned">you have earned 30 points.</div>
+      </div>
+      <img class="illustration-icon" alt="" src="../ReferEarnedThanksPoints/public/illustration.svg" />
+    </div>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>

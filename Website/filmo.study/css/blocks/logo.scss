@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+
+  color: $color-nero;
+
+  transition: color $trans-default;
+
+  svg {
+    width: size(199px);
+    height: size(28px);
+  }
+}

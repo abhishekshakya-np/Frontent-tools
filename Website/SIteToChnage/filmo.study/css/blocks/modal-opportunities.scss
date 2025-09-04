@@ -1,0 +1,45 @@
+.modal-opportunities {
+  &__title {
+    margin: 0 0 size(40px) 0;
+    font-weight: 400;
+    font-size: size(56px);
+    line-height: 95%;
+
+    @include vp-1023 {
+      margin: 0 0 16px 0;
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 size(32px) 0;
+    font-size: size(16px);
+    line-height: size(18px);
+
+    @include vp-1023 {
+      margin: 0 0 24px 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    margin: 0 0 size(32px) 0;
+    width: size(680px);
+    height: size(381px);
+
+    @include vp-1023 {
+      width: 100%;
+      height: 51vw;
+      margin: 0 0 24px 0;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

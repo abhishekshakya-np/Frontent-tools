@@ -1,0 +1,81 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+// Swiper 7.4.1
+@import "vendor/swiper";
+
+@import "vendor/locomotive-scroll";
+
+// Global
+// ---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "functions";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
+// ---------------------------------
+
+@import "blocks/logo";
+@import "blocks/logo-column";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/button";
+@import "blocks/social-link";
+@import "blocks/socials";
+@import "blocks/menu";
+@import "blocks/call-to-action";
+@import "blocks/accordion";
+@import "blocks/data-accordion";
+@import "blocks/faq";
+@import "blocks/intro";
+@import "blocks/gamification";
+@import "blocks/puzzle";
+@import "blocks/video";
+@import "blocks/application";
+@import "blocks/modal-application";
+@import "blocks/modal-success";
+@import "blocks/custom-input";
+@import "blocks/plans";
+@import "blocks/plan-card";
+@import "blocks/segments";
+@import "blocks/data-tabs";
+@import "blocks/opportunities";
+@import "blocks/opportunities-card";
+@import "blocks/modal-opportunities";
+@import "blocks/comparison";
+@import "blocks/steps";
+@import "blocks/beta";
+@import "blocks/cursor";
+@import "blocks/container-3d";
+@import "blocks/first-wrapper";
+@import "blocks/second-wrapper";
+@import "blocks/third-wrapper";
+@import "blocks/loader";
+
+// ---------------------------------
+
+// ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
+
+// ❗ обязательно используйте @media для отключения ховеров на тач устройствах
+// но не используем для текстовых полей ( input, textarea )
+/* @media (hover: hover), screen and (min-width: 0\0) {
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+  }
+} */
+
+// write adaptive inside each class (see container.scss)
+
+// to fix problems with vh on iOS, a script is included in the assembly
+// using vh on the project, set them the same way as in the example in utils.scss
+
+// for any transition, be sure to specify transition-property
+// transition: $trans-default ❌ ---> transition: color $trans-default ✅

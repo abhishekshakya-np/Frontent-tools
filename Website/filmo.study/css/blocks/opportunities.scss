@@ -1,0 +1,176 @@
+.opportunities {
+  padding: size(320px) 0 size(80px) 0;
+  position: relative;
+
+  @include tablet {
+    overflow: hidden;
+  }
+
+  @include vp-1023 {
+    padding: 100px 0 40px 0;
+    overflow: hidden;
+  }
+
+  &__bg {
+    position: absolute;
+    background-color: $color-nero;
+    border-radius: 0px 0px size(80px) size(80px);
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% + 85px);
+
+    @media (max-height: 768px) and (min-width: 1024px) {
+      height: 100%;
+    }
+
+    @include vp-1023 {
+      border-radius: 0px 0px 40px 40px;
+      height: 100%;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 auto size(80px) auto;
+    font-weight: 400;
+    font-size: size(80px);
+    line-height: size(76px);
+    color: $color-default-white;
+
+    @include vp-1023 {
+      max-width: 269px;
+      margin: 0 auto 24px auto;
+      font-size: 32px;
+      line-height: 95%;
+      text-align: center;
+    }
+
+    span {
+      color: $color-cream-brulee;
+    }
+
+    svg {
+      position: absolute;
+      top: size(-43px);
+      right: size(-98px);
+      width: size(84px);
+      height: size(95px);
+      fill: none;
+
+      @include vp-1023 {
+        width: 40px;
+        height: 45px;
+        right: -12px;
+        top: 16px;
+      }
+    }
+  }
+
+  &__slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    width: 100%;
+    margin: 0 0 size(80px) 0;
+    overflow: visible;
+
+    @include vp-1023 {
+      margin: 0 0 32px 0;
+    }
+  }
+
+  &__slider {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: stretch;
+  }
+
+  &__slide {
+    display: flex;
+    width: size(800px);
+    min-height: size(440px);
+    height: auto;
+
+    transform: translateZ(0);
+
+    @include vp-1023 {
+      width: calc(100% - 32px);
+    }
+
+    @include vp-767 {
+      min-height: 432px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 size(16px) 0 0;
+    padding: 0;
+    width: size(72px);
+    height: size(72px);
+    color: $color-cream-brulee;
+    border: 1px solid $color-cream-brulee;
+    border-radius: 50%;
+    background-color: $color-transparent;
+    cursor: pointer;
+    z-index: 1;
+    transition: color $trans-default, border $trans-default;
+
+    @include vp-1023 {
+      width: 64px;
+      height: 64px;
+      margin: 0 12px 0 0;
+    }
+
+    &:hover {
+      color: $color-romantic;
+      border: 1px solid $color-romantic;
+    }
+
+    svg {
+      width: size(19px);
+      height: size(22px);
+
+      @include vp-1023 {
+        width: 17px;
+        height: 19px;
+      }
+    }
+
+    &--next {
+      margin: 0;
+
+      @include vp-1023 {
+        margin: 0;
+      }
+    }
+
+    &--prev svg {
+      transform: rotate(90deg);
+    }
+
+    &--next svg {
+      transform: rotate(-90deg);
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.modal-application {
+  &__title {
+    margin: 0;
+    margin-bottom: size(17px);
+    font-weight: normal;
+    font-size: size(42px);
+    line-height: size(48px);
+
+    @include vp-1023 {
+      font-size: 24px;
+      line-height: 27px;
+    }
+  }
+
+  &__description {
+    margin-bottom: size(43px);
+    max-width: size(376px);
+    font-size: size(16px);
+    line-height: size(21px);
+
+    @include vp-1023 {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 131%;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__form {
+    fieldset {
+      margin: 0;
+      margin-bottom: size(24px);
+      padding: 0;
+      border: none;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 23px;
+    }
+
+    .custom-input {
+      margin-bottom: size(16px);
+
+      @include vp-1023 {
+        margin-bottom: 11px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  &--consult {
+    .modal-application__title {
+      @include vp-1023 {
+        margin-bottom: 12px;
+      }
+    }
+
+    .modal-application__form fieldset {
+      @include vp-1023 {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

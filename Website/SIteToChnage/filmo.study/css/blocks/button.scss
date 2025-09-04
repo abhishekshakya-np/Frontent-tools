@@ -1,0 +1,330 @@
+.button {
+  position: relative;
+
+  display: inline-flex;
+  padding: size(18px) size(40px);
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+
+  font-weight: 400;
+  font-size: size(20px);
+  line-height: size(23px);
+
+  border: none;
+  border-radius: size(12px);
+  outline: none;
+  cursor: pointer;
+
+  transition: box-shadow $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+  }
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 16px 32px;
+  }
+
+  @include vp-359 {
+    padding: 16px 24px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+    overflow: hidden;
+    transform: translateZ(0);
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      border-radius: inherit;
+      transform: scaleY(0);
+      transform-origin: bottom;
+
+      transition: transform $trans-default;
+    }
+  }
+
+  &__text-wrapper {
+    z-index: 2;
+
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__text {
+    position: relative;
+
+    transition: transform $trans-default;
+
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 150%;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--small {
+    padding: size(16px) size(40px);
+
+    font-size: size(16px);
+    line-height: size(18px);
+  }
+
+  &--text-small {
+    font-size: size(16px);
+    line-height: size(18px);
+  }
+
+  &--xs {
+    padding: size(15px) size(40px);
+
+    font-size: size(16px);
+    line-height: size(18px);
+
+    @include vp-1023 {
+      padding: 18px 40px;
+    }
+  }
+
+  &--large {
+    padding: size(18px) size(40px);
+
+    @include vp-1023 {
+      padding: 18px 40px;
+    }
+  }
+
+  &--text-large {
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &--romantic {
+    color: $color-nero;
+
+    &::before {
+      background-color: $color-romantic;
+    }
+
+    .button__bg {
+      span {
+        background-color: $color-nero;
+      }
+    }
+
+    .button__text {
+      &::before {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  &--nero {
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-nero;
+    }
+
+    .button__bg {
+      span {
+        background-color: $color-romantic;
+      }
+    }
+
+    .button__text {
+      &::before {
+        color: $color-nero;
+      }
+    }
+  }
+
+  &--cream {
+    color: $color-nero;
+
+    &::before {
+      background-color: $color-cream-brulee;
+    }
+
+    .button__bg {
+      span {
+        background-color: $color-nero;
+      }
+    }
+
+    .button__text {
+      &::before {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  &--simple {
+    color: $color-nero;
+
+    box-shadow: inset 0 0 0 1px $color-nero;
+  }
+
+  &--underlined {
+    padding: 0 0 size(2px) 0;
+    font-size: size(18px);
+    line-height: size(21px);
+
+    color: $color-romantic;
+    text-decoration-line: underline;
+    text-underline-offset: size(3px);
+    border-radius: 0;
+
+    transition: color $trans-default;
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 0 0 2px 0;
+    }
+
+    @include vp-359 {
+      padding: 0 0 2px 0;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    .button__text {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &:disabled {
+    color: $color-nero;
+
+    background-color: $color-white-smoke;
+
+    pointer-events: none;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &--cream-reverse {
+    color: $color-default-white;
+
+    background-color: $color-nero;
+
+    .button__bg {
+      span {
+        background-color: $color-cream-brulee;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      box-shadow: inset 0 0 0 1px $color-nero;
+    }
+
+    .button__text {
+      &::before {
+        color: $color-nero;
+      }
+    }
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      .button__bg {
+        span {
+          transform: scaleY(1);
+          transform-origin: top;
+        }
+      }
+
+      .button__text {
+        transform: translateY(-150%);
+      }
+    }
+
+    &--simple {
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 0 1px $color-romantic;
+
+        .button__text {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &--underlined {
+      &:hover,
+      &:focus {
+        color: $color-cream-brulee;
+
+        .button__text {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+span.button {
+  color: $color-nero;
+
+  background-color: $color-white-smoke;
+
+  pointer-events: none;
+
+  &::before {
+    display: none;
+  }
+}

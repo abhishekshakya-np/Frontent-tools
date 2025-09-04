@@ -1,0 +1,288 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  width: 100%;
+  overflow: hidden;
+
+  background: rgba($color-default-white, 0.8);
+
+  transition: background-color $trans-default;
+
+  backdrop-filter: blur(25px);
+
+  &__wrapper {
+    display: grid;
+    align-items: center;
+    padding: size(27px) 0;
+
+    box-shadow: inset 0 -1px 0 $color-whisper;
+
+    gap: size(40px);
+    grid-template-columns: max-content 1fr;
+
+    @include vp-1023 {
+      padding: 0;
+
+      box-shadow: none;
+
+      gap: 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__top-block {
+    @include vp-1023 {
+      position: relative;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+
+      box-shadow: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        width: 100vw;
+        height: 1px;
+
+        background-color: $color-whisper;
+        transform: translateX(-50%);
+
+        transition: background-color $trans-default;
+      }
+    }
+    @include vp-767 {
+      padding: 15px 0 21px 0;
+    }
+  }
+
+  &__logo {
+    @include vp-1023 {
+      transition: color $trans-default;
+    }
+    @include vp-767 {
+      width: 146px;
+      height: 20px;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    align-items: center;
+
+    gap: 9%;
+    grid-template-columns: 1fr max-content;
+
+    @include vp-1439 {
+      gap: 7%;
+    }
+
+    @include vp-1279 {
+      gap: 4%;
+    }
+
+    @include vp-1023 {
+      position: absolute;
+      top: 56px;
+      bottom: 0;
+
+      width: calc(100% - 40px);
+      padding: 90px 0 90px 0;
+      overflow-y: auto;
+
+      visibility: hidden;
+      opacity: 0;
+
+      transition: opacity $trans-default 0.1s, visibility $trans-default 0.1s;
+    }
+  }
+
+  &__inner-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 size(-40px) size(-10px) auto;
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-1279 {
+      margin: 0 size(-20px) size(-10px) auto;
+    }
+
+    @include vp-1023 {
+      margin: 0 0 -22px 0;
+    }
+
+    @include vp-767 {
+      margin: 0 0 -40px 0;
+    }
+  }
+
+  &__inner-item {
+    margin: 0 size(40px) size(10px) 0;
+
+    @include vp-1279 {
+      margin: 0 20px 10px 0;
+    }
+
+    @include vp-1023 {
+      margin: 0 0 40px 0;
+    }
+
+    @include vp-767 {
+      margin: 0 0 22px 0;
+    }
+  }
+
+  &__inner-link {
+    font-size: size(16px);
+    line-height: size(18px);
+
+    outline: none;
+
+    transition: color $trans-default;
+
+    @include vp-1023 {
+      font-size: 32px;
+      line-height: 95%;
+      color: $color-default-white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-tacao;
+    }
+  }
+
+  &__button-block {
+    @include vp-1023 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+
+  &__button {
+    margin-right: size(6px);
+
+    @include vp-1023 {
+      flex-grow: 1;
+      max-width: 182px;
+      margin-right: 8px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .button--simple {
+    @include vp-1023 {
+      flex-grow: 1;
+      max-width: 130px;
+
+      color: $color-default-white;
+
+      box-shadow: inset 0 0 0 1px $color-romantic;
+    }
+  }
+
+  &__nav-toggle {
+    position: relative;
+
+    display: none;
+    width: 24px;
+    height: 20px;
+    padding: 0;
+
+    background-color: $color-transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @include vp-1023 {
+      display: block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+
+      width: 24px;
+      height: 2px;
+
+      background-color: $color-nero;
+      border-radius: 99px;
+
+      transition: transform $trans-default, color $trans-default;
+    }
+
+    &::before {
+      top: 8px;
+    }
+
+    &::after {
+      bottom: 2px;
+    }
+  }
+
+  &.is-open {
+    @include vp-1023 {
+      height: 100vh;
+      height: calc(100 * var(--vh, 1vh));
+
+      background-color: $color-nero;
+
+      .header__top-block {
+        @include vp-1023 {
+          &::before {
+            background-color: $color-night-rider;
+          }
+        }
+      }
+
+      .header__logo {
+        color: $color-cream-brulee;
+      }
+
+      .header__nav-toggle {
+        &::before,
+        &::after {
+          background-color: $color-default-white;
+        }
+
+        &::before {
+          transform: translate(3px, 4px) rotate(-45deg);
+        }
+
+        &::after {
+          transform: translate(3px, -4px) rotate(45deg);
+        }
+      }
+
+      .header__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .header__inner-nav {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

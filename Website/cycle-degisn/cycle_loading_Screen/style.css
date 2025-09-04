@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cyl-loader {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.highway {
+    position: absolute;
+    animation-name: move;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    top: -110%;
+    left: -110%;
+    width: 600px;
+    height: 600px;
+    transform: rotateX(99deg) rotateY(-1deg) rotateZ(99deg);
+}
+
+.highway img {
+    width: 100%;
+    height: 100%;
+}
+
+.cycle {
+    width: 150px;
+    height: 150px;
+    animation-name: cycle;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.cycle svg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes move {
+    from {
+        transform: rotateX(99deg) rotateY(-1deg) rotateZ(99deg) translateY(0);
+    }
+    to {
+        transform: rotateX(99deg) rotateY(-1deg) rotateZ(99deg) translateY(10px);
+    }
+}
+
+@keyframes cycle {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(120px);
+    }
+}

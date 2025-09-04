@@ -1,0 +1,14 @@
+.container {
+    align-self: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--color-ship-gray);
+    font-family: var(--font-arial-regular-22);
+}
+.background {
+    background-color: var(--color-wild-sand);
+    justify-content: flex-start;
+  }

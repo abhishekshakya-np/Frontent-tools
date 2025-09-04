@@ -1,0 +1,112 @@
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-cream-brulee;
+
+  transition: opacity 0.6s ease;
+
+  &.is-active {
+    display: flex;
+  }
+
+  &.is-hidden {
+    opacity: 0;
+  }
+
+  &__icon {
+    margin-bottom: size(56px);
+
+    @include vp-1023 {
+      margin-bottom: 56px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 40px;
+    }
+
+    svg {
+      width: size(167px);
+      height: auto;
+
+      @include vp-1023 {
+        width: 167px;
+      }
+
+      @include vp-767 {
+        width: 84px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: size(800px);
+
+    @include vp-1023 {
+      width: 600px;
+    }
+
+    @include vp-767 {
+      width: 320px;
+    }
+
+    @include vp-359 {
+      width: 280px;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: size(8px);
+    margin-bottom: size(16px);
+
+    background-color: $color-default-white;
+    border-radius: 2px;
+
+    @include vp-1023 {
+      height: 8px;
+      margin-bottom: 16px;
+    }
+
+    @include vp-767 {
+      height: 4px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__progress {
+    width: 0;
+    height: 100%;
+
+    background-color: $color-mustard;
+    border-radius: 2px;
+  }
+
+  &__percent {
+    font-weight: 400;
+    font-size: size(32px);
+    line-height: size(37px);
+
+    @include vp-1023 {
+      font-size: 32px;
+      line-height: 37px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}

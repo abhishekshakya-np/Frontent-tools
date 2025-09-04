@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/img_icon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+<!--  <link rel="stylesheet" href="/css/Hyperlink.css">-->
+  <title>The Map and Area Elements</title>
+</head>
+<body class="bg-gray-100 font-sans p-6">
+
+<!-- Styled image -->
+<p class="mb-4 text-center">
+  Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:
+</p>
+<!-- Corrected the use map attribute value to match the name of the map -->
+<!-- Removed duplicate alt attribute -->
+<!-- Changed width and height attributes to match the image dimensions -->
+<!-- Added the name attribute to the map element -->
+<div class="flex justify-center mb-4">
+  <img src="/img/workplace.jpg" alt="Workplace" width="400" height="379" usemap="#workmap" class="rounded-lg shadow-md">
+</div>
+<!-- Area elements work with maps -->
+<!-- Corrected the name attribute value to match the name used in the usemap attribute -->
+
+<map name="workmap">
+  <!-- Corrected the name of the map to match the name attribute of the map element -->
+  <!-- Added href attributes to link to the corresponding pages -->
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="../Portfolio-Project/xabickx.html">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
+
+<h1 class="text-3xl font-bold text-center mb-8">The Map and Area Elements</h1>
+
+<div class="flex flex-wrap justify-around">
+  <!-- Unordered List Box -->
+  <div class="bg-white rounded-lg shadow-md p-4 mb-6 w-full sm:w-1/3 mx-2">
+    <h2 class="text-xl font-semibold mb-4">Unordered List</h2>
+    <ul class="list-disc list-inside">
+      <li>Coffee
+        <ul class="list-disc list-inside ml-4">
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ul>
+      </li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  </div>
+
+  <!-- Ordered List Box -->
+  <div class="bg-white rounded-lg shadow-md p-4 mb-6 w-full sm:w-1/3 mx-2">
+    <h2 class="text-xl font-semibold mb-4">Ordered List</h2>
+    <ol class="list-decimal list-inside">
+      <li>Coffee
+        <ol class="list-decimal list-inside ml-4" start="2">
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ol>
+      </li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+  </div>
+
+  <!-- Description List Box -->
+  <div class="bg-white rounded-lg shadow-md p-4 mb-6 w-full sm:w-1/3 mx-2">
+    <h2 class="text-xl font-semibold mb-4">Description List</h2>
+    <dl>
+      <dt class="font-semibold">Coffee</dt>
+      <dd class="ml-4 mb-2">- black hot drink</dd>
+      <dt class="font-semibold">Milk</dt>
+      <dd class="ml-4">- white cold drink</dd>
+    </dl>
+  </div>
+</div>
+
+</body>
+</html>

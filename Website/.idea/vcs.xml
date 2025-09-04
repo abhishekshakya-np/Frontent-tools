@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Hover" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Resume" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SassCrashCode/course-sass-basics-start" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Sass_website" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/only-using-html-css" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tailwind-learn/tailwind-course-starter" vcs="Git" />
+  </component>
+</project>

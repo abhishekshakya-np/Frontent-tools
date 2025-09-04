@@ -1,0 +1,36 @@
+:root {
+  /* fonts */
+  --font-ibm-plex-sans: "IBM Plex Sans";
+  --font-helvetica: Helvetica;
+
+  /* font sizes */
+  --font-size-sm: 14px;
+  --font-size-base: 18px;
+  --font-size-lg: 22px;
+  --font-size-xl: 26px;
+  --font-size-2xl: 30px;
+  --font-size-3xl: 36px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-dodgerblue: #0267c3;
+  --color-gray-100: #1b2442;
+  --color-gray-200: rgba(0, 0, 0, 0.5);
+  --color-goldenrod: #d29824;
+  --color-black: #000;
+
+  /* Gaps */
+  --gap-sm: 40px;
+  --gap-md: 42px;
+
+  /* Paddings */
+  --padding-xs: 3px;
+  --padding-sm: 10px;
+  --padding-md: 12px;
+  --padding-lg: 18px;
+  --padding-xl: 39px;
+
+  /* border radiuses */
+  --br-sm: 10px;
+  --br-md: 20px;
+}

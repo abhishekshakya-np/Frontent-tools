@@ -1,0 +1,170 @@
+.gamification {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  /* stylelint-disable-next-line */
+  min-height: calc(100 * var(--vh, 1vh));
+  padding: size(80px) 0 size(110px) 0;
+  overflow: hidden;
+  background-color: $color-default-white;
+
+  @include vp-1023 {
+    display: block;
+    padding: 76px 0;
+    min-height: 100vh;
+  }
+
+  @include vp-767 {
+    padding: 60px 0;
+  }
+
+  &__wrapper {
+    display: grid;
+
+    gap: 5%;
+    grid-template-columns: 1fr size(663px);
+    @include vp-1439 {
+      grid-template-columns: 1fr size(530px);
+    }
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column-reverse;
+      max-width: 720px;
+      margin: 0 auto;
+
+      gap: 0;
+    }
+    @include vp-767 {
+      max-width: 320px;
+    }
+  }
+
+  &__content {
+    transform: translateY(size(-48px));
+
+    @include vp-1023 {
+      transform: none;
+    }
+  }
+
+  &__title {
+    margin: 0 0 size(17px) 0;
+
+    font-weight: 400;
+    font-size: size(80px);
+    line-height: size(76px);
+
+    white-space: nowrap;
+
+    @include vp-767 {
+      margin: 0 0 10px 0;
+
+      font-size: 40px;
+      line-height: 95%;
+    }
+  }
+
+  &__title-rotate {
+    display: inline-flex;
+
+    color: $color-romantic;
+  }
+
+  &__content-wrapper {
+    padding-left: 42.5%;
+
+    @include vp-1439 {
+      padding-left: 35%;
+    }
+    @include vp-767 {
+      padding-left: 94px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 size(32px) 0;
+
+    font-weight: 400;
+    font-size: size(20px);
+    line-height: size(23px);
+    color: $color-nobel;
+
+    @include vp-1679 {
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 18px 0;
+
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 size(16px) 0;
+
+    font-size: size(16px);
+    line-height: size(18px);
+
+    @include vp-1679 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include vp-767 {
+      br {
+        display: none;
+      }
+
+      &:last-of-type {
+        margin: 0 0 30px 0;
+      }
+    }
+
+    &:last-of-type {
+      margin: 0 0 size(56px) 0;
+    }
+  }
+
+  &__img {
+    @include vp-1023 {
+      margin-bottom: 40px;
+    }
+    svg {
+      width: size(663px);
+      height: size(388px);
+
+      @include vp-1439 {
+        width: size(530px);
+        height: size(310px);
+      }
+      @include vp-1023 {
+        position: relative;
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
+      @include vp-767 {
+        width: 358px;
+        height: 208px;
+      }
+      @include vp-359 {
+        width: 304px;
+        height: 177px;
+      }
+    }
+  }
+}

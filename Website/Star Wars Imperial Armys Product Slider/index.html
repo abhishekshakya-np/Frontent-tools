@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+        .product-img__item.active {
+            display: block;
+        }
+        .product-img__item {
+            display: none;
+        }
+        .disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .heart.is-active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Swiper slider -->
+    <div class="swiper-container product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide product-slider__item" data-target="img1">Slide 1</div>
+            <div class="swiper-slide product-slider__item" data-target="img2">Slide 2</div>
+            <div class="swiper-slide product-slider__item" data-target="img3">Slide 3</div>
+        </div>
+        <div class="swiper-button-prev prev">Prev</div>
+        <div class="swiper-button-next next">Next</div>
+    </div>
+
+    <!-- Product images -->
+    <div class="product-images">
+        <div class="product-img__item active" id="img1">
+            <img src="./img/item-1.webp" alt="Blush Bedroom" />
+        </div>
+        <div class="product-img__item" id="img2">
+            <img src="./img/item-1.webp" alt="Art Deco Living Room" />
+        </div>
+        <div class="product-img__item" id="img3">
+            <img src="./img/item-1.webp" alt="Boho Bedroom" />
+        </div>
+    </div>
+
+    <!-- Favorite Button -->
+    <div class="js-fav">
+        <span class="heart">❤</span> Favorite
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var swiper = new Swiper('.product-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            loop: false,
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev'
+            },
+            on: {
+                init: function(){
+                    var index = this.activeIndex;
+                    var target = $('.product-slider__item').eq(index).data('target');
+
+                    console.log(target);
+
+                    $('.product-img__item').removeClass('active');
+                    $('.product-img__item#' + target).addClass('active');
+                }
+            }
+        });
+
+        swiper.on('slideChange', function () {
+            var index = this.activeIndex;
+            var target = $('.product-slider__item').eq(index).data('target');
+
+            console.log(target);
+
+            $('.product-img__item').removeClass('active');
+            $('.product-img__item#' + target).addClass('active');
+
+            if(swiper.isEnd) {
+                $('.prev').removeClass('disabled');
+                $('.next').addClass('disabled');
+            } else {
+                $('.next').removeClass('disabled');
+            }
+
+            if(swiper.isBeginning) {
+                $('.prev').addClass('disabled');
+            } else {
+                $('.prev').removeClass('disabled');
+            }
+        });
+
+        $(".js-fav").on("click", function() {
+            $(this).find('.heart').toggleClass("is-active");
+        });
+    </script>
+
+</body>
+</html>
+
+
+https://codepen.io/JavaScriptJunkie/pen/vzWPbV

@@ -1,0 +1,323 @@
+
+
+body {
+   text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: normal;
+}
+
+.main-content {
+  /* styles for the main content */
+
+}
+.all-beers,
+.my-beers {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  width: 115px;
+  height: 29px;
+}
+.my-beers {
+  top: 4px;
+  left: 131px;
+  letter-spacing: 0.02em;
+  line-height: 30px;
+  color: var(--color-gray-100);
+  width: 132px;
+  height: 34px;
+  
+}
+.all-beers-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 276px;
+  height: 39px;
+}
+.add-a-new,
+.add-a-new-beer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-a-new {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-ibm-plex-sans);
+  color: var(--white);
+  text-align: center;
+  width: 143px;
+  height: 26px;
+  flex-shrink: 0;
+}
+.add-a-new-beer-wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-md);
+  background-color: var(--color-dodgerblue-100);
+  position: absolute;
+  top: 0;
+  left: 831px;
+  border-radius: var(--br-sm);
+  width: 145px;
+  height: 38px;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+/* .frame-child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: var(--color-gray-300);
+  filter: blur(2px);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+} */
+.save {
+  position: relative;
+  font-size: var(--font-size-2xs);
+  font-weight: 500;
+  font-family: var(--font-ibm-plex-sans);
+  color: var(--white);
+  text-align: center;
+  display: inline-block;
+  width: 52px;
+  height: 19px;
+  flex-shrink: 0;
+}
+.buttonsdropdownsmalldefault {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-sm) var(--padding-xl);
+  background-color: #0066c3;
+  position: absolute;
+  top: 373px;
+  left: 302px;
+  border-radius: var(--br-xs);
+  width: 78px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.cancel {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  width: 45px;
+  flex-shrink: 0;
+}
+.buttonsdropdownsmalldefault1,
+.cancel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cancel-wrapper {
+  flex-direction: row;
+  opacity: 0.7;
+}
+.buttonsdropdownsmalldefault1 {
+  align-self: stretch;
+  border-radius: var(--br-md);
+  height: 16px;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: var(--padding-sm) var(--padding-xl);
+  box-sizing: border-box;
+}
+.amount,
+.buttonsoutlinedlarge,
+.describe,
+.name {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.buttonsoutlinedlarge {
+  top: 378px;
+  left: 234px;
+  border-radius: 3px;
+  width: 45px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: center;
+}
+.amount,
+.describe,
+.name {
+  border: 1px solid var(--border-color);
+  font-family: var(--font-ibm-plex-sans);
+  font-size: var(--font-size-2xs);
+  background-color: transparent;
+  top: 272px;
+  left: 25px;
+  border-radius: var(--br-xs);
+  box-sizing: border-box;
+  width: 355px;
+  height: 81px;
+  flex-direction: row;
+  padding: var(--padding-sm) var(--padding-xl) var(--padding-sm) 11px;
+  justify-content: flex-start;
+}
+.amount,
+.name {
+  top: 221px;
+  border-radius: var(--br-md);
+  height: 38px;
+  padding: var(--padding-sm) var(--padding-2xs);
+}
+.name {
+  top: 168px;
+}
+.image-1-icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.image-1 {
+  position: relative;
+  width: 25px;
+  height: 68px;
+  flex-shrink: 0;
+}
+.add-a-new1,
+.beer-pic {
+  display: flex;
+  align-items: center;
+}
+.beer-pic {
+  position: absolute;
+  top: 68px;
+  left: 25px;
+  border-radius: var(--br-md);
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  width: 73px;
+  height: 82px;
+  flex-direction: row;
+  padding: var(--padding-sm) var(--padding-2xs);
+  justify-content: center;
+}
+.add-a-new1 {
+  position: relative;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  width: 150px;
+  height: 19px;
+  flex-shrink: 0;
+}
+.buttonstransparentlarge-icon {
+  position: relative;
+  border-radius: var(--br-md);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.title {
+  position: absolute;
+  top: 26px;
+  left: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 182px;
+  text-align: left;
+  font-size: 19px;
+}
+/* .background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('path/to/background/image.jpg');
+  background-size: cover;
+  backdrop-filter: blur(1px); 
+  z-index: 9999; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.192);
+  backdrop-filter: blur(1px);/* adjust the blur amount as needed */
+  z-index: 9999;/* make sure it's on top of other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .add-beer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+} */
+.add-beer {
+  position: absolute;
+  top: 128px;
+  left: 320px;
+  background-color: var(--white);
+  width: 405px;
+  height: 430px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-2xs);
+  color: var(--dark);
+  font-family: var(--font-ibm-plex-sans);
+  border: 0.5px solid rgb(0 0 0 / 13%);
+}
+.frame-parent {
+  /* position: absolute;
+  top: 169px;
+  left: 198px;
+  width: 1044px;
+  height: 686px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1044px;
+  height: 686px;
+}
+.landing {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-300);
+  font-family: var(--font-helvetica);
+}

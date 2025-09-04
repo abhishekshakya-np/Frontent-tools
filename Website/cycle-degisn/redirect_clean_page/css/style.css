@@ -1,0 +1,374 @@
+body{
+    font-family: 'Noto Sans', Arial, serif;
+    font-weight: 400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height: 1.618em;
+    background: #F0F0F0 center center no-repeat fixed;
+    background-size: cover;
+}.img {
+
+    width: 220px;
+    height: 100px;
+    margin: 12px auto;
+  }
+  .img img {
+    height: 100%;
+    width: 100%;
+}
+h2{
+    font-family: 'Noto Sans', Arial, serif,;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.618em;
+    color: #FF3C3C;
+    width: 271px;
+    height: 50px;
+    margin: 0px auto;
+    white-space: nowrap;
+}
+section{
+    max-width:800px;
+    margin:8% auto 1em auto;
+    opacity: 0.8;
+    color:#fff;
+    padding:1em 5%;
+}
+
+a{
+    color: #003049;
+}
+a:focus{
+    outline:none;
+    outline-offset:inherit;
+}
+/* animation */
+
+
+:root {
+    --alabaster: #FAFAFA;
+    --frangipani: #FFDCB5;
+    --frostee: #EAF7EB;
+    --lemon-chiffon: #F9EEAB;
+    --sundown: #FFB7BC;
+    --white: #FFF;
+  }
+  
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--alabaster);
+    min-height: 100vh;
+    width: 100%;
+  }
+  .card-container {
+    background-color: #003049;
+    
+
+  }
+  .card {
+    align-items: center;
+    border-radius: 0.25rem;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    height: 23rem;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ball {
+    background-color: #FF3C3C;
+    border-radius: 50%;
+    height: 3rem;
+    position: absolute;
+    width: 3rem;
+  }
+  .down {
+    animation: down 1.6s ease-in infinite both;
+    bottom: 2rem;
+    position: absolute;
+  }
+  
+  .down .up {
+    animation: up 1.6s ease-in-out infinite both;
+  }
+  
+  .down .up .squeeze {
+    animation: squeeze 1.6s cubic-bezier(0.72, 0.03, 0.28, 0.97) infinite both;
+    transform-origin: 50% 100%;
+  }
+  
+  .down .up .squeeze .rotate-in {
+    animation: rotate-in 1.6s ease-out infinite both;
+  }
+  
+  .down .up .squeeze .rotate-in .rotate-out {
+    animation: rotate-out 1.6s ease-in infinite both;
+  }
+  
+  .square {
+    background-color: var(--white);
+    height: 5rem;
+    width: 5rem;
+  }
+  
+  @keyframes down {
+    0% {
+      transform: translateY(-10rem);
+    }
+    20%,
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes up {
+    0%,
+    75% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10rem);
+    }
+  }
+  
+  @keyframes squeeze {
+    0%,
+    4% {
+      transform: scale(1);
+    }
+    45% {
+      transform: scale(1.8, 0.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate-in {
+    0% {
+      transform: rotate(-135deg);
+    }
+    20%,
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes rotate-out {
+    0%,
+    80% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(135deg);
+    }
+  }
+  
+  @keyframes shadow {
+    0%,
+    100% {
+      transform: scaleX(0.3);
+    }
+    45%,
+    50% {
+      transform: scaleX(0.8);
+    }
+  }
+  /* End square */
+ 
+  .ball-bouncing {
+    background-color:#003049;  
+  } 
+  
+  .ball-bouncing::before {
+    animation: shadowBouncing 1.2s ease-in infinite;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    bottom: 2rem;
+    content: '';
+    height: 0.15rem;
+    position: absolute;
+    width: 2rem;
+  }
+  
+  .ball-bouncing .ball {
+    animation: ballBouncing 1.2s ease-in infinite;
+    bottom: 2.1rem;
+    transform-origin: bottom;
+  }
+  
+  @keyframes ballBouncing {
+    0% {
+      transform: scale(1.5, 0.5);
+      background-color: #EE322E;
+    }
+    20% {
+      transform: scaleY(1.2);
+    }
+    40%,
+    80% {
+      transform: translateY(-14rem);
+    }
+    70% {
+      transform: translateY(-15rem);
+    }
+    90% {
+      transform: translateY(0);
+    }
+    100%{
+      transform: scale(1.5, 0.5);
+      
+    }
+    
+  }
+  
+  @keyframes shadowBouncing {
+    0%,
+    100% {
+      transform: scale(2, 0.8);
+    }
+    20% {
+      transform: scale(1.2, 0.8);
+    }
+    40%,
+    80% {
+      transform: scale(0.5, 0.2);
+    }
+    70% {
+      transform: scale(0.5, 0.15);
+    }
+    90% {
+      transform: scale(1.5, 0.6);
+    }
+  }
+  /* End ball bouncing */
+  
+  /* Ball movement */
+  .ball-movement {
+    background-color: var(--frangipani);
+    overflow: hidden;
+  }
+  
+  .ball-movement::before {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    bottom: 2rem;
+    content: '';
+    height: 0.15rem;
+    left: 2rem;
+    position: absolute;
+    right: 2rem;
+  }
+  
+  .ball-movement .ball {
+    animation: ballMovement 1.6s cubic-bezier(0, 0.98, 1, 0.99) infinite;
+    bottom: 2.1rem;
+    transform: translate(14rem, -15rem) scale(1.2, 0.5);
+    transform-origin: bottom;
+  }
+  
+  @keyframes ballMovement {
+    0% {
+      transform: translate(14rem, -15rem);
+    }
+    15% {
+      transform: translate(7rem, 0rem) scale(1.2, 0.5);
+    }
+    30% {
+      transform: translate(2rem, -10rem) scale(1, 1);
+    }
+    45% {
+      transform: translate(-2rem, 0rem) scale(1.2, 0.8);
+    }
+    60% {
+      transform: translate(-5rem, -5.5rem) scale(1, 1);
+    }
+    75% {
+      transform: translate(-8rem, 0rem) scale(1.1, 0.9);
+    }
+    100% {
+      transform: translate(-14rem, -3rem) scale(1, 1);
+      
+    }
+  }
+  /* End ball movement */
+  
+  /* Counter */
+  .counter {
+    animation: counter 5s linear infinite alternate;
+    background-color: var(--sundown);
+    counter-reset: count 0;
+  }
+  
+  .counter::before {
+    color: var(--white);
+    content: counter(count);
+    font-size: 7rem;
+    line-height: 1.1;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  @keyframes counter {
+    0% {
+      counter-increment: count 0;
+    }
+    10% {
+      counter-increment: count 1;
+    }
+    20% {
+      counter-increment: count 2;
+    }
+    30% {
+      counter-increment: count 3;
+    }
+    40% {
+      counter-increment: count 4;
+    }
+    50% {
+      counter-increment: count 5;
+    }
+    60% {
+      counter-increment: count 6;
+    }
+    70% {
+      counter-increment: count 7;
+    }
+    80% {
+      counter-increment: count 8;
+    }
+    90% {
+      counter-increment: count 9;
+    }
+    100% {
+      counter-increment: count 10;
+    }
+  }
+  /* End counter */
+  
+@media (max-device-width: 1027px) {
+
+    body{
+        text-align:center;
+        font-size:larger;
+    }
+    section{
+        max-width: 90%;
+    }
+
+}
+
+@media (max-device-width: 640px) {
+    section{
+        max-width: 97%;
+    }
+
+}

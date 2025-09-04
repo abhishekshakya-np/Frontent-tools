@@ -1,0 +1,54 @@
+.menu {
+  &__title {
+    margin: 0;
+    margin-bottom: size(24px);
+    font-weight: normal;
+    font-size: size(24px);
+    line-height: 95%;
+    color: $color-default-white;
+
+    @include vp-1679 {
+      font-size: 24px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: size(16px);
+    max-width: size(288px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include vp-767 {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: size(16px);
+    line-height: size(18px);
+    color: $color-default-white;
+    transition: color $trans-default;
+
+    @include vp-1679 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &:hover {
+      color: $color-cream-brulee;
+    }
+  }
+}

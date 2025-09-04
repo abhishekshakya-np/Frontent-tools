@@ -1,0 +1,11 @@
+.logo-column {
+  display: flex;
+  color: $color-cream-brulee;
+
+  transition: color $trans-default;
+
+  svg {
+    width: size(104px);
+    height: size(101px);
+  }
+}

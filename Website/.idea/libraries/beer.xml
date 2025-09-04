@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="beer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/code loocify/beer/beer.zip!/" />
+      <root url="jar://$PROJECT_DIR$/code loocify/beer/beer (2).zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

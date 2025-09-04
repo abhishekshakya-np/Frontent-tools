@@ -1,0 +1,24 @@
+.third-wrapper {
+  background-color: $color-nero;
+  position: relative;
+  transform: translateZ(0);
+
+  &__bg {
+    transform-origin: top;
+    will-change: transform;
+    position: absolute;
+    background-color: $color-snow;
+    border-radius: size(80px);
+    top: size(-80px);
+    left: 0;
+
+    width: 100%;
+    height: calc(100% + 80px);
+
+    @include vp-1023 {
+      top: -40px;
+      border-radius: 40px;
+      height: calc(100% + 40px);
+    }
+  }
+}

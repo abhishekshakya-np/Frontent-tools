@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1, width=device-width" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <link rel="stylesheet" href="../beer%20(2)/global.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;500;600&display=swap"
+    />
+    <style>
+      @font-face {
+        font-family: "Helvetica";
+        src: url("public/Helvetica.ttf");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Helvetica";
+        src: url("public/Helvetica-Bold.ttf");
+        font-weight: 700;
+      }
+      
+      /* Responsive styles */
+      @media screen and (max-width: 768px) {
+        /* Adjust the font size for smaller screens */
+        html {
+          font-size: 14px;
+        }
+
+        /* Make the header buttons stack on top of each other */
+        .all-beers-parent {
+          flex-direction: column;
+          align-items: center;
+        }
+        .my-beers {
+          margin-top: 20px;
+        }
+
+        /* Make the add-a-new-beer button full width */
+        .add-a-new-beer-wrapper {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        /* Adjust the layout of the add-beer section */
+        .add-beer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+        }
+        .buttonsdropdownsmalldefault,
+        .buttonsoutlinedlarge {
+          margin-top: 20px;
+        }
+        .beer-pic {
+          margin-top: 20px;
+        }
+        .title {
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="landing">
+      
+      <div class="frame-parent">
+        <div class="all-beers-parent">
+          <div class="all-beers">All Beers</div>
+          <b class="my-beers">My Beers</b>
+        </div>
+        <button class="add-a-new-beer-wrapper" autofocus>
+          <div class="add-a-new">Add a New Beer</div>
+        </button>
+        <div class="frame-child"></div>
+        <div class="background-blur">
+        <div class="add-beer">
+          <button class="buttonsdropdownsmalldefault"><a href="../beer%20(2)/landing2.html">
+            <div class="save">Save</div></a>
+          </button>
+          <div class="buttonsoutlinedlarge">
+            <div class="buttonsdropdownsmalldefault1">
+              <div class="cancel-wrapper"><div class="cancel">Cancel</div></div>
+            </div>
+          </div>
+          <input class="describe" type="text" required /><input
+            class="amount"
+            type="number"
+            required
+          /><input class="name" type="text" required />
+          <div class="beer-pic">
+            <div class="image-1">
+              <img class="image-1-icon" alt="" src="../beer%20(2)/public/image-1@2x.png" />
+            </div>
+          </div>
+          <div class="title">
+            <div class="add-a-new1">Add a New Beer</div>
+            <img
+              class="buttonstransparentlarge-icon"
+              alt=""
+              src="../beer%20(2)/public/buttonstransparentlarge.svg"
+            />
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    </div>
+  </div>
+  </body>
+</html>
+      

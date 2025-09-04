@@ -1,0 +1,236 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  contain: layout style size;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s, color 0.4s;
+
+  @include vp-1023 {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.cursor::before {
+  content: "";
+  position: absolute;
+  top: size(-24px);
+  left: size(-24px);
+  display: block;
+  width: size(48px);
+  height: size(48px);
+  transform: scale(0);
+  background: currentColor;
+  border-radius: 50%;
+  transition: transform 0.25s ease-in-out, opacity 0.1s;
+}
+
+.cursor-text {
+  position: absolute;
+  top: size(-18px);
+  left: size(-18px);
+  width: size(36px);
+  height: size(36px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0) rotate(10deg);
+  opacity: 0;
+  color: $color-default-white;
+  font-size: size(16px);
+  line-height: size(20px);
+  text-align: center;
+  transition: opacity 0.4s, transform 0.3s;
+  color: $color-nero;
+}
+
+.cursor-media {
+  display: block;
+  position: absolute;
+  width: size(350px);
+  height: size(350px);
+  margin: size(-175px) 0 0 size(-175px);
+}
+
+@media (min-width: size(1600px)) {
+  .cursor-media {
+    width: size(430px);
+    height: size(430px);
+    margin: size(-215px) 0 0 size(-215px);
+  }
+}
+
+.cursor-media-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: scale(0) translateZ(0);
+  transform-origin: center center;
+  padding: size(1px);
+  opacity: 0;
+  border-radius: 50%;
+  transition: transform 0.35s, opacity 0.2s 0.2s;
+}
+
+.cursor-media img,
+.cursor-media video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+@supports ((-o-object-fit:cover) or (object-fit:cover)) {
+  .cursor-media img,
+  .cursor-media video {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateZ(0);
+  }
+}
+
+@supports (mix-blend-mode:exclusion) {
+  .cursor.exclusion,
+  .cursor.media.media-blend,
+  .cursor.opaque {
+    mix-blend-mode: exclusion;
+  }
+}
+
+@supports (mix-blend-mode:exclusion) {
+  .cursor.exclusion::before,
+  .cursor.media.media-blend::before,
+  .cursor.opaque::before {
+    background: $color-default-white;
+  }
+}
+
+.cursor.normal,
+.cursor.text {
+  mix-blend-mode: normal;
+}
+
+.cursor.normal::before,
+.cursor.text::before {
+  background: currentColor;
+}
+
+.cursor.inverse {
+  color: $color-cream-brulee;
+}
+
+.cursor.visible::before {
+  transform: scale(0.2);
+}
+
+.checkbox_rounded label > input:checked ~ .cursor.visible.checkbox_rounded-box::before,
+.cursor.visible.active::before,
+.menu.open .menu-toggle button.cursor.visible::before {
+  transform: scale(0.23);
+  transition-duration: 0.2s;
+}
+
+.cursor.pointer::before {
+  transform: scale(0.15);
+}
+
+.cursor.text::before {
+  background: rgba(152, 108, 242, 0.7);
+  transform: scale(2.35);
+}
+
+.cursor.text .cursor-text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.checkbox_rounded label > input:checked ~ .cursor.text.checkbox_rounded-box::before,
+.cursor.text.active::before,
+.menu.open .menu-toggle button.cursor.text::before {
+  transform: scale(1.6);
+  transition-duration: 0.2s;
+}
+
+.cursor.icon::before {
+  background: rgba($color-default-white, 0.8);
+  transform: scale(2.1);
+}
+
+.checkbox_rounded label > input:checked ~ .cursor.icon.checkbox_rounded-box::before,
+.cursor.icon.active::before,
+.menu.open .menu-toggle button.cursor.icon::before {
+  transform: scale(1.4);
+}
+
+.cursor.media {
+  z-index: 0;
+}
+
+.cursor.media .cursor-media-box {
+  opacity: 1;
+  transform: scale(0.696);
+  transition-duration: 0.4s, 0.4s;
+  transition-delay: 0s, 0s;
+}
+
+.cursor.media.media-lg .cursor-media-box {
+  transform: scale(1) !important
+}
+
+@supports (mix-blend-mode:exclusion) {
+  .cursor.media.media-blend {
+    z-index: 150;
+  }
+}
+
+@supports (mix-blend-mode:exclusion) {
+  .cursor.media.media-blend .cursor-media-box {
+    filter: invert(1);
+  }
+}
+
+.cursor.menu::before {
+  transform: scale(1.32);
+}
+
+.checkbox_rounded label > input:checked ~ .cursor.menu.checkbox_rounded-box::before,
+.cursor.menu.active::before,
+.menu.open .menu-toggle button.cursor.menu::before {
+  transform: scale(1.2);
+}
+
+.cursor.opaque::before {
+  transform: scale(1.32);
+}
+
+.checkbox_rounded label > input:checked ~ .cursor.opaque.checkbox_rounded-box::before,
+.cursor.opaque.active::before,
+.menu.open .menu-toggle button.cursor.opaque::before {
+  transform: scale(1.2);
+}
+
+.cursor.loading::before {
+  animation: cursor-loading 0.6s 0.1s infinite alternate-reverse;
+  transform: scale(0.3);
+}
+
+.cursor.hidden::before {
+  transform: scale(0);
+}
+
+@keyframes cursor-loading {
+  0% {
+    transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(0.3);
+  }
+}

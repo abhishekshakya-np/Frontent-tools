@@ -1,0 +1,8 @@
+.container-3d {
+  perspective: 500px;
+  transform: translateZ(0);
+
+  & > * {
+    will-change: transform;
+  }
+}

@@ -1,0 +1,49 @@
+.call-to-action {
+  padding: size(80px) 0;
+  z-index: 1;
+  position: relative;
+
+  @include vp-767 {
+    padding: 40px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: size(656px);
+    margin: 0;
+    margin-bottom: size(24px);
+    font-weight: 400;
+    font-size: size(60px);
+    line-height: 95%;
+    text-align: center;
+    color: $color-nero;
+
+    @include vp-767 {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    margin-bottom: size(40px);
+    font-size: size(20px);
+    line-height: size(23px);
+    text-align: center;
+    color: $color-nero;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

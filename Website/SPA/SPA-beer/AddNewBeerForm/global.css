@@ -1,0 +1,46 @@
+:root {
+  /* fonts */
+  --font-ibm-plex-sans: "IBM Plex Sans";
+  --font-helvetica: Helvetica;
+
+  /* font sizes */
+  --font-size-2xs: 12px;
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-base: 18px;
+  --font-size-lg: 22px;
+  --font-size-xl: 26px;
+  --font-size-2xl: 30px;
+  --font-size-3xl: 36px;
+
+  /* Colors */
+  --white: #fff;
+  --color-gray-100: #1b2442;
+  --dark: #0f1730;
+  --color-gray-300: rgba(0, 0, 0, 0.5);
+  --border-color: #cfd4e2;
+  --color-dodgerblue-100: #0267c3;
+  --color-goldenrod: #d29824;
+  --color-black: #000;
+
+  /* Gaps */
+  --gap-sm: 40px;
+  --gap-md: 42px;
+
+  /* Paddings */
+  --padding-3xs: 3px;
+  --padding-2xs: 10px;
+  --padding-xs: 12px;
+  --padding-sm: 15px;
+  --padding-md: 16px;
+  --padding-lg: 18px;
+  --padding-xl: 20px;
+  --padding-2xl: 39px;
+
+  /* border radiuses */
+  --br-xs: 2px;
+  --br-sm: 4px;
+  --br-md: 5px;
+  --br-lg: 10px;
+  --br-xl: 20px;
+}
