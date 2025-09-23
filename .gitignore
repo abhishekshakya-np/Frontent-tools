@@ -121,10 +121,12 @@ Office Work/CleverCowSCSS/bootstrapSnipit.html
 Office Work/CleverCowSCSS/indexx.html
 Office Work/CleverCowSCSS/file
 Office Work/CleverCowSCSS/package.json
+Office Work/CleverCowSCSS/package-lock.json
 
 Office Work/Mind's Mirror - Mental Health Tracking Landing Page/.gitignore
 Office Work/Mind's Mirror - Mental Health Tracking Landing Page/src/
 Office Work/Mind's Mirror - Mental Health Tracking Landing Page/package.json
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/package-lock.json
 Office Work/Mind's Mirror - Mental Health Tracking Landing Page/eslint.config.js
 Office Work/Mind's Mirror - Mental Health Tracking Landing Page/postcss.config.js
 Office Work/Mind's Mirror - Mental Health Tracking Landing Page/tailwind.config.js
