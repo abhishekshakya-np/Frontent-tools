@@ -103,7 +103,8 @@ if ($fileCount -gt 0) {
     if ($fileCount -gt 10) {
         Write-Host "  ... and $($fileCount - 10) more files" -ForegroundColor Gray
     }
-} else {
+}
+else {
     Write-Host "❌ No files were staged. Please check the file paths." -ForegroundColor Red
 }
 

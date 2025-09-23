@@ -107,6 +107,44 @@ Website/snippetsdevelop.github.io-master/
 Office Work/CleverCowSCSS/node_modules/
 Office Work/Mind's Mirror - Mental Health Tracking Landing Page/node_modules/
 
+# Office Work project files (keep only main index.html)
+Office Work/CleverCowBootstrap/css/
+Office Work/CleverCowBootstrap/fonts/
+Office Work/CleverCowBootstrap/image/
+Office Work/CleverCowBootstrap/js/
+Office Work/CleverCowBootstrap/join.html
+
+Office Work/CleverCowSCSS/assets/
+Office Work/CleverCowSCSS/scss/
+Office Work/CleverCowSCSS/vendors/
+Office Work/CleverCowSCSS/bootstrapSnipit.html
+Office Work/CleverCowSCSS/indexx.html
+Office Work/CleverCowSCSS/file
+Office Work/CleverCowSCSS/package.json
+
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/.gitignore
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/src/
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/package.json
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/eslint.config.js
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/postcss.config.js
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/tailwind.config.js
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/tsconfig.*.json
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/tsconfig.json
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/vite.config.ts
+
+# Magz project files (keep only main index.html and README.md)
+Projects/Magz-master/.gitignore
+Projects/Magz-master/css/
+Projects/Magz-master/js/
+Projects/Magz-master/scripts/
+Projects/Magz-master/images/
+Projects/Magz-master/src/
+Projects/Magz-master/*.html
+Projects/Magz-master/changelogs.md
+Projects/Magz-master/LICENSE
+!Projects/Magz-master/index.html
+!Projects/Magz-master/README.md
+
 # Keep only essential files from large projects
 # Exclude development files but keep demos
 **/bower_components/
