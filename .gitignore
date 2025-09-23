@@ -170,6 +170,19 @@ Projects/Magz-master/LICENSE
 **/server/
 **/*.php
 
+# Movie Website exclusions
+Projects/moviewebsite-master/node_modules/
+Projects/moviewebsite-master/build/
+Projects/moviewebsite-master/package-lock.json
+Projects/moviewebsite-master/.gitignore
+Projects/moviewebsite-master/src/
+Projects/moviewebsite-master/public/
+Projects/moviewebsite-master/package.json
+
+# Include only the static demo and README for Movie Website
+!Projects/moviewebsite-master/static-demo.html
+!Projects/moviewebsite-master/README.md
+
 # Keep main project files but exclude development artifacts
 !index.html
 !landing-style.css

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Website - React Demo</title>
+    <meta name="description" content="A React movie search website with OMDB API integration, debounced search, and Context API state management.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Lora:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --text-clr: #4a5c6c;
+            --bg-clr: #f2f4fc;
+            --border-clr: rgb(156, 176, 193);
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            background-color: var(--bg-clr);
+            min-height: 100vh;
+        }
+
+        h2 {
+            font-family: "Lora", serif;
+            color: var(--text-clr);
+            font-size: 2rem;
+            transition: all 0.5s linear;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            min-width: 10rem;
+            max-height: 30rem;
+            margin: 1rem 0;
+            border-radius: 1rem;
+            transition: all 0.3s linear;
+        }
+
+        .container {
+            max-width: 140rem;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Search Section */
+        .search-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 50rem;
+            margin: 5rem auto;
+        }
+
+        .search-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        .search-section form {
+            width: 100%;
+        }
+
+        .search-section input {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            border: 0.1rem solid var(--border-clr);
+            border-radius: 1rem;
+            font-size: 1.6rem;
+            outline: none;
+            transition: all 0.3s linear;
+        }
+
+        .search-section input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        .error {
+            color: #ff6b6b;
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+
+        /* Movie Grid */
+        .movie-page {
+            padding: 5rem 0;
+        }
+
+        .grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .grid-4-col {
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            transition: all 0.3s linear;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+        }
+
+        .card-info {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 30rem;
+            object-fit: cover;
+            margin: 0;
+        }
+
+        .title {
+            color: var(--text-clr);
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            font-size: 2rem;
+            color: var(--text-clr);
+        }
+
+        /* Demo Banner */
+        .demo-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .demo-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: "Lora", serif;
+        }
+
+        .demo-banner p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 55%;
+            }
+            
+            .demo-banner h1 {
+                font-size: 2.5rem;
+            }
+            
+            .grid-4-col {
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        <div class="container">
+            <h1>🎬 Movie Search Website</h1>
+            <p>React-based movie search application with OMDB API integration</p>
+            <div class="tech-stack">
+                <span class="tech-badge">React 18</span>
+                <span class="tech-badge">React Router</span>
+                <span class="tech-badge">Context API</span>
+                <span class="tech-badge">OMDB API</span>
+                <span class="tech-badge">Debounced Search</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <h2>Search Your Favourite Movie</h2>
+            <form action="#" onsubmit="handleSearch(event)">
+                <div>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="search movie"
+                        value="hacker"
+                    />
+                </div>
+            </form>
+            <div id="errorMessage" class="error" style="display: none;"></div>
+        </section>
+
+        <!-- Movie Grid -->
+        <section class="movie-page">
+            <div id="movieContainer" class="grid grid-4-col">
+                <!-- Movies will be loaded here -->
+            </div>
+            <div id="loading" class="loading" style="display: none;">Loading....</div>
+        </section>
+    </div>
+
+    <script>
+        // Demo movie data (simulating API response)
+        const demoMovies = [
+            {
+                imdbID: "tt0903747",
+                Title: "The Hacker Wars",
+                Year: "2014",
+                Type: "movie",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMjEyNzA4Nzk2NF5BMl5BanBnXkFtZTgwNzg4ODM0MzE@._V1_SX300.jpg"
+            },
+            {
+                imdbID: "tt0113243",
+                Title: "Hackers",
+                Year: "1995",
+                Type: "movie",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNmExMmMwZTItYjk3OC00NjczLWJlOTMtNGY2MzBkOGNhYzVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+            },
+            {
+                imdbID: "tt4158110",
+                Title: "Mr. Robot",
+                Year: "2015–2019",
+                Type: "series",
+                Poster: "https://m.media-amazon.com/images/M/MV5BM2QyNDIzOGMtNThhNS00NmUwLWI0ZjUtZjdkN2I1OTRjZWQ3XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg"
+            },
+            {
+                imdbID: "tt1285016",
+                Title: "The Social Network",
+                Year: "2010",
+                Type: "movie",
+                Poster: "https://m.media-amazon.com/images/M/MV5BOGUyZDUxZjEtMmIzMC00MzlmLTg4MGItZWJmMzBhZjE0Mjc1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+            },
+            {
+                imdbID: "tt0468569",
+                Title: "The Dark Knight",
+                Year: "2008",
+                Type: "movie",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
+            },
+            {
+                imdbID: "tt1375666",
+                Title: "Inception",
+                Year: "2010",
+                Type: "movie",
+                Poster: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
+            },
+            {
+                imdbID: "tt0133093",
+                Title: "The Matrix",
+                Year: "1999",
+                Type: "movie",
+                Poster: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            },
+            {
+                imdbID: "tt0816692",
+                Title: "Interstellar",
+                Year: "2014",
+                Type: "movie",
+                Poster: "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+            }
+        ];
+
+        let currentMovies = demoMovies;
+        let searchTimeout;
+
+        // Initialize the page
+        function init() {
+            displayMovies(currentMovies);
+            setupSearch();
+        }
+
+        // Display movies in the grid
+        function displayMovies(movies) {
+            const container = document.getElementById('movieContainer');
+            
+            if (!movies || movies.length === 0) {
+                container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: var(--text-clr); font-size: 1.6rem;">No movies found. Try searching for something else!</div>';
+                return;
+            }
+
+            container.innerHTML = movies.map(movie => {
+                const movieName = movie.Title.length > 15 ? movie.Title.substring(0, 15) + '...' : movie.Title;
+                const poster = movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x400/f2f4fc/4a5c6c?text=No+Image';
+                
+                return `
+                    <div class="card" onclick="showMovieDetails('${movie.imdbID}', '${movie.Title}')">
+                        <div class="card-info">
+                            <img src="${poster}" alt="${movie.Title}" onerror="this.src='https://via.placeholder.com/300x400/f2f4fc/4a5c6c?text=No+Image'" />
+                            <h3 class="title">${movieName}</h3>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Setup search functionality with debouncing
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.trim();
+                
+                // Clear previous timeout
+                clearTimeout(searchTimeout);
+                
+                // Set new timeout for debounced search
+                searchTimeout = setTimeout(() => {
+                    if (query.length > 0) {
+                        performSearch(query);
+                    } else {
+                        displayMovies(demoMovies);
+                    }
+                }, 500); // 500ms debounce
+            });
+        }
+
+        // Perform search (demo version with filtered results)
+        function performSearch(query) {
+            showLoading(true);
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                const filteredMovies = demoMovies.filter(movie => 
+                    movie.Title.toLowerCase().includes(query.toLowerCase())
+                );
+                
+                currentMovies = filteredMovies;
+                displayMovies(currentMovies);
+                showLoading(false);
+                
+                if (filteredMovies.length === 0) {
+                    showError('No movies found for your search. Try different keywords!');
+                } else {
+                    hideError();
+                }
+            }, 800); // Simulate network delay
+        }
+
+        // Handle form submission
+        function handleSearch(e) {
+            e.preventDefault();
+            const query = document.getElementById('searchInput').value.trim();
+            if (query) {
+                performSearch(query);
+            }
+        }
+
+        // Show/hide loading state
+        function showLoading(show) {
+            const loading = document.getElementById('loading');
+            const container = document.getElementById('movieContainer');
+            
+            if (show) {
+                loading.style.display = 'flex';
+                container.style.display = 'none';
+            } else {
+                loading.style.display = 'none';
+                container.style.display = 'grid';
+            }
+        }
+
+        // Show error message
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+
+        // Hide error message
+        function hideError() {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.style.display = 'none';
+        }
+
+        // Show movie details (demo alert)
+        function showMovieDetails(imdbID, title) {
+            alert(`🎬 Movie Details:\n\nTitle: ${title}\nIMDB ID: ${imdbID}\n\nNote: This is a demo version. In the full React app, this would navigate to a detailed movie page with complete information, cast, plot, and ratings.`);
+        }
+
+        // Initialize the application
+        init();
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation to cards
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            // Initially hide cards for animation
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.card');
+                cards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'all 0.5s ease';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

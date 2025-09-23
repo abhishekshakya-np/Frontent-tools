@@ -338,6 +338,24 @@ const projectData = {
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 3', 'SCSS', 'PHP', 'jQuery', 'Ion Icons'],
         demoUrl: 'Projects/Magz-master/index.html'
+    },
+    moviewebsite: {
+        title: 'Movie Search Website - React Application',
+        description: 'A modern React-based movie search website that demonstrates advanced React concepts including Context API, custom hooks, debounced search, and API integration with the OMDB database.',
+        features: [
+            'Real-time movie search with OMDB API',
+            'Debounced search input for performance',
+            'React Context API for state management',
+            'React Router for navigation',
+            'Custom hooks for data fetching',
+            'Responsive grid layout',
+            'Loading states and error handling',
+            'Movie details with poster images',
+            'Clean and modern UI design',
+            'Performance optimized search'
+        ],
+        technologies: ['React 18', 'React Router', 'Context API', 'OMDB API', 'Custom Hooks', 'Debounced Search'],
+        demoUrl: 'Projects/moviewebsite-master/static-demo.html'
     }
 };
 
@@ -912,6 +930,14 @@ function addFilterControls() {
                     onclick="filterByCategory('blog')" data-filter="blog">
                 <i class="fas fa-blog me-1"></i>Blog
             </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'entertainment' ? 'active' : ''}" 
+                    onclick="filterByCategory('entertainment')" data-filter="entertainment">
+                <i class="fas fa-film me-1"></i>Entertainment
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'api' ? 'active' : ''}" 
+                    onclick="filterByCategory('api')" data-filter="api">
+                <i class="fas fa-plug me-1"></i>API
+            </button>
         </div>
     `;
 
@@ -934,7 +960,7 @@ function updateSectionHeaders(category) {
 
     if (category === 'all') {
         projectsTitle.textContent = 'Featured Projects';
-        projectsSubtitle.textContent = 'Explore our collection of 20+ professional frontend websites and applications';
+        projectsSubtitle.textContent = 'Explore our collection of 21+ professional frontend websites and applications';
         snippetsTitle.textContent = 'Component Snippets & Utilities';
     } else {
         const categoryNames = {
@@ -947,7 +973,9 @@ function updateSectionHeaders(category) {
             'healthcare': 'Healthcare',
             'react': 'React Projects',
             'magazine': 'Magazine Templates',
-            'blog': 'Blog Templates'
+            'blog': 'Blog Templates',
+            'entertainment': 'Entertainment',
+            'api': 'API Integration'
         };
 
         const categoryName = categoryNames[category] || category;
