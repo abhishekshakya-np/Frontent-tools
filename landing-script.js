@@ -311,7 +311,7 @@ const projectData = {
             'Personalized wellness recommendations'
         ],
         technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Healthcare Tech', 'Mental Health'],
-        demoUrl: 'Office Work/Mind\'s Mirror - Mental Health Tracking Landing Page/index.html'
+        demoUrl: 'Office Work/Mind\'s Mirror - Mental Health Tracking Landing Page/static-demo.html'
     },
     magz: {
         title: 'Magz - Professional Magazine & Blog Template',

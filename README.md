@@ -1,6 +1,6 @@
 # Frontend Website Collection
 
-A comprehensive collection of responsive frontend websites showcasing modern web development techniques, professional designs, and best practices. This repository contains multiple projects built with Bootstrap, vanilla CSS/JS, and modern frontend technologies, ranging from business websites to interactive components.
+A comprehensive collection of **20+ responsive frontend websites** showcasing modern web development techniques, professional designs, and best practices. This repository contains multiple projects built with Bootstrap, vanilla CSS/JS, React, and modern frontend technologies, ranging from business websites to interactive components, healthcare applications, and magazine templates.
 
 ![Frontend Collection](https://via.placeholder.com/800x400/007bff/ffffff?text=Frontend+Website+Collection)
 
@@ -35,6 +35,20 @@ Sleek navigation bar with smooth animations, mobile overlay menu, and vanilla CS
 
 ### 📊 **Responsive Dashboard LightDark UI/** - Admin Dashboard
 Comprehensive dashboard with light/dark theme toggle, analytics charts, and responsive design.
+
+## 🆕 **NEW PROJECTS ADDED**
+
+### 💼 **CleverCow Bootstrap/** - Sustainability Platform (Bootstrap 5)
+Enhanced Bootstrap 5 version of CleverCow sustainability platform with modern components and improved responsive design.
+
+### 🎨 **CleverCow SCSS/** - Advanced Sustainability Platform  
+Advanced SCSS version with modular architecture, custom build system, and sophisticated styling for enterprise-level sustainability management.
+
+### 🧠 **Mind's Mirror/** - Mental Health Tracking Platform
+A comprehensive mental health tracking and goal management system designed for individuals managing bipolar disorder and other mental health conditions with modern React architecture.
+
+### 📰 **Magz Magazine/** - Professional Magazine & Blog Template
+A comprehensive HTML5 & CSS3 magazine template based on Bootstrap 3, featuring 14+ pages, unlimited color skins, and advanced functionality for modern publishing platforms.
 
 ## 🚀 Quick Start Guide
 
@@ -105,6 +119,10 @@ xdg-open index.html
 | **FAQ Accordion**     | Bootstrap 5       | Component     | Frontend Mentor challenge     | ⭐⭐         |
 | **Navigation**        | Vanilla CSS       | Component     | Mobile overlay, animations    | ⭐⭐⭐        |
 | **Dashboard**         | CSS Grid          | Dashboard     | Light/dark theme, charts      | ⭐⭐⭐⭐       |
+| **CleverCow Bootstrap** | Bootstrap 5     | Sustainability| Carbon tracking, eco-solutions| ⭐⭐⭐        |
+| **CleverCow SCSS**    | Custom SCSS       | Sustainability| Modular architecture, build   | ⭐⭐⭐⭐       |
+| **Mind's Mirror**     | React/TypeScript  | Healthcare    | Mental health tracking        | ⭐⭐⭐⭐       |
+| **Magz Magazine**     | Bootstrap 3       | Publishing    | 14+ pages, multiple skins     | ⭐⭐⭐⭐       |
 
 ## 🎨 Design Features Across Projects
 
@@ -123,13 +141,39 @@ xdg-open index.html
 - **Tours**: Purple gradients (`rgba(49, 24, 131, 0.9)`)
 - **The Rosa**: Gold accent (`#c59d5f`)
 
+## 🎯 **NEW: Smart Category Filtering System**
+
+Our enhanced landing page now features an intelligent category filtering system:
+
+### 🏷️ **Available Categories:**
+- **🧩 UI Components** - Navigation bars, dashboards, accordions
+- **📧 Email Templates** - Professional email designs (12+ templates)  
+- **📄 PDF Templates** - Invoice and document templates (6+ templates)
+- **💻 Code Utilities** - React components, SCSS files (5+ tools)
+- **💼 Office Work** - Business projects and corporate solutions
+- **👤 Portfolio** - Personal portfolio templates (5+ designs)
+- **❤️ Healthcare** - Mental health and wellness applications
+- **⚛️ React** - Modern React-based projects
+- **📰 Magazine** - Publishing and blog templates
+- **📝 Blog** - Content management and blogging solutions
+
+### ✨ **Features:**
+- **Smart Filtering**: Click any category to instantly filter projects
+- **Multi-Category Support**: Projects can belong to multiple categories
+- **URL Persistence**: Share filtered views with others
+- **Smooth Animations**: Beautiful transitions between categories
+- **Mobile Responsive**: Works perfectly on all devices
+- **Loading States**: Professional loading animations
+
 ## 🔧 Technical Stack
 
 ### Frontend Technologies
 - **HTML5**: Semantic markup and modern standards
 - **CSS3**: Flexbox, Grid, animations, custom properties
 - **JavaScript ES6+**: Modern JavaScript features
-- **Bootstrap 4 & 5**: Responsive framework
+- **React & TypeScript**: Modern component-based architecture
+- **Bootstrap 3, 4 & 5**: Responsive frameworks
+- **SCSS/Sass**: Advanced CSS preprocessing
 - **Font Awesome**: Icon libraries
 - **Google Fonts**: Typography enhancement
 
@@ -385,7 +429,18 @@ This project collection is open source and available under the [MIT License](LIC
 
 ## 📋 Version History
 
-### Recent Updates
+### 🆕 Latest Updates (2024)
+- ✅ **Added 4 new major projects** (CleverCow Bootstrap/SCSS, Mind's Mirror, Magz)
+- ✅ **Implemented smart category filtering system** with 10 categories
+- ✅ **Enhanced text gradient** with animated rainbow colors
+- ✅ **Updated project count** from 16+ to 20+ projects
+- ✅ **Added comprehensive project modals** with detailed information
+- ✅ **Improved git repository management** with smart .gitignore
+- ✅ **Created auto-start scripts** for easy local development
+- ✅ **Enhanced responsive design** across all projects
+- ✅ **Added healthcare and React categories** for specialized projects
+
+### Previous Updates
 - ✅ Fixed CSS syntax errors across all projects
 - ✅ Updated Bootstrap versions to latest stable
 - ✅ Enhanced responsive design implementations
@@ -400,6 +455,10 @@ This project collection is open source and available under the [MIT License](LIC
 - **Nuno Collection**: ✅ Complete suite ready
 - **Tours Website**: ✅ Production ready
 - **The Rosa**: ✅ Production ready
+- **CleverCow Bootstrap**: ✅ Production ready
+- **CleverCow SCSS**: ✅ Production ready
+- **Mind's Mirror**: ✅ Production ready
+- **Magz Magazine**: ✅ Production ready
 
 ## 🌟 Showcase
 
@@ -416,7 +475,7 @@ Projects feature:
 
 ## 🎉 Conclusion
 
-This Frontend Website Collection provides a comprehensive foundation for modern web development. Whether you're a beginner learning responsive design or an experienced developer looking for project templates, these 10 websites and components offer professional-grade examples with clean code and modern best practices across multiple technologies.
+This Frontend Website Collection provides a comprehensive foundation for modern web development. Whether you're a beginner learning responsive design or an experienced developer looking for project templates, these **20+ websites and components** offer professional-grade examples with clean code and modern best practices across multiple technologies including **React, TypeScript, SCSS, healthcare applications, and magazine templates**.
 
 **Happy coding!** 🚀
 
