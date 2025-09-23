@@ -107,22 +107,22 @@ xdg-open index.html
 
 ## 📊 Projects Comparison
 
-| Project               | Bootstrap Version | Type          | Features                      | Difficulty |
-| --------------------- | ----------------- | ------------- | ----------------------------- | ---------- |
-| **Agency**            | 5.3.3             | Business      | Gradient design, testimonials | ⭐⭐         |
-| **Books-4**           | 4.3.1             | E-commerce    | Course selling, pricing       | ⭐⭐         |
-| **Books-5**           | 5.3.3             | E-commerce    | Modern design, improved UX    | ⭐⭐⭐        |
-| **bootstrap4-master** | 4.x               | Portfolio     | Landing page, smooth scroll   | ⭐⭐         |
-| **Nuno**              | 4.x & 5.x         | Multi-purpose | Complete theme suite          | ⭐⭐⭐⭐       |
-| **Tours**             | Custom            | Tourism       | Adventure booking, parallax   | ⭐⭐⭐        |
-| **The Rosa**          | Custom            | Restaurant    | Elegant animations, menu      | ⭐⭐⭐⭐       |
-| **FAQ Accordion**     | Bootstrap 5       | Component     | Frontend Mentor challenge     | ⭐⭐         |
-| **Navigation**        | Vanilla CSS       | Component     | Mobile overlay, animations    | ⭐⭐⭐        |
-| **Dashboard**         | CSS Grid          | Dashboard     | Light/dark theme, charts      | ⭐⭐⭐⭐       |
-| **CleverCow Bootstrap** | Bootstrap 5     | Sustainability| Carbon tracking, eco-solutions| ⭐⭐⭐        |
-| **CleverCow SCSS**    | Custom SCSS       | Sustainability| Modular architecture, build   | ⭐⭐⭐⭐       |
-| **Mind's Mirror**     | React/TypeScript  | Healthcare    | Mental health tracking        | ⭐⭐⭐⭐       |
-| **Magz Magazine**     | Bootstrap 3       | Publishing    | 14+ pages, multiple skins     | ⭐⭐⭐⭐       |
+| Project                 | Bootstrap Version | Type           | Features                       | Difficulty |
+| ----------------------- | ----------------- | -------------- | ------------------------------ | ---------- |
+| **Agency**              | 5.3.3             | Business       | Gradient design, testimonials  | ⭐⭐         |
+| **Books-4**             | 4.3.1             | E-commerce     | Course selling, pricing        | ⭐⭐         |
+| **Books-5**             | 5.3.3             | E-commerce     | Modern design, improved UX     | ⭐⭐⭐        |
+| **bootstrap4-master**   | 4.x               | Portfolio      | Landing page, smooth scroll    | ⭐⭐         |
+| **Nuno**                | 4.x & 5.x         | Multi-purpose  | Complete theme suite           | ⭐⭐⭐⭐       |
+| **Tours**               | Custom            | Tourism        | Adventure booking, parallax    | ⭐⭐⭐        |
+| **The Rosa**            | Custom            | Restaurant     | Elegant animations, menu       | ⭐⭐⭐⭐       |
+| **FAQ Accordion**       | Bootstrap 5       | Component      | Frontend Mentor challenge      | ⭐⭐         |
+| **Navigation**          | Vanilla CSS       | Component      | Mobile overlay, animations     | ⭐⭐⭐        |
+| **Dashboard**           | CSS Grid          | Dashboard      | Light/dark theme, charts       | ⭐⭐⭐⭐       |
+| **CleverCow Bootstrap** | Bootstrap 5       | Sustainability | Carbon tracking, eco-solutions | ⭐⭐⭐        |
+| **CleverCow SCSS**      | Custom SCSS       | Sustainability | Modular architecture, build    | ⭐⭐⭐⭐       |
+| **Mind's Mirror**       | React/TypeScript  | Healthcare     | Mental health tracking         | ⭐⭐⭐⭐       |
+| **Magz Magazine**       | Bootstrap 3       | Publishing     | 14+ pages, multiple skins      | ⭐⭐⭐⭐       |
 
 ## 🎨 Design Features Across Projects
 
