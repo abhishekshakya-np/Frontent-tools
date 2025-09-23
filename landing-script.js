@@ -250,6 +250,94 @@ const projectData = {
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'AOS', 'Swiper', 'GLightbox'],
         demoUrl: 'nova-new-1.0.0/index.html'
+    },
+    clevercowbootstrap: {
+        title: 'CleverCow Bootstrap - Sustainability Platform',
+        description: 'Enhanced Bootstrap 5 version of CleverCow sustainability platform with modern components, improved responsive design, and advanced eco-tracking features for businesses.',
+        features: [
+            'Bootstrap 5.3 framework integration',
+            'Modern responsive design',
+            'Carbon footprint tracking dashboard',
+            'Sustainability metrics visualization',
+            'Corporate eco-friendly solutions',
+            'Enhanced user interface components',
+            'Mobile-optimized experience',
+            'Interactive sustainability tools',
+            'Business analytics integration',
+            'Green technology showcase',
+            'Environmental impact calculator',
+            'Eco-certification tracking'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Sustainability Tech', 'Analytics'],
+        demoUrl: 'Office Work/CleverCowBootstrap/index.html'
+    },
+    clevercowscss: {
+        title: 'CleverCow SCSS - Advanced Sustainability Platform',
+        description: 'Advanced SCSS version of CleverCow with modular architecture, custom build system, and sophisticated styling for enterprise-level sustainability management.',
+        features: [
+            'Modular SCSS architecture',
+            'Custom build system with Node.js',
+            'Advanced component library',
+            'Scalable CSS methodology',
+            'Performance-optimized stylesheets',
+            'Custom design system',
+            'Advanced sustainability metrics',
+            'Enterprise-grade features',
+            'Responsive grid system',
+            'Custom animations and transitions',
+            'Theme customization system',
+            'Development workflow optimization'
+        ],
+        technologies: ['HTML5', 'SCSS', 'JavaScript', 'Node.js', 'Build Tools', 'Custom Framework'],
+        demoUrl: 'Office Work/CleverCowSCSS/index.html'
+    },
+    mindsmirror: {
+        title: 'Mind\'s Mirror - Mental Health Tracking Platform',
+        description: 'A comprehensive mental health tracking and goal management system specifically designed for individuals managing bipolar disorder and other mental health conditions with modern React architecture.',
+        features: [
+            'Mental health tracking dashboard',
+            'Bipolar disorder management tools',
+            'Goal setting and progress tracking',
+            'Mood monitoring and analytics',
+            'Medication reminder system',
+            'Wellness goal management',
+            'Data visualization charts',
+            'Progress reporting features',
+            'Healthcare provider integration',
+            'Privacy-focused design',
+            'Mobile-responsive interface',
+            'Accessibility-compliant UI',
+            'Real-time health insights',
+            'Personalized wellness recommendations'
+        ],
+        technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Healthcare Tech', 'Mental Health'],
+        demoUrl: 'Office Work/Mind\'s Mirror - Mental Health Tracking Landing Page/index.html'
+    },
+    magz: {
+        title: 'Magz - Professional Magazine & Blog Template',
+        description: 'A comprehensive HTML5 & CSS3 magazine template based on Bootstrap 3, featuring 14+ pages, unlimited color skins, and advanced functionality for modern publishing platforms.',
+        features: [
+            'Fully responsive design for all devices',
+            '14+ complete pages (Home, Article, Category, Search, etc.)',
+            'Bootstrap 3 framework integration',
+            'Unlimited color skins and themes',
+            'Working contact form with PHPMailer',
+            '20+ social media buttons',
+            'Advanced search functionality',
+            'User authentication system (Login/Register)',
+            'Error pages (403, 404, 500, 503)',
+            'SASS/SCSS support for easy customization',
+            'Ion Icons font integration',
+            'Google Fonts integration',
+            'jQuery plugins (Owl Carousel, Magnific Popup)',
+            'Sweet Alert notifications',
+            'Cross-browser compatibility',
+            'SEO-optimized structure',
+            'Professional documentation included',
+            'Magazine-style layout design'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 3', 'SCSS', 'PHP', 'jQuery', 'Ion Icons'],
+        demoUrl: 'Projects/Magz-master/index.html'
     }
 };
 
@@ -808,6 +896,22 @@ function addFilterControls() {
                     onclick="filterByCategory('portfolio')" data-filter="portfolio">
                 <i class="fas fa-user-tie me-1"></i>Portfolio
             </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'healthcare' ? 'active' : ''}" 
+                    onclick="filterByCategory('healthcare')" data-filter="healthcare">
+                <i class="fas fa-heart me-1"></i>Healthcare
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'react' ? 'active' : ''}" 
+                    onclick="filterByCategory('react')" data-filter="react">
+                <i class="fab fa-react me-1"></i>React
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'magazine' ? 'active' : ''}" 
+                    onclick="filterByCategory('magazine')" data-filter="magazine">
+                <i class="fas fa-newspaper me-1"></i>Magazine
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'blog' ? 'active' : ''}" 
+                    onclick="filterByCategory('blog')" data-filter="blog">
+                <i class="fas fa-blog me-1"></i>Blog
+            </button>
         </div>
     `;
 
@@ -830,7 +934,7 @@ function updateSectionHeaders(category) {
 
     if (category === 'all') {
         projectsTitle.textContent = 'Featured Projects';
-        projectsSubtitle.textContent = 'Explore our collection of 16+ professional frontend websites and applications';
+        projectsSubtitle.textContent = 'Explore our collection of 20+ professional frontend websites and applications';
         snippetsTitle.textContent = 'Component Snippets & Utilities';
     } else {
         const categoryNames = {
@@ -839,7 +943,11 @@ function updateSectionHeaders(category) {
             'pdf-templates': 'PDF Templates',
             'code-utilities': 'Code Utilities',
             'office-work': 'Office Work',
-            'portfolio': 'Portfolio'
+            'portfolio': 'Portfolio',
+            'healthcare': 'Healthcare',
+            'react': 'React Projects',
+            'magazine': 'Magazine Templates',
+            'blog': 'Blog Templates'
         };
 
         const categoryName = categoryNames[category] || category;

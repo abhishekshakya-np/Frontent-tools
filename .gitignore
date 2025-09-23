@@ -1,0 +1,141 @@
+# Node modules and package manager files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# Build outputs and dist folders
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vuepress/dist/
+
+# Development and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.env
+.env.local
+.env.production
+.env.staging
+
+# Compiled CSS and JS (keep source files)
+*.min.css
+*.min.js
+*.map
+
+# Large media files (keep only essential ones)
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.webm
+
+# Font files (keep only essential ones)
+*.eot
+*.ttf
+*.woff
+*.woff2
+*.otf
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Documentation files that are too large
+*.epub
+*.mobi
+*.pdf
+
+# Temporary and cache files
+.cache/
+.tmp/
+tmp/
+temp/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# SCSS cache
+.sass-cache/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Sketch files
+*.sketch
+
+# Large image directories (comment out if needed)
+# images/
+# img/
+
+# Specific large directories to exclude
+Code Utilities/css/
+Code Utilities/Lesson/css/
+Component Snippets/carousel-20/
+Website/snippetsdevelop.github.io-master/
+Office Work/CleverCowSCSS/node_modules/
+Office Work/Mind's Mirror - Mental Health Tracking Landing Page/node_modules/
+
+# Keep only essential files from large projects
+# Exclude development files but keep demos
+**/bower_components/
+**/vendor/
+**/.git/
+**/__MACOSX/
+**/RecycleBin/
+
+# Exclude source maps and development files
+*.map
+*.scss.map
+*.css.map
+*.js.map
+
+# Exclude large documentation folders
+**/documentation/
+**/docs/build/
+**/site/
+
+# Exclude server-side files (keep for demo but exclude from git)
+**/server/
+**/*.php
+
+# Keep main project files but exclude development artifacts
+!index.html
+!landing-style.css
+!landing-script.js
+!README.md
+!package.json
+!server.py
+!start-local.bat
+!start-local.ps1
