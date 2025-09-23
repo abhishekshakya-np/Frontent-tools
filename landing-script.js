@@ -471,11 +471,35 @@ function copySnippetPath(path) {
     });
 }
 
-// Typing effect for hero title
+// Typing effect for hero title (HTML-aware)
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
 
+    // Parse HTML to separate text and tags
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    const textContent = element.textContent || element.innerText;
+
+    // For complex HTML, just show it immediately with fade-in effect
+    if (text.includes('<span')) {
+        element.style.opacity = '0';
+        element.innerHTML = text;
+
+        // Fade in effect
+        let opacity = 0;
+        const fadeIn = setInterval(() => {
+            opacity += 0.05;
+            element.style.opacity = opacity;
+            if (opacity >= 1) {
+                clearInterval(fadeIn);
+                element.style.opacity = '1';
+            }
+        }, 30);
+        return;
+    }
+
+    // Simple text typing effect for plain text
     function type() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
@@ -494,7 +518,7 @@ window.addEventListener('load', function () {
         const originalText = heroTitle.innerHTML;
         setTimeout(() => {
             typeWriter(heroTitle, originalText, 50);
-        }, 1000);
+        }, 500);
     }
 });
 
@@ -684,3 +708,194 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
+// Category filtering functionality
+let currentFilter = 'all';
+
+function filterByCategory(category) {
+    currentFilter = category;
+
+    // Show loading state
+    showFilteringLoader();
+
+    // Get all project and snippet cards
+    const projectCards = document.querySelectorAll('#projects .col-lg-4, #projects .col-md-6');
+    const snippetCards = document.querySelectorAll('#snippets .col-lg-4, #snippets .col-md-6');
+    const allCards = [...projectCards, ...snippetCards];
+
+    // Add filter controls if not exists
+    addFilterControls();
+
+    // Filter cards with animation
+    setTimeout(() => {
+        allCards.forEach((card, index) => {
+            const cardCategories = card.dataset.category || '';
+            const shouldShow = category === 'all' || cardCategories.includes(category);
+
+            if (shouldShow) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 50);
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+
+        // Update section headers
+        updateSectionHeaders(category);
+
+        // Hide loading state
+        hideFilteringLoader();
+
+        // Scroll to projects section
+        document.querySelector('#projects').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+
+        // Update URL without page reload
+        const url = new URL(window.location);
+        if (category === 'all') {
+            url.searchParams.delete('category');
+        } else {
+            url.searchParams.set('category', category);
+        }
+        window.history.pushState({}, '', url);
+
+    }, 300);
+}
+
+function addFilterControls() {
+    // Check if filter controls already exist
+    if (document.querySelector('.filter-controls')) return;
+
+    const projectsSection = document.querySelector('#projects .container');
+    const filterControls = document.createElement('div');
+    filterControls.className = 'mb-4 filter-controls';
+    filterControls.innerHTML = `
+        <div class="d-flex justify-content-center align-items-center flex-wrap gap-2">
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'all' ? 'active' : ''}" 
+                    onclick="filterByCategory('all')" data-filter="all">
+                <i class="fas fa-th me-1"></i>All Projects
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'ui-components' ? 'active' : ''}" 
+                    onclick="filterByCategory('ui-components')" data-filter="ui-components">
+                <i class="fas fa-puzzle-piece me-1"></i>UI Components
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'email-templates' ? 'active' : ''}" 
+                    onclick="filterByCategory('email-templates')" data-filter="email-templates">
+                <i class="fas fa-envelope me-1"></i>Email Templates
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'pdf-templates' ? 'active' : ''}" 
+                    onclick="filterByCategory('pdf-templates')" data-filter="pdf-templates">
+                <i class="fas fa-file-pdf me-1"></i>PDF Templates
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'code-utilities' ? 'active' : ''}" 
+                    onclick="filterByCategory('code-utilities')" data-filter="code-utilities">
+                <i class="fas fa-code me-1"></i>Code Utilities
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'office-work' ? 'active' : ''}" 
+                    onclick="filterByCategory('office-work')" data-filter="office-work">
+                <i class="fas fa-briefcase me-1"></i>Office Work
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'portfolio' ? 'active' : ''}" 
+                    onclick="filterByCategory('portfolio')" data-filter="portfolio">
+                <i class="fas fa-user-tie me-1"></i>Portfolio
+            </button>
+        </div>
+    `;
+
+    const sectionHeader = projectsSection.querySelector('.section-header');
+    sectionHeader.insertAdjacentElement('afterend', filterControls);
+}
+
+function updateSectionHeaders(category) {
+    const projectsTitle = document.querySelector('#projects .section-title');
+    const projectsSubtitle = document.querySelector('#projects .section-subtitle');
+    const snippetsTitle = document.querySelector('#snippets .section-title');
+
+    // Update active filter button
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.filter === category) {
+            btn.classList.add('active');
+        }
+    });
+
+    if (category === 'all') {
+        projectsTitle.textContent = 'Featured Projects';
+        projectsSubtitle.textContent = 'Explore our collection of 16+ professional frontend websites and applications';
+        snippetsTitle.textContent = 'Component Snippets & Utilities';
+    } else {
+        const categoryNames = {
+            'ui-components': 'UI Components',
+            'email-templates': 'Email Templates',
+            'pdf-templates': 'PDF Templates',
+            'code-utilities': 'Code Utilities',
+            'office-work': 'Office Work',
+            'portfolio': 'Portfolio'
+        };
+
+        const categoryName = categoryNames[category] || category;
+        projectsTitle.textContent = `${categoryName} Collection`;
+        projectsSubtitle.textContent = `Browse all ${categoryName.toLowerCase()} in our collection`;
+        snippetsTitle.textContent = `${categoryName} Snippets & Components`;
+    }
+}
+
+function showFilteringLoader() {
+    // Add loading overlay
+    const loader = document.createElement('div');
+    loader.id = 'filtering-loader';
+    loader.innerHTML = `
+        <div class="filtering-overlay">
+            <div class="filtering-spinner">
+                <i class="fas fa-spinner fa-spin fa-2x text-primary"></i>
+                <p class="mt-2">Filtering projects...</p>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(loader);
+}
+
+function hideFilteringLoader() {
+    const loader = document.getElementById('filtering-loader');
+    if (loader) {
+        loader.remove();
+    }
+}
+
+// Initialize category filtering from URL on page load
+window.addEventListener('load', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryFromUrl = urlParams.get('category');
+
+    if (categoryFromUrl) {
+        setTimeout(() => {
+            filterByCategory(categoryFromUrl);
+        }, 1000);
+    }
+});
+
+// Enhanced category item hover effects
+document.addEventListener('DOMContentLoaded', function () {
+    const categoryItems = document.querySelectorAll('.category-item');
+
+    categoryItems.forEach(item => {
+        item.addEventListener('mouseenter', function () {
+            this.style.transform = 'translateY(-10px) scale(1.05)';
+            this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+        });
+
+        item.addEventListener('mouseleave', function () {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+        });
+    });
+});
