@@ -41,14 +41,42 @@ Comprehensive dashboard with light/dark theme toggle, analytics charts, and resp
 ### Prerequisites
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - Text editor for customization
-- Local web server (for some PHP features)
+- Python 3.x OR Node.js (for local server)
 
-### Installation
+### Auto-Start Local Server (Recommended)
+
+#### Option 1: Windows Batch File
+```bash
+# Double-click or run from command prompt
+start-local.bat
+```
+
+#### Option 2: PowerShell Script
+```powershell
+# Right-click and "Run with PowerShell" or from PowerShell
+.\start-local.ps1
+```
+
+#### Option 3: Using npm (if Node.js installed)
+```bash
+# Install dependencies and start
+npm install
+npm start
+```
+
+#### Option 4: Direct Python Server
+```bash
+# Navigate to project root and run
+python -m http.server 8000
+# Then open: http://localhost:8000
+```
+
+### Manual Installation
 1. **Choose Your Project**: Navigate to any project folder
 2. **Open in Browser**: Double-click `index.html` or use a local server
 3. **Customize**: Edit HTML, CSS, and JS files as needed
 
-### Running Projects
+### Running Individual Projects
 ```bash
 # Navigate to any project
 cd Agency  # or any other project folder
