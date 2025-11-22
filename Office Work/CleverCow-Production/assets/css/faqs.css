@@ -1,0 +1,183 @@
+/* linear gradient */
+/*Font family*/
+/* Font size */
+/* Adjusted Font Weights */
+/* padding size */
+/* viewport size */
+/* Business Banner Section */
+.faqs-banner-section {
+  background-image: url("../image/faqsBanner.png");
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-height: 500px;
+}
+.faqs-banner-section .banner-overlay {
+  background: rgba(0, 29, 23, 0.16);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.faqs-banner-section .container .row .col-md-12 .banner-content {
+  padding: 14rem 0;
+  position: relative;
+  z-index: 1;
+}
+.faqs-banner-section .container .row .col-md-12 .banner-content .title .faqs-banner-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3.5rem;
+}
+@media (max-width: 768px) {
+  .faqs-banner-section .container .row .col-md-12 .banner-content .title .faqs-banner-heading {
+    font-size: 2.5rem;
+  }
+}
+
+.business-us {
+  background-color: rgba(210, 238, 255, 0.4);
+}
+
+.title-NTC h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(0, 91, 73);
+  font-size: 3.5rem;
+}
+@media (max-width: 768px) {
+  .title-NTC h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.description-NTC .get-in {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgb(71, 70, 70);
+}
+
+/* //FAQ// */
+.faq-section {
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.faq-cards {
+  background-color: #e9f3ea;
+  border-radius: 40px;
+  border: none;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.faq-category {
+  margin-top: 1.5rem;
+}
+
+.faq-category .card-body {
+  display: none;
+}
+
+.accordion-item {
+  background-color: transparent !important;
+  border: 0px solid #e9f3ea;
+  border-bottom: 1px solid #6b778c;
+}
+
+.accordion-header {
+  background-color: transparent;
+  color: #005c4a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.faq-category h5 {
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.faq-category h4 {
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.faq-category .clip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.accordion-button {
+  background-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #005d4a;
+  font-weight: 600;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+  transition: all 0.5s;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+}
+
+.FAQ {
+  margin-top: 5.75rem;
+  background: #fff;
+}
+
+.faq-pane {
+  border: 1px solid #005c4a;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+}
+
+.theme-accordion {
+  margin: 1rem 0;
+}
+
+.theme-accordion .accordion-button {
+  background-color: transparent;
+}
+
+.theme-accordion .accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.theme-accordion .accordion-header a {
+  color: #005c4a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.theme-accordion .accordion-header .accordion-button:not(.collapsed) {
+  background: #bfeb5b;
+  color: #005c4a;
+  font-weight: 600;
+}
+
+.theme-accordion .accordion-body p,
+.accordion-body {
+  color: #005c4a;
+  font-size: 1.15rem;
+  font-weight: 400;
+}

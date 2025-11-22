@@ -183,6 +183,9 @@ Projects/moviewebsite-master/package.json
 !Projects/moviewebsite-master/static-demo.html
 !Projects/moviewebsite-master/README.md
 
+# CC Development folder exclusions (keep only production build)
+Office Work/CC/
+
 # Keep main project files but exclude development artifacts
 !index.html
 !landing-style.css

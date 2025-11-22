@@ -356,6 +356,24 @@ const projectData = {
         ],
         technologies: ['React 18', 'React Router', 'Context API', 'OMDB API', 'Custom Hooks', 'Debounced Search'],
         demoUrl: 'Projects/moviewebsite-master/static-demo.html'
+    },
+    clevercowprod: {
+        title: 'CleverCow Production - Sustainability Website',
+        description: 'A professional sustainability-focused website built with modern development tools including Bootstrap 5, Sass, and Gulp 4 build system. This production-ready version showcases optimized assets and clean, modular code architecture.',
+        features: [
+            'Bootstrap 5.2.3 with full customization support',
+            'Sass/SCSS integration for maintainable styles',
+            'Gulp 4 automated build system',
+            'Minified and optimized production assets',
+            'BrowserSync integration for development',
+            'Bootstrap Icons (1,800+ icons included)',
+            'Responsive design with mobile-first approach',
+            'SEO-optimized meta tags and structure',
+            'Clean, semantic HTML markup',
+            'Environmental sustainability focus'
+        ],
+        technologies: ['HTML5', 'Bootstrap 5', 'Sass/SCSS', 'Gulp 4', 'JavaScript', 'Bootstrap Icons'],
+        demoUrl: 'Office Work/CleverCow-Production/index.html'
     }
 };
 
@@ -938,6 +956,10 @@ function addFilterControls() {
                     onclick="filterByCategory('api')" data-filter="api">
                 <i class="fas fa-plug me-1"></i>API
             </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'sustainability' ? 'active' : ''}" 
+                    onclick="filterByCategory('sustainability')" data-filter="sustainability">
+                <i class="fas fa-leaf me-1"></i>Sustainability
+            </button>
         </div>
     `;
 
@@ -960,7 +982,7 @@ function updateSectionHeaders(category) {
 
     if (category === 'all') {
         projectsTitle.textContent = 'Featured Projects';
-        projectsSubtitle.textContent = 'Explore our collection of 21+ professional frontend websites and applications';
+        projectsSubtitle.textContent = 'Explore our collection of 22+ professional frontend websites and applications';
         snippetsTitle.textContent = 'Component Snippets & Utilities';
     } else {
         const categoryNames = {
@@ -975,7 +997,8 @@ function updateSectionHeaders(category) {
             'magazine': 'Magazine Templates',
             'blog': 'Blog Templates',
             'entertainment': 'Entertainment',
-            'api': 'API Integration'
+            'api': 'API Integration',
+            'sustainability': 'Sustainability'
         };
 
         const categoryName = categoryNames[category] || category;
