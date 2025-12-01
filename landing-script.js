@@ -920,25 +920,16 @@ Explore 7 amazing projects showcasing modern web development.
 Happy coding! 💻✨
 `);
 
-// Performance monitoring
-window.addEventListener('load', function () {
-    if ('performance' in window) {
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        console.log(`⚡ Page loaded in ${loadTime}ms`);
-    }
-});
-
-// Service Worker registration (if available)
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
-            })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
+// Performance monitoring (using modern Performance Observer API)
+if ('PerformanceObserver' in window) {
+    const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+            if (entry.entryType === 'navigation') {
+                console.log(`⚡ Page loaded in ${Math.round(entry.loadEventEnd)}ms`);
+            }
+        }
     });
+    observer.observe({ entryTypes: ['navigation'] });
 }
 
 // Category filtering functionality
