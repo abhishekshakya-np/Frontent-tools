@@ -7,6 +7,7 @@ try {
     $pythonVersion = python --version 2>$null
     if ($LASTEXITCODE -eq 0) {
         Write-Host "Using Custom Python Server..." -ForegroundColor Yellow
+        Write-Host "Python Version: $pythonVersion" -ForegroundColor Gray
         Write-Host ""
         
         # Start custom Python server

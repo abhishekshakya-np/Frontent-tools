@@ -251,6 +251,60 @@ const projectData = {
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'AOS', 'Swiper', 'GLightbox'],
         demoUrl: 'nova-new-1.0.0/index.html'
     },
+    wedding: {
+        title: 'Wedding Template - Elegant Event Website',
+        description: 'An elegant wedding website template featuring RSVP functionality, photo gallery, event timeline, and romantic design elements perfect for couples celebrating their special day.',
+        features: [
+            'Elegant romantic design',
+            'RSVP form functionality',
+            'Photo gallery with lightbox',
+            'Event timeline section',
+            'Countdown timer',
+            'Location maps integration',
+            'Guest book section',
+            'Responsive mobile design',
+            'Beautiful typography',
+            'Social media sharing'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Font Awesome'],
+        demoUrl: 'Projects/SF_SAMPLE_BootstrapWeddingTemplate_mufOle/index.html'
+    },
+    webview: {
+        title: 'Portfolio WebView - Professional Showcase',
+        description: 'A comprehensive portfolio template designed for professionals to showcase their work, skills, and experience with a clean, modern design and interactive elements.',
+        features: [
+            'Professional portfolio layout',
+            'Project gallery with filtering',
+            'Skills showcase section',
+            'Experience timeline',
+            'Contact form integration',
+            'Responsive design',
+            'Smooth animations',
+            'Social media links',
+            'Clean typography',
+            'Easy customization'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Portfolio Design'],
+        demoUrl: 'Portfolio/webView/webView/index.html'
+    },
+    clevercow: {
+        title: 'CleverCow - Sustainability Business Platform',
+        description: 'An innovative sustainability platform focused on carbon footprint tracking and eco-friendly business solutions. Features modern design with environmental consciousness at its core.',
+        features: [
+            'Carbon footprint tracking',
+            'Eco-friendly solutions showcase',
+            'Sustainability metrics dashboard',
+            'Business environmental impact tools',
+            'Green technology features',
+            'Responsive design',
+            'Modern UI components',
+            'Environmental certifications',
+            'Sustainability reports',
+            'Corporate eco-solutions'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Sustainability Tech'],
+        demoUrl: 'Office Work/Clevercow/index.html'
+    },
     clevercowbootstrap: {
         title: 'CleverCow Bootstrap - Sustainability Platform',
         description: 'Enhanced Bootstrap 5 version of CleverCow sustainability platform with modern components, improved responsive design, and advanced eco-tracking features for businesses.',
