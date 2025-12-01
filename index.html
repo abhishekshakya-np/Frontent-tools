@@ -35,7 +35,8 @@
                 <i class="fas fa-layer-group me-2"></i>
                 Frontend Collection
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -45,6 +46,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#website-projects">Website Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#snippets">Snippets</a>
@@ -63,1194 +67,1311 @@
     <!-- Main Content -->
     <main id="main-content">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero" aria-labelledby="hero-title">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h1 class="hero-title" id="hero-title">
-                        Frontend Website
-                        <span class="text-gradient">Collection</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        A comprehensive collection of 25+ professional frontend websites and 25+ component snippets
-                        showcasing modern web
-                        development techniques with Bootstrap, CSS Grid, Flexbox, AI integration, and JavaScript.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <h3>20+</h3>
-                            <p>Complete Projects</p>
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-background"></div>
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h1 class="hero-title" id="hero-title">
+                            Frontend Website
+                            <span class="text-gradient">Collection</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            A comprehensive collection of 25+ professional frontend websites and 25+ component snippets
+                            showcasing modern web
+                            development techniques with Bootstrap, CSS Grid, Flexbox, AI integration, and JavaScript.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <h3>20+</h3>
+                                <p>Complete Projects</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>25+</h3>
+                                <p>Code Snippets</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>100%</h3>
+                                <p>Responsive</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h3>25+</h3>
-                            <p>Code Snippets</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>100%</h3>
-                            <p>Responsive</p>
-                        </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary btn-lg me-3">
-                            <i class="fas fa-eye me-2"></i>View Projects
-                        </a>
-                        <a href="https://github.com" class="btn btn-outline-light btn-lg">
-                            <i class="fab fa-github me-2"></i>GitHub
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="hero-image">
-                        <div class="floating-card" data-aos="fade-up" data-aos-delay="200">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Mobile First</span>
-                        </div>
-                        <div class="floating-card" data-aos="fade-up" data-aos-delay="400">
-                            <i class="fas fa-rocket"></i>
-                            <span>Fast Loading</span>
-                        </div>
-                        <div class="floating-card" data-aos="fade-up" data-aos-delay="600">
-                            <i class="fas fa-palette"></i>
-                            <span>Modern Design</span>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-eye me-2"></i>View Projects
+                            </a>
+                            <a href="https://github.com" class="btn btn-outline-light btn-lg">
+                                <i class="fab fa-github me-2"></i>GitHub
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <a href="#projects">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="mb-5 text-center section-header" data-aos="fade-up">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Explore our collection of 25+ professional frontend websites and
-                    applications</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Agency Project -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-category="business">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/agency.svg" alt="Digital Agency" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/Agency/index.html" target="_blank" class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('agency')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-purple">Bootstrap 5</span>
-                                <span class="badge bg-secondary">Business</span>
-                            </div>
-                            <h3 class="project-title">Digital Agency</h3>
-                            <p class="project-description">Modern business website with gradient design, testimonials,
-                                and contact forms.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Books Bootstrap 4 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200"
-                    data-category="e-commerce education">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/books4.svg" alt="Books Platform v4" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/Books-bootstrap-4-website/src/Index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('books4')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-info">Bootstrap 4</span>
-                                <span class="badge bg-success">E-commerce</span>
-                            </div>
-                            <h3 class="project-title">Books Platform v4</h3>
-                            <p class="project-description">Educational platform with course selling, pricing tables, and
-                                testimonials.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Books Bootstrap 5 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300"
-                    data-category="e-commerce education">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/books5.svg" alt="Books Platform v5" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/Books-bootstrap-5-website/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('books5')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-primary">Bootstrap 5</span>
-                                <span class="badge bg-success">E-commerce</span>
-                            </div>
-                            <h3 class="project-title">Books Platform v5</h3>
-                            <p class="project-description">Updated version with Bootstrap 5, improved accessibility and
-                                modern components.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bootstrap 4 Master -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400" data-category="portfolio">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/bootstrap4master.svg" alt="Portfolio Landing" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/bootstrap4-website-master/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('bootstrap4master')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-warning">Bootstrap 4</span>
-                                <span class="badge bg-dark">Portfolio</span>
-                            </div>
-                            <h3 class="project-title">Portfolio Landing</h3>
-                            <p class="project-description">Professional portfolio website with smooth scrolling and
-                                project showcase.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nuno Theme -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500"
-                    data-category="business portfolio">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/nuno.svg" alt="Nuno Theme Collection" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/Nuno/nuno/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('nuno')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-gradient">Multi-version</span>
-                                <span class="badge bg-info">Theme Suite</span>
-                            </div>
-                            <h3 class="project-title">Nuno Theme Collection</h3>
-                            <p class="project-description">Complete Bootstrap theme suite with multiple versions
-                                (Bootstrap 4 & 5).</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tours Website -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600" data-category="tourism business">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/tours.svg" alt="Adventure Tours" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/outdoors-website/tours/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('tours')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-nature">Custom CSS</span>
-                                <span class="badge bg-adventure">Tourism</span>
-                            </div>
-                            <h3 class="project-title">Adventure Tours</h3>
-                            <p class="project-description">Nature tours website with beautiful imagery, responsive
-                                design, and booking features.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-mountain"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The Rosa Restaurant -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700"
-                    data-category="restaurant business">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/rosa.svg" alt="The Rosa Restaurant" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/the-rosa/the-rosa/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('rosa')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-gold">Custom CSS</span>
-                                <span class="badge bg-restaurant">Restaurant</span>
-                            </div>
-                            <h3 class="project-title">The Rosa Restaurant</h3>
-                            <p class="project-description">Elegant restaurant website with smooth animations, menu
-                                showcase, and reservation system.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-utensils"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bootstrap Accordion -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800" data-category="ui-components">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/accordion.svg" alt="FAQ Accordion" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Component Snippets/Bootstrap-Accordion-Frontend Mentor/index.html"
-                                        target="_blank" class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('accordion')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-purple">Bootstrap 5</span>
-                                <span class="badge bg-warning">Component</span>
-                            </div>
-                            <h3 class="project-title">FAQ Accordion</h3>
-                            <p class="project-description">Frontend Mentor challenge featuring smooth accordion
-                                animations and modern design.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Navigation Component -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900" data-category="ui-components">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/navigation.svg" alt="Modern Navigation" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Component Snippets/Navigation/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('navigation')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-success">Vanilla CSS</span>
-                                <span class="badge bg-warning">Component</span>
-                            </div>
-                            <h3 class="project-title">Modern Navigation</h3>
-                            <p class="project-description">Sleek navigation bar with smooth animations and mobile
-                                overlay menu.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-mobile-alt"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Responsive Dashboard -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1000"
-                    data-category="ui-components dashboard">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/dashboard.svg" alt="Admin Dashboard" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Component Snippets/Responsive Dashboard  LightDark UI/indexB.html"
-                                        target="_blank" class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('dashboard')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-dark">Dashboard</span>
-                                <span class="badge bg-info">Light/Dark</span>
-                            </div>
-                            <h3 class="project-title">Admin Dashboard</h3>
-                            <p class="project-description">Comprehensive dashboard with light/dark theme toggle and
-                                responsive design.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-chart-bar"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CSS Flexbox QR Code -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1100" data-category="ui-components">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/qrcode.svg" alt="QR Code Component" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Component Snippets/CSS-Flexbox-main/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('qrcode')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-success">CSS Flexbox</span>
-                                <span class="badge bg-warning">Component</span>
-                            </div>
-                            <h3 class="project-title">QR Code Component</h3>
-                            <p class="project-description">Responsive QR code card built with pure CSS Flexbox and
-                                modern layout techniques.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Chatbot -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1200"
-                    data-category="ui-components ai">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/aichatbot.svg" alt="AI Chatbot Assistant" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Component Snippets/AI-Chatbot-main/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('aichatbot')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-primary">AI Chatbot</span>
-                                <span class="badge bg-success">Gemini API</span>
-                            </div>
-                            <h3 class="project-title">AI Chatbot Assistant</h3>
-                            <p class="project-description">Intelligent conversational AI powered by Google Gemini with
-                                image upload and emoji picker.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-robot"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nova Bootstrap Template -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1300"
-                    data-category="business portfolio">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/nova.svg" alt="Nova Business Template" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/nova-new-1.0.0/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('nova')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-info">Bootstrap 5</span>
-                                <span class="badge bg-warning">Business</span>
-                            </div>
-                            <h3 class="project-title">Nova Business Template</h3>
-                            <p class="project-description">Professional Bootstrap 5 business template with multiple
-                                pages, portfolio, blog, and modern design.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wedding Template -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1400" data-category="wedding event">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/wedding.svg" alt="Wedding Template" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/SF_SAMPLE_BootstrapWeddingTemplate_mufOle/index.html"
-                                        target="_blank" class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('wedding')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-pink">Wedding</span>
-                                <span class="badge bg-romantic">Event</span>
-                            </div>
-                            <h3 class="project-title">Wedding Template</h3>
-                            <p class="project-description">Elegant wedding website template with RSVP, gallery, and
-                                event details.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-heart"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio WebView -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1500" data-category="portfolio">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/webview.svg" alt="Portfolio WebView" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Portfolio/webView/webView/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('webview')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-portfolio">Portfolio</span>
-                                <span class="badge bg-personal">Personal</span>
-                            </div>
-                            <h3 class="project-title">Portfolio WebView</h3>
-                            <p class="project-description">Comprehensive portfolio showcase with project gallery and
-                                professional presentation.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-user-tie"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CleverCow Business -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1600"
-                    data-category="office-work business">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/clevercow.svg" alt="CleverCow Business" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Office Work/Clevercow/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('clevercow')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-green">Sustainability</span>
-                                <span class="badge bg-business">Corporate</span>
-                            </div>
-                            <h3 class="project-title">CleverCow Business</h3>
-                            <p class="project-description">Innovative sustainability platform with carbon footprint
-                                tracking and eco-friendly solutions.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-leaf"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CleverCow Bootstrap -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1700"
-                    data-category="office-work business bootstrap">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/clevercowbootstrap.svg" alt="CleverCow Bootstrap" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Office Work/CleverCowBootstrap/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('clevercowbootstrap')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-primary">Bootstrap 5</span>
-                                <span class="badge bg-green">Sustainability</span>
-                            </div>
-                            <h3 class="project-title">CleverCow Bootstrap</h3>
-                            <p class="project-description">Bootstrap 5 version of CleverCow with enhanced components and
-                                modern responsive design.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-leaf"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CleverCow SCSS -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1800"
-                    data-category="office-work business scss">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/clevercowscss.svg" alt="CleverCow SCSS" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Office Work/CleverCowSCSS/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('clevercowscss')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-purple">SCSS</span>
-                                <span class="badge bg-green">Sustainability</span>
-                            </div>
-                            <h3 class="project-title">CleverCow SCSS</h3>
-                            <p class="project-description">Advanced SCSS version with modular architecture and custom
-                                build system.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-sass"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-cogs"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mind's Mirror Mental Health App -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1900"
-                    data-category="office-work healthcare react">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/mindsmirror.svg" alt="Mind's Mirror" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Office Work/Mind's Mirror - Mental Health Tracking Landing Page/static-demo.html"
-                                        target="_blank" class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('mindsmirror')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-info">React</span>
-                                <span class="badge bg-success">Healthcare</span>
-                            </div>
-                            <h3 class="project-title">Mind's Mirror</h3>
-                            <p class="project-description">Mental health tracking and goal management system for bipolar
-                                disorder and wellness.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-react"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-brain"></i></span>
-                                <span><i class="fas fa-heart"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Magz Magazine Template -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2000"
-                    data-category="magazine blog bootstrap">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/magz.svg" alt="Magz Magazine" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/Magz-master/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('magz')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-warning">Magazine</span>
-                                <span class="badge bg-info">Bootstrap 3</span>
-                            </div>
-                            <h3 class="project-title">Magz Magazine</h3>
-                            <p class="project-description">Professional magazine and blog template with 14+ pages,
-                                multiple skins, and advanced features.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-newspaper"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Movie Search Website -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2100"
-                    data-category="react entertainment api">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/moviewebsite.svg" alt="Movie Search Website" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Projects/moviewebsite-master/static-demo.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('moviewebsite')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-danger">React</span>
-                                <span class="badge bg-success">API</span>
-                            </div>
-                            <h3 class="project-title">Movie Search Website</h3>
-                            <p class="project-description">React-based movie search with OMDB API integration, debounced
-                                search, and Context API state management.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-react"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-film"></i></span>
-                                <span><i class="fas fa-search"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CleverCow Production -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2200"
-                    data-category="office-work sustainability bootstrap">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/clevercowprod.svg" alt="CleverCow Production" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Office Work/CleverCow-Production/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('clevercowprod')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-success">Sustainability</span>
-                                <span class="badge bg-primary">Bootstrap 5</span>
-                            </div>
-                            <h3 class="project-title">CleverCow Production</h3>
-                            <p class="project-description">Professional sustainability website with Gulp build system,
-                                SASS compilation, and optimized production assets.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-sass"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                                <span><i class="fas fa-leaf"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SKY Website - Sewa Ko Yatra -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2300"
-                    data-category="office-work service landing">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/skywebsite.svg" alt="SKY - Sewa Ko Yatra" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Office Work/SKY_website/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('skywebsite')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-info">Service</span>
-                                <span class="badge bg-secondary">Landing Page</span>
-                            </div>
-                            <h3 class="project-title">SKY - Sewa Ko Yatra</h3>
-                            <p class="project-description">Modern service-oriented landing page with smooth animations,
-                                responsive design, and professional branding.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-mobile-alt"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MrMarket NEPSE Trading Platform -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2400"
-                    data-category="office-work trading finance">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/mrmarket.svg" alt="MrMarket NEPSE" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Office Work/MrMarket/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm" onclick="showProjectModal('mrmarket')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-warning">Trading</span>
-                                <span class="badge bg-primary">SASS</span>
-                            </div>
-                            <h3 class="project-title">MrMarket NEPSE</h3>
-                            <p class="project-description">Professional trading platform website with modern UI, pricing
-                                plans, and comprehensive feature showcase.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-sass"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-chart-line"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Muktinath Krishi -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2500"
-                    data-category="office-work agriculture bootstrap">
-                    <div class="project-card">
-                        <div class="project-preview">
-                            <img src="thumbnails/muktinath.svg" alt="Muktinath Krishi" class="project-thumbnail" loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="Office Work/muktinath/muktinath/public/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showProjectModal('muktinath')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-meta">
-                                <span class="badge bg-success">Agriculture</span>
-                                <span class="badge bg-primary">Bootstrap</span>
-                            </div>
-                            <h3 class="project-title">Muktinath Krishi</h3>
-                            <p class="project-description">Agricultural business website with Bootstrap framework,
-                                responsive design, and comprehensive content management.</p>
-                            <div class="project-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-bootstrap"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-seedling"></i></span>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="hero-image">
+                            <div class="floating-card" data-aos="fade-up" data-aos-delay="200">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile First</span>
+                            </div>
+                            <div class="floating-card" data-aos="fade-up" data-aos-delay="400">
+                                <i class="fas fa-rocket"></i>
+                                <span>Fast Loading</span>
+                            </div>
+                            <div class="floating-card" data-aos="fade-up" data-aos-delay="600">
+                                <i class="fas fa-palette"></i>
+                                <span>Modern Design</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Snippets Section -->
-    <section id="snippets" class="snippets">
-        <div class="container">
-            <div class="mb-5 text-center section-header" data-aos="fade-up">
-                <h2 class="section-title">Component Snippets & Utilities</h2>
-                <p class="section-subtitle">25+ ready-to-use components, email templates, and code utilities</p>
+            <div class="scroll-indicator">
+                <a href="#projects">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
+        </section>
 
-            <div class="row g-4">
-                <!-- Navigation Component -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-category="ui-components">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <iframe src="Component Snippets/NavigationV2/index.html"
-                                title="Navigation Component Preview"></iframe>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Component Snippets/NavigationV2/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('navigation')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="mb-5 text-center section-header" data-aos="fade-up">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Explore our collection of 25+ professional frontend websites and
+                        applications</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Agency Project -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-category="business">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/Agency/index.html" target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/agency.svg" alt="Digital Agency" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Digital Agency</h3>
+                                <p class="project-description">Modern business website with gradient design,
+                                    testimonials,
+                                    and contact forms.</p>
+                                <div class="project-category">
+                                    <span>Business</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap 5</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-success">Navigation</span>
-                                <span class="badge bg-warning">Component</span>
+                    </div>
+
+                    <!-- Books Bootstrap 4 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200"
+                        data-category="e-commerce education">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/Books-bootstrap-4-website/src/Index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/books4.svg" alt="Books Platform v4" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-book"></i>
+                                </div>
                             </div>
-                            <h3 class="snippet-title">Modern Navigation Bar</h3>
-                            <p class="snippet-description">Responsive navigation with smooth animations and mobile
-                                overlay menu.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-mobile-alt"></i></span>
+                            <div class="project-info">
+                                <h3 class="project-title">Books Platform v4</h3>
+                                <p class="project-description">Educational platform with course selling, pricing tables,
+                                    and
+                                    testimonials.</p>
+                                <div class="project-category">
+                                    <span>E-commerce</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap 4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Books Bootstrap 5 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300"
+                        data-category="e-commerce education">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/Books-bootstrap-5-website/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/books5.svg" alt="Books Platform v5" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Books Platform v5</h3>
+                                <p class="project-description">Updated version with Bootstrap 5, improved accessibility
+                                    and
+                                    modern components.</p>
+                                <div class="project-category">
+                                    <span>E-commerce</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap 4 Master -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400" data-category="portfolio">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/bootstrap4-website-master/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/bootstrap4master.svg" alt="Portfolio Landing"
+                                    class="project-thumbnail" loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Portfolio Landing</h3>
+                                <p class="project-description">Professional portfolio website with smooth scrolling and
+                                    project showcase.</p>
+                                <div class="project-category">
+                                    <span>Portfolio</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap 4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nuno Theme -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500"
+                        data-category="business portfolio">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/Nuno/nuno/index.html" target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/nuno.svg" alt="Nuno Theme Collection" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Nuno Theme Collection</h3>
+                                <p class="project-description">Complete Bootstrap theme suite with multiple versions
+                                    (Bootstrap 4 & 5).</p>
+                                <div class="project-category">
+                                    <span>Theme Suite</span>
+                                    <span class="dot"></span>
+                                    <span>Multi-version</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tours Website -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600"
+                        data-category="tourism business">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/outdoors-website/tours/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/tours.svg" alt="Adventure Tours" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Adventure Tours</h3>
+                                <p class="project-description">Nature tours website with beautiful imagery, responsive
+                                    design, and booking features.</p>
+                                <div class="project-category">
+                                    <span>Tourism</span>
+                                    <span class="dot"></span>
+                                    <span>Custom CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Rosa Restaurant -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700"
+                        data-category="restaurant business">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/the-rosa/the-rosa/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/rosa.svg" alt="The Rosa Restaurant" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #c59d5f 0%, #8B7355 100%);">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">The Rosa Restaurant</h3>
+                                <p class="project-description">Elegant restaurant website with smooth animations, menu
+                                    showcase, and reservation system.</p>
+                                <div class="project-category">
+                                    <span>Restaurant</span>
+                                    <span class="dot"></span>
+                                    <span>Custom CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap Accordion -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800"
+                        data-category="ui-components">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Component Snippets/Bootstrap-Accordion-Frontend Mentor/index.html"
+                                    target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/accordion.svg" alt="FAQ Accordion" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                                    <i class="fas fa-list"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">FAQ Accordion</h3>
+                                <p class="project-description">Frontend Mentor challenge featuring smooth accordion
+                                    animations and modern design.</p>
+                                <div class="project-category">
+                                    <span>Component</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Component -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900"
+                        data-category="ui-components">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Component Snippets/Navigation/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/navigation.svg" alt="Modern Navigation" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Modern Navigation</h3>
+                                <p class="project-description">Sleek navigation bar with smooth animations and mobile
+                                    overlay menu.</p>
+                                <div class="project-category">
+                                    <span>Component</span>
+                                    <span class="dot"></span>
+                                    <span>Vanilla CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Dashboard -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1000"
+                        data-category="ui-components dashboard">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Component Snippets/Responsive Dashboard  LightDark UI/indexB.html"
+                                    target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/dashboard.svg" alt="Admin Dashboard" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Admin Dashboard</h3>
+                                <p class="project-description">Comprehensive dashboard with light/dark theme toggle and
+                                    responsive design.</p>
+                                <div class="project-category">
+                                    <span>Dashboard</span>
+                                    <span class="dot"></span>
+                                    <span>Light/Dark</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CSS Flexbox QR Code -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1100"
+                        data-category="ui-components">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Component Snippets/CSS-Flexbox-main/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/qrcode.svg" alt="QR Code Component" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">QR Code Component</h3>
+                                <p class="project-description">Responsive QR code card built with pure CSS Flexbox and
+                                    modern layout techniques.</p>
+                                <div class="project-category">
+                                    <span>Component</span>
+                                    <span class="dot"></span>
+                                    <span>CSS Flexbox</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Chatbot -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1200"
+                        data-category="ui-components ai">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Component Snippets/AI-Chatbot-main/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/aichatbot.svg" alt="AI Chatbot Assistant" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">AI Chatbot Assistant</h3>
+                                <p class="project-description">Intelligent conversational AI powered by Google Gemini
+                                    with
+                                    image upload and emoji picker.</p>
+                                <div class="project-category">
+                                    <span>AI Tools</span>
+                                    <span class="dot"></span>
+                                    <span>Gemini API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nova Bootstrap Template -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1300"
+                        data-category="business portfolio">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/nova-new-1.0.0/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/nova.svg" alt="Nova Business Template" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Nova Business Template</h3>
+                                <p class="project-description">Professional Bootstrap 5 business template with multiple
+                                    pages, portfolio, blog, and modern design.</p>
+                                <div class="project-category">
+                                    <span>Business</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wedding Template -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1400"
+                        data-category="wedding event">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/SF_SAMPLE_BootstrapWeddingTemplate_mufOle/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/wedding.svg" alt="Wedding Template" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Wedding Template</h3>
+                                <p class="project-description">Elegant wedding website template with RSVP, gallery, and
+                                    event details.</p>
+                                <div class="project-category">
+                                    <span>Wedding</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio WebView -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1500" data-category="portfolio">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Portfolio/webView/webView/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/webview.svg" alt="Portfolio WebView" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Portfolio WebView</h3>
+                                <p class="project-description">Comprehensive portfolio showcase with project gallery and
+                                    professional presentation.</p>
+                                <div class="project-category">
+                                    <span>Portfolio</span>
+                                    <span class="dot"></span>
+                                    <span>Personal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CleverCow Business -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1600"
+                        data-category="office-work business">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Office Work/Clevercow/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/clevercow.svg" alt="CleverCow Business" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">CleverCow Business</h3>
+                                <p class="project-description">Innovative sustainability platform with carbon footprint
+                                    tracking and eco-friendly solutions.</p>
+                                <div class="project-category">
+                                    <span>Sustainability</span>
+                                    <span class="dot"></span>
+                                    <span>Corporate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CleverCow Bootstrap -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1700"
+                        data-category="office-work business bootstrap">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Office Work/CleverCowBootstrap/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/clevercowbootstrap.svg" alt="CleverCow Bootstrap"
+                                    class="project-thumbnail" loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #7952b3 0%, #6610f2 100%);">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">CleverCow Bootstrap</h3>
+                                <p class="project-description">Bootstrap 5 version of CleverCow with enhanced components
+                                    and
+                                    modern responsive design.</p>
+                                <div class="project-category">
+                                    <span>Bootstrap 5</span>
+                                    <span class="dot"></span>
+                                    <span>Sustainability</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CleverCow SCSS -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1800"
+                        data-category="office-work business scss">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Office Work/CleverCowSCSS/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/clevercowscss.svg" alt="CleverCow SCSS" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #cc6699 0%, #bf4080 100%);">
+                                    <i class="fab fa-sass"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">CleverCow SCSS</h3>
+                                <p class="project-description">Advanced SCSS version with modular architecture and
+                                    custom
+                                    build system.</p>
+                                <div class="project-category">
+                                    <span>SCSS</span>
+                                    <span class="dot"></span>
+                                    <span>Sustainability</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mind's Mirror Mental Health App -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1900"
+                        data-category="office-work healthcare react">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Office Work/Mind's Mirror - Mental Health Tracking Landing Page/static-demo.html"
+                                    target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/mindsmirror.svg" alt="Mind's Mirror" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Mind's Mirror</h3>
+                                <p class="project-description">Mental health tracking and goal management system for
+                                    bipolar
+                                    disorder and wellness.</p>
+                                <div class="project-category">
+                                    <span>React</span>
+                                    <span class="dot"></span>
+                                    <span>Healthcare</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Magz Magazine Template -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2000"
+                        data-category="magazine blog bootstrap">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/Magz-master/index.html" target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/magz.svg" alt="Magz Magazine" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Magz Magazine</h3>
+                                <p class="project-description">Professional magazine and blog template with 14+ pages,
+                                    multiple skins, and advanced features.</p>
+                                <div class="project-category">
+                                    <span>Magazine</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Search Website -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2100"
+                        data-category="react entertainment api">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Projects/moviewebsite-master/static-demo.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/moviewebsite.svg" alt="Movie Search Website"
+                                    class="project-thumbnail" loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Movie Search Website</h3>
+                                <p class="project-description">React-based movie search with OMDB API integration,
+                                    debounced
+                                    search, and Context API state management.</p>
+                                <div class="project-category">
+                                    <span>React</span>
+                                    <span class="dot"></span>
+                                    <span>API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CleverCow Production -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2200"
+                        data-category="office-work sustainability bootstrap">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Office Work/CleverCow-Production/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/clevercowprod.svg" alt="CleverCow Production"
+                                    class="project-thumbnail" loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">CleverCow Production</h3>
+                                <p class="project-description">Professional sustainability website with Gulp build
+                                    system,
+                                    SASS compilation, and optimized production assets.</p>
+                                <div class="project-category">
+                                    <span>Sustainability</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SKY Website - Sewa Ko Yatra -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2300"
+                        data-category="office-work service landing">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Office Work/SKY_website/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/skywebsite.svg" alt="SKY - Sewa Ko Yatra" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">SKY - Sewa Ko Yatra</h3>
+                                <p class="project-description">Modern service-oriented landing page with smooth
+                                    animations,
+                                    responsive design, and professional branding.</p>
+                                <div class="project-category">
+                                    <span>Service</span>
+                                    <span class="dot"></span>
+                                    <span>Landing Page</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MrMarket NEPSE Trading Platform -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2400"
+                        data-category="office-work trading finance">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Office Work/MrMarket/index.html" target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/mrmarket.svg" alt="MrMarket NEPSE" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #0172CE 0%, #005bb5 100%);">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">MrMarket NEPSE</h3>
+                                <p class="project-description">Professional trading platform website with modern UI,
+                                    pricing
+                                    plans, and comprehensive feature showcase.</p>
+                                <div class="project-category">
+                                    <span>Trading</span>
+                                    <span class="dot"></span>
+                                    <span>SASS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Muktinath Krishi -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="2500"
+                        data-category="office-work agriculture bootstrap">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Featured</span>
+                                <a href="Office Work/muktinath/muktinath/public/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <img src="thumbnails/muktinath.svg" alt="Muktinath Krishi" class="project-thumbnail"
+                                    loading="lazy">
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Muktinath Krishi</h3>
+                                <p class="project-description">Agricultural business website with Bootstrap framework,
+                                    responsive design, and comprehensive content management.</p>
+                                <div class="project-category">
+                                    <span>Agriculture</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Email Templates V1 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" data-category="email-templates">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <iframe src="Email Templates/mail web/verify-email.html"
-                                title="Email Templates Preview"></iframe>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Email Templates/mail web/verify-email.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('emailtemplates')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-primary">Email</span>
-                                <span class="badge bg-info">Templates</span>
-                            </div>
-                            <h3 class="snippet-title">Email Templates</h3>
-                            <p class="snippet-description">Professional email templates for verification, reminders, and
-                                notifications.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fas fa-envelope"></i></span>
-                                <span><i class="fas fa-mobile-alt"></i></span>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Website Projects Section -->
+        <section id="website-projects" class="website-projects">
+            <div class="container">
+                <div class="mb-5 text-center section-header" data-aos="fade-up">
+                    <h2 class="section-title">Website Projects & Learning</h2>
+                    <p class="section-subtitle">A collection of practice projects, challenges, and learning resources
+                        from various sources</p>
                 </div>
 
-                <!-- Email Templates V2 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300" data-category="email-templates">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <iframe src="Email Templates/mail web V1/verify-email.html"
-                                title="Email Templates V1 Preview"></iframe>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Email Templates/mail web V1/verify-email.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('emailtemplatesv1')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-primary">Email</span>
-                                <span class="badge bg-secondary">V1</span>
-                            </div>
-                            <h3 class="snippet-title">Email Templates V1</h3>
-                            <p class="snippet-description">Enhanced email templates with improved styling and better
-                                compatibility.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fas fa-envelope"></i></span>
-                                <span><i class="fas fa-palette"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Email Templates V3 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400" data-category="email-templates">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <iframe src="Email Templates/mail web V2/verify-email.html"
-                                title="Email Templates V2 Preview"></iframe>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Email Templates/mail web V2/verify-email.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('emailtemplatesv2')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-primary">Email</span>
-                                <span class="badge bg-success">V2</span>
-                            </div>
-                            <h3 class="snippet-title">Email Templates V2</h3>
-                            <p class="snippet-description">Latest version with modern design patterns and mobile
-                                optimization.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fas fa-envelope"></i></span>
-                                <span><i class="fas fa-rocket"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PDF/Invoice Templates -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500" data-category="pdf-templates">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <iframe src="Email Templates/web pdf/invoice.html"
-                                title="PDF Invoice Template Preview"></iframe>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Email Templates/web pdf/invoice.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('pdftemplates')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-danger">PDF</span>
-                                <span class="badge bg-warning">Invoice</span>
-                            </div>
-                            <h3 class="snippet-title">PDF & Invoice Templates</h3>
-                            <p class="snippet-description">Professional invoice and document templates ready for PDF
-                                generation.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fas fa-file-pdf"></i></span>
-                                <span><i class="fas fa-receipt"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- React/SCSS Components -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600" data-category="code-utilities">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <div class="code-preview">
-                                <div class="code-header">
-                                    <span class="code-lang">React/SCSS</span>
-                                    <div class="code-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
+                <div class="row g-4">
+                    <!-- Filmo Study -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100"
+                        data-category="learning practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Learning</span>
+                                <a href="Website/filmo.study/index.html" target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder filmo"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <div><i class="fas fa-graduation-cap fa-2x mb-2"></i>
+                                        <div>Filmo Study</div>
                                     </div>
                                 </div>
-                                <div class="code-content">
-                                    <pre><code>// React Component
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Filmo Study</h3>
+                                <p class="project-description">Educational platform with modern SCSS architecture,
+                                    responsive design, and interactive components.</p>
+                                <div class="project-category">
+                                    <span>Learning</span>
+                                    <span class="dot"></span>
+                                    <span>SCSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sass Website -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200"
+                        data-category="learning practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Learning</span>
+                                <a href="Website/Sass_website/index.html" target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder sass"
+                                    style="background: linear-gradient(135deg, #cc6699 0%, #bf4080 100%);">
+                                    <div><i class="fab fa-sass fa-2x mb-2"></i>
+                                        <div>Sass Website</div>
+                                    </div>
+                                </div>
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #cc6699 0%, #bf4080 100%);">
+                                    <i class="fab fa-sass"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Sass Website</h3>
+                                <p class="project-description">Modern website built with Sass preprocessor, featuring
+                                    variables, mixins, and organized SCSS architecture.</p>
+                                <div class="project-category">
+                                    <span>Learning</span>
+                                    <span class="dot"></span>
+                                    <span>Sass</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Star Wars Slider -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300"
+                        data-category="component practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Component</span>
+                                <a href="Website/Star Wars Imperial Armys Product Slider/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder starwars"
+                                    style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <div><i class="fas fa-jedi fa-2x mb-2"></i>
+                                        <div>Star Wars Slider</div>
+                                    </div>
+                                </div>
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-jedi"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Star Wars Product Slider</h3>
+                                <p class="project-description">Interactive product slider component with Star Wars
+                                    theme, featuring smooth animations and modern design.</p>
+                                <div class="project-category">
+                                    <span>Component</span>
+                                    <span class="dot"></span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Survey Form -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400"
+                        data-category="form practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Form</span>
+                                <a href="Website/SurveyForm/index.html" target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder survey"
+                                    style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <div><i class="fas fa-clipboard-list fa-2x mb-2"></i>
+                                        <div>Survey Form</div>
+                                    </div>
+                                </div>
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Survey Form</h3>
+                                <p class="project-description">Responsive survey form with validation, multiple input
+                                    types, and clean modern design.</p>
+                                <div class="project-category">
+                                    <span>Form</span>
+                                    <span class="dot"></span>
+                                    <span>HTML/CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Huddle Challenge -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500"
+                        data-category="challenge practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Challenge</span>
+                                <a href="Website/ChallengeFrontentMentor/Huddle/Index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder huddle"
+                                    style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                    <div><i class="fas fa-trophy fa-2x mb-2"></i>
+                                        <div>Huddle Landing</div>
+                                    </div>
+                                </div>
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Huddle Landing Page</h3>
+                                <p class="project-description">Frontend Mentor challenge - responsive landing page with
+                                    modern design and clean code structure.</p>
+                                <div class="project-category">
+                                    <span>Challenge</span>
+                                    <span class="dot"></span>
+                                    <span>Frontend Mentor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Signup -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600"
+                        data-category="challenge practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Challenge</span>
+                                <a href="Website/ChallengeFrontentMentor/newsletter-sign-up-with-success-message-main/index.html"
+                                    target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder newsletter"
+                                    style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                    <div><i class="fas fa-envelope fa-2x mb-2"></i>
+                                        <div>Newsletter Signup</div>
+                                    </div>
+                                </div>
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Newsletter Signup</h3>
+                                <p class="project-description">Frontend Mentor challenge with success message, form
+                                    validation, and responsive design.</p>
+                                <div class="project-category">
+                                    <span>Challenge</span>
+                                    <span class="dot"></span>
+                                    <span>Frontend Mentor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio WebHeroBanner -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700"
+                        data-category="component practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Component</span>
+                                <a href="Website/PortFolio/WebHeroBanner/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder herobanner"
+                                    style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                                    <div><i class="fas fa-image fa-2x mb-2"></i>
+                                        <div>Hero Banner</div>
+                                    </div>
+                                </div>
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Web Hero Banner</h3>
+                                <p class="project-description">Animated hero banner component with modern design,
+                                    perfect for portfolio and landing pages.</p>
+                                <div class="project-category">
+                                    <span>Component</span>
+                                    <span class="dot"></span>
+                                    <span>CSS/JS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SPA Beer -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800" data-category="spa practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">SPA</span>
+                                <a href="Website/SPA/SPA-beer/AssignmentHouzz/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder spabeer"
+                                    style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                    <div><i class="fas fa-beer fa-2x mb-2"></i>
+                                        <div>SPA Beer</div>
+                                    </div>
+                                </div>
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                    <i class="fas fa-beer"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">SPA Beer Application</h3>
+                                <p class="project-description">Single Page Application for beer catalog with dynamic
+                                    content loading and interactive features.</p>
+                                <div class="project-category">
+                                    <span>SPA</span>
+                                    <span class="dot"></span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cat Photo App -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900"
+                        data-category="learning practice">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <span class="project-badge">Learning</span>
+                                <a href="Website/Freecodecamp/CatPhotoApp-freeCodeCamp/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="project-placeholder catphoto"
+                                    style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);">
+                                    <div><i class="fas fa-cat fa-2x mb-2"></i>
+                                        <div>Cat Photo App</div>
+                                    </div>
+                                </div>
+                                <div class="project-logo"
+                                    style="background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);">
+                                    <i class="fas fa-cat"></i>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Cat Photo App</h3>
+                                <p class="project-description">FreeCodeCamp learning project - simple HTML/CSS
+                                    application for practicing web development basics.</p>
+                                <div class="project-category">
+                                    <span>Learning</span>
+                                    <span class="dot"></span>
+                                    <span>FreeCodeCamp</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Snippets Section -->
+        <section id="snippets" class="snippets">
+            <div class="container">
+                <div class="mb-5 text-center section-header" data-aos="fade-up">
+                    <h2 class="section-title">Component Snippets & Utilities</h2>
+                    <p class="section-subtitle">25+ ready-to-use components, email templates, and code utilities</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Navigation Component -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100"
+                        data-category="ui-components">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Component</span>
+                                <a href="Component Snippets/NavigationV2/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <iframe src="Component Snippets/NavigationV2/index.html"
+                                    title="Navigation Component Preview"></iframe>
+                            </div>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">Modern Navigation Bar</h3>
+                                <p class="snippet-description">Responsive navigation with smooth animations and mobile
+                                    overlay menu.</p>
+                                <div class="project-category">
+                                    <span>Navigation</span>
+                                    <span class="dot"></span>
+                                    <span>Component</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email Templates V1 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200"
+                        data-category="email-templates">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Template</span>
+                                <a href="Email Templates/mail web/verify-email.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <iframe src="Email Templates/mail web/verify-email.html"
+                                    title="Email Templates Preview"></iframe>
+                            </div>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">Email Templates</h3>
+                                <p class="snippet-description">Professional email templates for verification, reminders,
+                                    and
+                                    notifications.</p>
+                                <div class="project-category">
+                                    <span>Email</span>
+                                    <span class="dot"></span>
+                                    <span>Templates</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email Templates V2 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300"
+                        data-category="email-templates">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Template</span>
+                                <a href="Email Templates/mail web V1/verify-email.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <iframe src="Email Templates/mail web V1/verify-email.html"
+                                    title="Email Templates V1 Preview"></iframe>
+                            </div>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">Email Templates V1</h3>
+                                <p class="snippet-description">Enhanced email templates with improved styling and better
+                                    compatibility.</p>
+                                <div class="project-category">
+                                    <span>Email</span>
+                                    <span class="dot"></span>
+                                    <span>V1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email Templates V3 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400"
+                        data-category="email-templates">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Template</span>
+                                <a href="Email Templates/mail web V2/verify-email.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <iframe src="Email Templates/mail web V2/verify-email.html"
+                                    title="Email Templates V2 Preview"></iframe>
+                            </div>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">Email Templates V2</h3>
+                                <p class="snippet-description">Latest version with modern design patterns and mobile
+                                    optimization.</p>
+                                <div class="project-category">
+                                    <span>Email</span>
+                                    <span class="dot"></span>
+                                    <span>V2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PDF/Invoice Templates -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500"
+                        data-category="pdf-templates">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Template</span>
+                                <a href="Email Templates/web pdf/invoice.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <iframe src="Email Templates/web pdf/invoice.html"
+                                    title="PDF Invoice Template Preview"></iframe>
+                            </div>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">PDF & Invoice Templates</h3>
+                                <p class="snippet-description">Professional invoice and document templates ready for PDF
+                                    generation.</p>
+                                <div class="project-category">
+                                    <span>PDF</span>
+                                    <span class="dot"></span>
+                                    <span>Invoice</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- React/SCSS Components -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600"
+                        data-category="code-utilities">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Code</span>
+                                <a href="Code Utilities/nev-code/" target="_blank" class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <div class="code-preview">
+                                    <div class="code-header">
+                                        <span class="code-lang">React/SCSS</span>
+                                        <div class="code-dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="code-content">
+                                        <pre><code>// React Component
 import React from 'react';
 import './styles.scss';
 
@@ -1265,323 +1386,278 @@ export const Header = () => {
     &lt;/header&gt;
   );
 };</code></pre>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Code Utilities/nev-code/" target="_blank" class="btn btn-light btn-sm">
-                                        <i class="fas fa-folder-open me-1"></i>View Code
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('reactcomponents')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">React Components</h3>
+                                <p class="snippet-description">Modern React components with TypeScript and SCSS styling.
+                                </p>
+                                <div class="project-category">
+                                    <span>React</span>
+                                    <span class="dot"></span>
+                                    <span>SCSS</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-info">React</span>
-                                <span class="badge bg-purple">SCSS</span>
+                    </div>
+
+                    <!-- Hover Effects Library -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700"
+                        data-category="ui-components">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Library</span>
+                                <a href="Component Snippets/Hover/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <iframe src="Component Snippets/Hover/index.html"
+                                    title="Hover Effects Library Preview"></iframe>
                             </div>
-                            <h3 class="snippet-title">React Components</h3>
-                            <p class="snippet-description">Modern React components with TypeScript and SCSS styling.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-react"></i></span>
-                                <span><i class="fab fa-sass"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-code"></i></span>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">Hover.css Library</h3>
+                                <p class="snippet-description">Complete collection of CSS3 powered hover effects for
+                                    buttons, links, and images.</p>
+                                <div class="project-category">
+                                    <span>Hover Effects</span>
+                                    <span class="dot"></span>
+                                    <span>Library</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animation Components -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800"
+                        data-category="ui-components">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Component</span>
+                                <a href="Component Snippets/Animation/loader.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <iframe src="Component Snippets/Animation/loader.html"
+                                    title="Animation Components Preview"></iframe>
+                            </div>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">Loading Animations</h3>
+                                <p class="snippet-description">Beautiful CSS loading animations and spinners for modern
+                                    web
+                                    applications.</p>
+                                <div class="project-category">
+                                    <span>Animations</span>
+                                    <span class="dot"></span>
+                                    <span>Loaders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Components -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900"
+                        data-category="ui-components">
+                        <div class="snippet-card">
+                            <div class="snippet-preview">
+                                <span class="project-badge">Component</span>
+                                <a href="Component Snippets/carousel-06/index.html" target="_blank"
+                                    class="project-external-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <iframe src="Component Snippets/carousel-06/index.html"
+                                    title="Carousel Components Preview"></iframe>
+                            </div>
+                            <div class="snippet-info">
+                                <h3 class="snippet-title">Carousel Gallery</h3>
+                                <p class="snippet-description">Responsive carousel components with Owl Carousel and
+                                    Bootstrap integration.</p>
+                                <div class="project-category">
+                                    <span>Carousel</span>
+                                    <span class="dot"></span>
+                                    <span>Bootstrap</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hover Effects Library -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700" data-category="ui-components">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <iframe src="Component Snippets/Hover/index.html"
-                                title="Hover Effects Library Preview"></iframe>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Component Snippets/Hover/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('hovereffects')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
+                <!-- Snippets Categories -->
+                <div class="mt-5 row">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="snippet-categories">
+                            <h3 class="mb-4 text-center">Browse by Category</h3>
+                            <div class="category-grid">
+                                <div class="category-item" onclick="filterByCategory('ui-components')"
+                                    data-category="ui-components">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <h5>UI Components</h5>
+                                    <p>12 Components</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-purple">Hover Effects</span>
-                                <span class="badge bg-warning">Library</span>
-                            </div>
-                            <h3 class="snippet-title">Hover.css Library</h3>
-                            <p class="snippet-description">Complete collection of CSS3 powered hover effects for
-                                buttons, links, and images.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-sass"></i></span>
-                                <span><i class="fas fa-magic"></i></span>
-                                <span><i class="fas fa-mouse-pointer"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Animation Components -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800" data-category="ui-components">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <iframe src="Component Snippets/Animation/loader.html"
-                                title="Animation Components Preview"></iframe>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Component Snippets/Animation/loader.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('animations')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
+                                <div class="category-item" onclick="filterByCategory('email-templates')"
+                                    data-category="email-templates">
+                                    <i class="fas fa-envelope"></i>
+                                    <h5>Email Templates</h5>
+                                    <p>12 Templates</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-primary">Animations</span>
-                                <span class="badge bg-info">Loaders</span>
-                            </div>
-                            <h3 class="snippet-title">Loading Animations</h3>
-                            <p class="snippet-description">Beautiful CSS loading animations and spinners for modern web
-                                applications.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fas fa-spinner"></i></span>
-                                <span><i class="fas fa-palette"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Carousel Components -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900" data-category="ui-components">
-                    <div class="snippet-card">
-                        <div class="snippet-preview">
-                            <iframe src="Component Snippets/carousel-06/index.html"
-                                title="Carousel Components Preview"></iframe>
-                            <div class="snippet-overlay">
-                                <div class="snippet-actions">
-                                    <a href="Component Snippets/carousel-06/index.html" target="_blank"
-                                        class="btn btn-light btn-sm">
-                                        <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                                    </a>
-                                    <button class="btn btn-outline-light btn-sm"
-                                        onclick="showSnippetModal('carousels')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
+                                <div class="category-item" onclick="filterByCategory('pdf-templates')"
+                                    data-category="pdf-templates">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <h5>PDF Templates</h5>
+                                    <p>6 Templates</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="snippet-info">
-                            <div class="snippet-meta">
-                                <span class="badge bg-success">Carousel</span>
-                                <span class="badge bg-warning">Bootstrap</span>
-                            </div>
-                            <h3 class="snippet-title">Carousel Gallery</h3>
-                            <p class="snippet-description">Responsive carousel components with Owl Carousel and
-                                Bootstrap integration.</p>
-                            <div class="snippet-tech">
-                                <span><i class="fab fa-html5"></i></span>
-                                <span><i class="fab fa-css3-alt"></i></span>
-                                <span><i class="fab fa-js-square"></i></span>
-                                <span><i class="fas fa-images"></i></span>
+                                <div class="category-item" onclick="filterByCategory('code-utilities')"
+                                    data-category="code-utilities">
+                                    <i class="fas fa-code"></i>
+                                    <h5>Code Utilities</h5>
+                                    <p>5+ Tools</p>
+                                </div>
+                                <div class="category-item" onclick="filterByCategory('office-work')"
+                                    data-category="office-work">
+                                    <i class="fas fa-briefcase"></i>
+                                    <h5>Office Work</h5>
+                                    <p>8 Projects</p>
+                                </div>
+                                <div class="category-item" onclick="filterByCategory('portfolio')"
+                                    data-category="portfolio">
+                                    <i class="fas fa-user-tie"></i>
+                                    <h5>Portfolio</h5>
+                                    <p>5 Templates</p>
+                                </div>
+                                <div class="category-item" onclick="filterByCategory('react')" data-category="react">
+                                    <i class="fab fa-react"></i>
+                                    <h5>React</h5>
+                                    <p>2 Projects</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Snippets Categories -->
-            <div class="mt-5 row">
-                <div class="col-12" data-aos="fade-up">
-                    <div class="snippet-categories">
-                        <h3 class="mb-4 text-center">Browse by Category</h3>
-                        <div class="category-grid">
-                            <div class="category-item" onclick="filterByCategory('ui-components')"
-                                data-category="ui-components">
-                                <i class="fas fa-puzzle-piece"></i>
-                                <h5>UI Components</h5>
-                                <p>12 Components</p>
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="mb-5 text-center section-header" data-aos="fade-up">
+                    <h2 class="section-title">Why Choose Our Collection?</h2>
+                    <p class="section-subtitle">Professional-grade websites with modern features</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
                             </div>
-                            <div class="category-item" onclick="filterByCategory('email-templates')"
-                                data-category="email-templates">
-                                <i class="fas fa-envelope"></i>
-                                <h5>Email Templates</h5>
-                                <p>12 Templates</p>
-                            </div>
-                            <div class="category-item" onclick="filterByCategory('pdf-templates')"
-                                data-category="pdf-templates">
-                                <i class="fas fa-file-pdf"></i>
-                                <h5>PDF Templates</h5>
-                                <p>6 Templates</p>
-                            </div>
-                            <div class="category-item" onclick="filterByCategory('code-utilities')"
-                                data-category="code-utilities">
+                            <h4>Fully Responsive</h4>
+                            <p>All websites are mobile-first and work perfectly on all devices and screen sizes.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card">
+                            <div class="feature-icon">
                                 <i class="fas fa-code"></i>
-                                <h5>Code Utilities</h5>
-                                <p>5+ Tools</p>
                             </div>
-                            <div class="category-item" onclick="filterByCategory('office-work')"
-                                data-category="office-work">
-                                <i class="fas fa-briefcase"></i>
-                                <h5>Office Work</h5>
-                                <p>8 Projects</p>
+                            <h4>Clean Code</h4>
+                            <p>Well-structured, semantic HTML5 with organized CSS and modern JavaScript.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
                             </div>
-                            <div class="category-item" onclick="filterByCategory('portfolio')"
-                                data-category="portfolio">
-                                <i class="fas fa-user-tie"></i>
-                                <h5>Portfolio</h5>
-                                <p>5 Templates</p>
+                            <h4>Fast Loading</h4>
+                            <p>Optimized for performance with CDN resources and efficient code structure.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-palette"></i>
                             </div>
-                            <div class="category-item" onclick="filterByCategory('react')" data-category="react">
-                                <i class="fab fa-react"></i>
-                                <h5>React</h5>
-                                <p>2 Projects</p>
-                            </div>
+                            <h4>Modern Design</h4>
+                            <p>Contemporary layouts with beautiful animations and professional aesthetics.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="mb-5 text-center section-header" data-aos="fade-up">
-                <h2 class="section-title">Why Choose Our Collection?</h2>
-                <p class="section-subtitle">Professional-grade websites with modern features</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h4>Fully Responsive</h4>
-                        <p>All websites are mobile-first and work perfectly on all devices and screen sizes.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h4>Clean Code</h4>
-                        <p>Well-structured, semantic HTML5 with organized CSS and modern JavaScript.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h4>Fast Loading</h4>
-                        <p>Optimized for performance with CDN resources and efficient code structure.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h4>Modern Design</h4>
-                        <p>Contemporary layouts with beautiful animations and professional aesthetics.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="about-content">
-                        <h2 class="mb-4 section-title">About This Collection</h2>
-                        <p class="lead">
-                            This comprehensive frontend website collection showcases modern web development techniques
-                            and professional designs across various industries and technologies.
-                        </p>
-                        <p>
-                            Each project and snippet demonstrates different aspects of frontend development, from
-                            Bootstrap
-                            frameworks to vanilla CSS/JS, responsive dashboards, interactive components, email
-                            templates,
-                            and React components. Perfect for learning, inspiration, or as starting points for your own
-                            projects.
-                        </p>
-                        <div class="about-stats">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="stat-box">
-                                        <h3>16</h3>
-                                        <p>Projects</p>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="about-content">
+                            <h2 class="mb-4 section-title">About This Collection</h2>
+                            <p class="lead">
+                                This comprehensive frontend website collection showcases modern web development
+                                techniques
+                                and professional designs across various industries and technologies.
+                            </p>
+                            <p>
+                                Each project and snippet demonstrates different aspects of frontend development, from
+                                Bootstrap
+                                frameworks to vanilla CSS/JS, responsive dashboards, interactive components, email
+                                templates,
+                                and React components. Perfect for learning, inspiration, or as starting points for your
+                                own
+                                projects.
+                            </p>
+                            <div class="about-stats">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="stat-box">
+                                            <h3>16</h3>
+                                            <p>Projects</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-box">
-                                        <h3>100%</h3>
-                                        <p>Responsive</p>
+                                    <div class="col-4">
+                                        <div class="stat-box">
+                                            <h3>100%</h3>
+                                            <p>Responsive</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-box">
-                                        <h3>25+</h3>
-                                        <p>Snippets</p>
+                                    <div class="col-4">
+                                        <div class="stat-box">
+                                            <h3>25+</h3>
+                                            <p>Snippets</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="about-image">
-                        <div class="tech-stack">
-                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
-                                <i class="fab fa-html5"></i>
-                                <span>HTML5</span>
-                            </div>
-                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
-                                <i class="fab fa-css3-alt"></i>
-                                <span>CSS3</span>
-                            </div>
-                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
-                                <i class="fab fa-js-square"></i>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
-                                <i class="fab fa-bootstrap"></i>
-                                <span>Bootstrap</span>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="about-image">
+                            <div class="tech-stack">
+                                <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+                                    <i class="fab fa-html5"></i>
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+                                    <i class="fab fa-js-square"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+                                    <i class="fab fa-bootstrap"></i>
+                                    <span>Bootstrap</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     </main>
 
@@ -1602,6 +1678,7 @@ export const Header = () => {
                                 <h5>Quick Links</h5>
                                 <ul>
                                     <li><a href="#projects">Projects</a></li>
+                                    <li><a href="#website-projects">Website Projects</a></li>
                                     <li><a href="#features">Features</a></li>
                                     <li><a href="#about">About</a></li>
                                     <li><a href="README.md">Documentation</a></li>

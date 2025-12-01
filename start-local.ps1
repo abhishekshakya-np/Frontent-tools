@@ -5,7 +5,7 @@ Write-Host ""
 # Check if Python is available
 try {
     $pythonVersion = python --version 2>$null
-    if ($LASTEXITCODE -eq 0) {
+    if ($LASTEXITCODE -eq 0 -and $pythonVersion) {
         Write-Host "Using Custom Python Server..." -ForegroundColor Yellow
         Write-Host "Python Version: $pythonVersion" -ForegroundColor Gray
         Write-Host ""
@@ -19,6 +19,7 @@ try {
         $nodeVersion = node --version 2>$null
         if ($LASTEXITCODE -eq 0) {
             Write-Host "Python not found, checking for Node.js..." -ForegroundColor Yellow
+            Write-Host "Node.js Version: $nodeVersion" -ForegroundColor Gray
             
             # Check if http-server is installed
             try {

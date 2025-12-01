@@ -4,10 +4,11 @@
   "description": "A comprehensive collection of responsive frontend websites showcasing modern web development techniques",
   "main": "index.html",
   "scripts": {
-    "start": "http-server -p 8000 -o",
-    "dev": "http-server -p 8000 -o -c-1",
+    "start": "live-server --port=8000 --open=index.html",
+    "dev": "live-server --port=8000 --open=index.html --watch=.",
     "serve": "python -m http.server 8000",
-    "open": "start index.html"
+    "open": "start index.html",
+    "http": "http-server -p 8000 -o -c-1"
   },
   "keywords": [
     "frontend",
@@ -22,7 +23,8 @@
   "author": "Frontend Collection",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
   },
   "repository": {
     "type": "git",
