@@ -1,6 +1,6 @@
 # Frontend Website Collection
 
-A comprehensive collection of **20+ responsive frontend websites** showcasing modern web development techniques, professional designs, and best practices. This repository contains multiple projects built with Bootstrap, vanilla CSS/JS, React, and modern frontend technologies, ranging from business websites to interactive components, healthcare applications, and magazine templates.
+A comprehensive collection of **25+ responsive frontend websites** showcasing modern web development techniques, professional designs, and best practices. This repository contains multiple projects built with Bootstrap, vanilla CSS/JS, React, and modern frontend technologies, ranging from business websites to interactive components, healthcare applications, trading platforms, and agricultural services.
 
 ![Frontend Collection](https://via.placeholder.com/800x400/007bff/ffffff?text=Frontend+Website+Collection)
 
@@ -49,6 +49,23 @@ A comprehensive mental health tracking and goal management system designed for i
 
 ### 📰 **Magz Magazine/** - Professional Magazine & Blog Template
 A comprehensive HTML5 & CSS3 magazine template based on Bootstrap 3, featuring 14+ pages, unlimited color skins, and advanced functionality for modern publishing platforms.
+
+### ⚛️ **Movie Search Website/** - React Application
+A modern React-based movie search website demonstrating advanced React concepts including Context API, custom hooks, debounced search, and API integration with the OMDB database.
+
+### 🌱 **CleverCow Production/** - Sustainability Website (Production Build)
+Professional sustainability-focused website built with Bootstrap 5, Sass, and Gulp 4 build system. This production-ready version showcases optimized assets and clean, modular code architecture.
+
+## 💼 **Office Work Projects**
+
+### 🛡️ **SKY Website/** - Sewa Ko Yatra Service Platform
+Modern service-oriented landing page with smooth animations, responsive design, and professional branding for service-based businesses.
+
+### 📈 **MrMarket NEPSE/** - Trading Platform Website  
+Comprehensive trading platform website for NEPSE (Nepal Stock Exchange) with modern UI design, built using SASS and featuring trading automation tools, pricing plans, and educational content.
+
+### 🌾 **Muktinath Krishi/** - Agricultural Business Website
+Comprehensive agricultural business website built with Bootstrap framework, featuring modern design, responsive layout, and extensive content management for agricultural services and products.
 
 ## 🚀 Quick Start Guide
 

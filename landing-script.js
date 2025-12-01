@@ -374,6 +374,60 @@ const projectData = {
         ],
         technologies: ['HTML5', 'Bootstrap 5', 'Sass/SCSS', 'Gulp 4', 'JavaScript', 'Bootstrap Icons'],
         demoUrl: 'Office Work/CleverCow-Production/index.html'
+    },
+    skywebsite: {
+        title: 'SKY - Sewa Ko Yatra Service Website',
+        description: 'A modern, professional service-oriented landing page built with clean HTML, CSS, and JavaScript. Features smooth animations, responsive design, and professional branding for service-based businesses.',
+        features: [
+            'Responsive mobile-first design',
+            'Smooth scroll animations with ScrollReveal',
+            'Professional service-oriented layout',
+            'Modern CSS styling with custom properties',
+            'Optimized image assets (SVG and WebP)',
+            'Clean semantic HTML structure',
+            'Cross-browser compatibility',
+            'Fast loading performance',
+            'Professional branding integration',
+            'Service showcase sections'
+        ],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'ScrollReveal', 'Responsive Design', 'SVG Graphics'],
+        demoUrl: 'Office Work/SKY_website/index.html'
+    },
+    mrmarket: {
+        title: 'MrMarket NEPSE - Trading Platform Website',
+        description: 'A comprehensive trading platform website for NEPSE (Nepal Stock Exchange) with modern UI design, built using SASS and featuring trading automation tools, pricing plans, and educational content.',
+        features: [
+            'Modern responsive design with Outfit font family',
+            'Professional trading platform showcase',
+            'Multi-platform compatibility section',
+            'Comprehensive feature showcase with SVG icons',
+            'Three-tier pricing structure',
+            'Interactive contact form with validation',
+            'Smooth scrolling navigation',
+            'Mobile-responsive hamburger menu',
+            'Brand-consistent color scheme (#0172CE)',
+            'Trading automation feature highlights'
+        ],
+        technologies: ['HTML5', 'SASS/SCSS', 'JavaScript', 'Responsive Design', 'Form Validation', 'SVG Icons'],
+        demoUrl: 'Office Work/MrMarket/index.html'
+    },
+    muktinath: {
+        title: 'Muktinath Krishi - Agricultural Business Website',
+        description: 'A comprehensive agricultural business website built with Bootstrap framework, featuring modern design, responsive layout, and extensive content management for agricultural services and products.',
+        features: [
+            'Bootstrap-based responsive framework',
+            'Multi-page website structure',
+            'Professional agricultural branding',
+            'Owl Carousel for image galleries',
+            'FontAwesome icon integration',
+            'Animated CSS effects',
+            'Contact and subsidiary pages',
+            'Blog and news sections',
+            'Mobile-optimized navigation',
+            'Agricultural service showcase'
+        ],
+        technologies: ['HTML5', 'Bootstrap', 'CSS3', 'JavaScript', 'Owl Carousel', 'FontAwesome', 'Animate.css'],
+        demoUrl: 'Office Work/muktinath/muktinath/public/index.html'
     }
 };
 
@@ -960,6 +1014,18 @@ function addFilterControls() {
                     onclick="filterByCategory('sustainability')" data-filter="sustainability">
                 <i class="fas fa-leaf me-1"></i>Sustainability
             </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'service' ? 'active' : ''}" 
+                    onclick="filterByCategory('service')" data-filter="service">
+                <i class="fas fa-concierge-bell me-1"></i>Service
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'trading' ? 'active' : ''}" 
+                    onclick="filterByCategory('trading')" data-filter="trading">
+                <i class="fas fa-chart-line me-1"></i>Trading
+            </button>
+            <button class="btn btn-outline-primary btn-sm filter-btn ${currentFilter === 'agriculture' ? 'active' : ''}" 
+                    onclick="filterByCategory('agriculture')" data-filter="agriculture">
+                <i class="fas fa-seedling me-1"></i>Agriculture
+            </button>
         </div>
     `;
 
@@ -982,7 +1048,7 @@ function updateSectionHeaders(category) {
 
     if (category === 'all') {
         projectsTitle.textContent = 'Featured Projects';
-        projectsSubtitle.textContent = 'Explore our collection of 22+ professional frontend websites and applications';
+        projectsSubtitle.textContent = 'Explore our collection of 25+ professional frontend websites and applications';
         snippetsTitle.textContent = 'Component Snippets & Utilities';
     } else {
         const categoryNames = {
@@ -998,7 +1064,12 @@ function updateSectionHeaders(category) {
             'blog': 'Blog Templates',
             'entertainment': 'Entertainment',
             'api': 'API Integration',
-            'sustainability': 'Sustainability'
+            'sustainability': 'Sustainability',
+            'service': 'Service Websites',
+            'trading': 'Trading Platforms',
+            'agriculture': 'Agriculture',
+            'finance': 'Finance',
+            'landing': 'Landing Pages'
         };
 
         const categoryName = categoryNames[category] || category;
