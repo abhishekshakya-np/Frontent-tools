@@ -186,6 +186,38 @@ Projects/moviewebsite-master/package.json
 # CC Development folder exclusions (keep only production build)
 Office Work/CC/
 
+# MrMarket exclusions
+Office Work/MrMarket/node_modules/
+Office Work/MrMarket/package-lock.json
+Office Work/MrMarket/package.json
+Office Work/MrMarket/vite.config.js
+Office Work/MrMarket/styles/
+
+# Muktinath exclusions (keep only public folder)
+Office Work/muktinath/muktinath/src/
+Office Work/muktinath/muktinath/workspace.code-workspace
+Office Work/muktinath/site/node_modules/
+Office Work/muktinath/site/package-lock.json
+Office Work/muktinath/site/package.json
+Office Work/muktinath/site/scss/
+
+# SKY Website exclusions (keep only main files)
+Office Work/SKY_website/src/
+Office Work/SKY_website/package-sample.json
+Office Work/SKY_website/CHANGELOG.md
+Office Work/SKY_website/LICENSE
+
+# Include only essential files for Office Work projects
+!Office Work/SKY_website/index.html
+!Office Work/SKY_website/dist/
+!Office Work/SKY_website/README.md
+!Office Work/MrMarket/index.html
+!Office Work/MrMarket/README.md
+!Office Work/MrMarket/assets/
+!Office Work/MrMarket/js/
+!Office Work/muktinath/muktinath/public/
+!Office Work/muktinath/site/index.html
+
 # Keep main project files but exclude development artifacts
 !index.html
 !landing-style.css
