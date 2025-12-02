@@ -28,6 +28,17 @@ Thumbs.db
 .env.production
 .env.staging
 
+# API Keys and Secrets (SECURITY)
+**/config/keys.js
+**/config/secrets.js
+**/*api*key*
+**/*secret*
+**/*token*
+**/mel_conf.html
+# Google API Keys
+**/google-api-key*
+**/gmap-key*
+
 # Compiled CSS and JS (keep source files)
 *.min.css
 *.min.js
