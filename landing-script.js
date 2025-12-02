@@ -938,6 +938,28 @@ let currentFilter = 'all';
 function filterByCategory(category) {
     currentFilter = category;
 
+    // Update active state of category buttons
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    categoryButtons.forEach(btn => {
+        const filterValue = btn.getAttribute('data-filter');
+        if (filterValue === category) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // Also update old filter buttons if they exist
+    const oldFilterButtons = document.querySelectorAll('.filter-btn');
+    oldFilterButtons.forEach(btn => {
+        const filterValue = btn.getAttribute('data-filter');
+        if (filterValue === category) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
     // Show loading state
     showFilteringLoader();
 
@@ -946,7 +968,7 @@ function filterByCategory(category) {
     const snippetCards = document.querySelectorAll('#snippets .col-lg-4, #snippets .col-md-6');
     const allCards = [...projectCards, ...snippetCards];
 
-    // Add filter controls if not exists
+    // Add filter controls if not exists (for backward compatibility)
     addFilterControls();
 
     // Filter cards with animation
@@ -1155,6 +1177,12 @@ window.addEventListener('load', function () {
         setTimeout(() => {
             filterByCategory(categoryFromUrl);
         }, 1000);
+    } else {
+        // Set "All Projects" as active by default
+        const allButton = document.querySelector('.category-btn[data-filter="all"]');
+        if (allButton) {
+            allButton.classList.add('active');
+        }
     }
 });
 
