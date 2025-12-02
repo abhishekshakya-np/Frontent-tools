@@ -2,67 +2,74 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="css/style.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Failed - Cycle</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <div class="img">
-      <img src="image/cycle_logo.png" alt="" > 
-    </div>
-  </header>
-  
-  <main>
-    <div class="wrapperAlert">
+    <div class="page-container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="image/cycle_logo.png" alt="Cycle Logo">
+            </div>
+        </header>
 
-      <div class="contentAlert">
-  
-        <div class="topHalf">
-    
-          <p><svg viewBox="0 0 188.7 187.1" width="100" title="check-circle">
-             <path  d="M161.1,27.2C143.3,9.4,119.6-0.4,94.4-0.4S45.5,9.4,27.6,27.2C9.8,45,0,68.7,0,94s9.8,48.9,27.6,66.7
-               c17.8,17.8,41.5,27.6,66.7,27.6s48.9-9.8,66.7-27.6c17.8-17.8,27.6-41.5,27.6-66.7S178.9,45,161.1,27.2z M151.3,126.8
-               c1.5,1.5,1.5,4,0,5.6l-18.5,18.5c-0.8,0.8-1.8,1.2-2.8,1.2c-1,0-2-0.4-2.8-1.2L94.4,118l-32.9,32.9c-1.5,1.5-4,1.5-5.6,0
-               l-18.5-18.5c-1.5-1.5-1.5-4,0-5.6L70.3,94L37.5,61.1c-1.5-1.5-1.5-4,0-5.6l18.5-18.5c1.5-1.5,4-1.5,5.6,0l32.9,32.9l32.9-32.9
-               c1.5-1.5,4-1.5,5.6,0l18.5,18.5c1.5,1.5,1.5,4,0,5.6L118.4,94L151.3,126.8z"/>
-           </svg></p>
-          <h1>Sorry payment has been decline</h1>
-  
-          <ul class="bg-bubbles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-  
-        <div class="bottomHalf">
-  
-          <p>Please try again!!!</p>
-  
-          <button id="alertMO">Back to home</button>
-          <button id="alertMO">Try Again</button>
-  
-        </div>
-  
-      </div>
-  
-    </div>
-  </main>
-  
-  
+        <main class="main-content">
+            <div class="error-card">
+                <div class="error-icon-wrapper">
+                    <div class="error-icon">
+                        <svg viewBox="0 0 188.7 187.1" width="80" height="80">
+                            <circle cx="94.35" cy="93.55" r="93.55" fill="#ef4444" opacity="0.1"/>
+                            <path d="M161.1,27.2C143.3,9.4,119.6-0.4,94.4-0.4S45.5,9.4,27.6,27.2C9.8,45,0,68.7,0,94s9.8,48.9,27.6,66.7
+                                c17.8,17.8,41.5,27.6,66.7,27.6s48.9-9.8,66.7-27.6c17.8-17.8,27.6-41.5,27.6-66.7S178.9,45,161.1,27.2z M151.3,126.8
+                                c1.5,1.5,1.5,4,0,5.6l-18.5,18.5c-0.8,0.8-1.8,1.2-2.8,1.2c-1,0-2-0.4-2.8-1.2L94.4,118l-32.9,32.9c-1.5,1.5-4,1.5-5.6,0
+                                l-18.5-18.5c-1.5-1.5-1.5-4,0-5.6L70.3,94L37.5,61.1c-1.5-1.5-1.5-4,0-5.6l18.5-18.5c1.5-1.5,4-1.5,5.6,0l32.9,32.9l32.9-32.9
+                                c1.5-1.5,4-1.5,5.6,0l18.5,18.5c1.5,1.5,1.5,4,0,5.6L118.4,94L151.3,126.8z" fill="#ef4444"/>
+                        </svg>
+                    </div>
+                </div>
 
+                <div class="error-content">
+                    <h1 class="error-title">Payment Declined</h1>
+                    <p class="error-message">We're sorry, but your payment could not be processed. Please check your payment details and try again.</p>
+                    
+                    <div class="error-reasons">
+                        <h3>Possible reasons:</h3>
+                        <ul>
+                            <li>Insufficient funds</li>
+                            <li>Incorrect card information</li>
+                            <li>Card expired or blocked</li>
+                            <li>Network issue</li>
+                        </ul>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="window.location.href='#'">Try Again</button>
+                        <button class="btn btn-secondary" onclick="window.location.href='#'">Back to Home</button>
+                    </div>
+                </div>
+
+                <div class="bg-bubbles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>
