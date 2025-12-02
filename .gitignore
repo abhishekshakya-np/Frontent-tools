@@ -39,6 +39,15 @@ Thumbs.db
 **/google-api-key*
 **/gmap-key*
 
+# Windows reserved filenames (CRITICAL)
+nul
+CON
+PRN
+AUX
+NUL
+com[1-9]
+lpt[1-9]
+
 # Compiled CSS and JS (keep source files)
 *.min.css
 *.min.js
