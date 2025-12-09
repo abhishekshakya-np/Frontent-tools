@@ -22,8 +22,10 @@
 
     /* Text Colors (Semantic) */
     --color-text: #1f2937;
-    --color-text-muted: #6b7280;
-    --color-text-light: #9ca3af;
+    --color-text-muted: #4b5563;
+    /* Increased contrast from #6b7280 */
+    --color-text-light: #6b7280;
+    /* Adjusted from #9ca3af */
     --color-text-inverse: #ffffff;
     --color-text-inverse-muted: rgba(255, 255, 255, 0.9);
 
@@ -42,6 +44,29 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    /* Focus Ring Colors */
+    --focus-ring-primary: rgba(139, 92, 246, 0.1);
+    --focus-ring-inverse: rgba(255, 255, 255, 0.2);
+    --border-inverse-light: rgba(255, 255, 255, 0.4);
+
+    /* Component Tokens */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-full: 50%;
+
+    --elevation-0: none;
+    --elevation-1: var(--shadow-sm);
+    --elevation-2: var(--shadow-md);
+    --elevation-3: var(--shadow-lg);
+
+    --transition-base: 0.2s ease;
+    --transition-smooth: 0.3s ease;
+
+    --hover-lift: -4px;
+    --hover-lift-small: -2px;
+    --hover-scale: 1.02;
 
     /* Legacy Support (mapped to semantic colors) */
     --primary-purple: var(--color-primary);
@@ -200,9 +225,17 @@ p {
     padding: 120px 0;
 }
 
-/* Text Width Limit for Readability */
+/* Text Width Limit for Readability (45-75 characters per line) */
 .text-content {
     max-width: 650px;
+    /* Approximately 65-70 characters per line at 16px font size */
+}
+
+.section-header p {
+    max-width: 650px;
+    /* 45-75 characters per line */
+    margin-bottom: 0;
+    /* Margin handled by base p element if needed */
 }
 
 /* ============================================
@@ -234,11 +267,17 @@ p {
     color: var(--color-text-inverse);
     font-weight: var(--fw-normal);
     font-size: var(--fs-body);
-    transition: opacity 0.2s;
+    transition: opacity var(--transition-base);
 }
 
 .navbar-nav li a:hover {
     opacity: 0.8;
+}
+
+.navbar-nav li a:focus-visible {
+    outline: 2px solid var(--color-text-inverse);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
 }
 
 .bi-list {
@@ -257,7 +296,8 @@ p {
 #banner {
     background: var(--gradient-primary);
     color: var(--color-text-inverse);
-    padding: 100px 0 80px;
+    padding: 120px 0 80px;
+    /* Standardized: 120px top for hero section */
 }
 
 .promo-title {
@@ -288,11 +328,17 @@ p {
     font-size: var(--fs-body);
     display: inline-flex;
     align-items: center;
-    transition: opacity 0.2s;
+    transition: opacity var(--transition-base);
 }
 
 #banner a:hover {
     opacity: 0.8;
+}
+
+#banner a:focus-visible {
+    outline: 2px solid var(--color-text-inverse);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
 }
 
 .bottom-img {
@@ -300,23 +346,25 @@ p {
     display: block;
 }
 
-@media (max-width: 990px) {
+/* Unified breakpoint: 768px for tablet and below */
+@media (max-width: 768px) {
     .promo-title {
         font-size: var(--fs-h2);
-        /* 40px */
+        /* 40px on tablet */
         margin-top: 0;
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 576px) {
     .promo-title {
         font-size: var(--fs-h3);
-        /* 32px */
+        /* 32px on mobile */
         text-align: center;
     }
 
     #banner {
-        padding: 60px 0 40px;
+        padding: 80px 0 60px;
+        /* Reduced for mobile */
     }
 }
 
@@ -324,12 +372,21 @@ p {
    FEATURES SECTION
    ============================================ */
 #features {
-    padding: 100px 0;
+    padding: 120px 0;
+    /* Standardized: 120px for main sections */
 }
 
 .section-header {
     text-align: left;
     margin-bottom: 64px;
+    /* 16px * 4 = consistent with vertical rhythm */
+}
+
+.section-header p {
+    max-width: 650px;
+    /* 45-75 characters per line */
+    margin-bottom: 0;
+    /* Paragraph margin handled by p element */
 }
 
 .section-header .section-label {
@@ -348,14 +405,7 @@ p {
     color: var(--text-dark);
 }
 
-.section-header p {
-    font-size: var(--fs-body);
-    /* Fixed: was 18px, now 16px for consistency */
-    color: var(--text-body);
-    max-width: 600px;
-    line-height: var(--lh-body-loose);
-    /* Keep 1.65 for section descriptions */
-}
+/* Section header paragraph styling moved to .section-header p above */
 
 .features-grid {
     display: grid;
@@ -367,21 +417,26 @@ p {
 .feature-card {
     padding: 32px;
     background: var(--color-surface);
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: var(--radius-md);
+    box-shadow: var(--elevation-2);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .feature-card:hover {
-    transform: scale(1.03);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(var(--hover-lift));
+    box-shadow: var(--elevation-3);
+}
+
+.feature-card:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .feature-icon {
     width: 64px;
     height: 64px;
     background: var(--color-primary);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -404,36 +459,42 @@ p {
 }
 
 .feature-card p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
     margin-bottom: 0;
+    /* Last element in card */
 }
 
-.features .btn-primary,
 .btn-primary {
-    box-shadow: none;
+    box-shadow: var(--elevation-0);
     padding: 12px 32px;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     background: var(--color-primary);
     color: var(--color-text-inverse);
     font-size: var(--fs-body);
     font-weight: var(--fw-medium);
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background var(--transition-smooth), transform var(--transition-base);
+    cursor: pointer;
 }
 
-.features .btn-primary:hover,
 .btn-primary:hover {
     background: var(--color-primary-dark);
-    transform: translateY(-2px);
+    transform: translateY(var(--hover-lift-small));
+}
+
+.btn-primary:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 /* ============================================
    ABOUT US / WHY CHOOSE US SECTION
    ============================================ */
 #about-us {
-    padding: 100px 0;
+    padding: 120px 0;
+    /* Standardized: 120px for main sections */
     background-color: var(--color-surface-alt);
 }
 
@@ -447,27 +508,44 @@ p {
 }
 
 #about-us ul {
-    margin-left: 24px;
+    margin-left: 0;
     list-style: none;
     padding-left: 0;
 }
 
 #about-us ul li {
     margin: 16px 0;
-    padding-left: 28px;
+    padding-left: 32px;
     position: relative;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
 }
 
 #about-us ul li::before {
-    content: '✓';
+    content: '';
     position: absolute;
     left: 0;
-    color: var(--color-primary);
+    top: 0.5em;
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#about-us ul li::after {
+    content: '✓';
+    position: absolute;
+    left: 5px;
+    top: 0.3em;
+    color: var(--color-text-inverse);
     font-weight: var(--fw-semibold);
-    font-size: var(--fs-h5);
+    font-size: 12px;
+    line-height: 1;
 }
 
 #about-us .text-content {
@@ -478,7 +556,8 @@ p {
    HOW IT WORKS SECTION (NEW)
    ============================================ */
 #how-it-works {
-    padding: 100px 0;
+    padding: 120px 0;
+    /* Standardized: 120px for main sections */
 }
 
 .steps-grid {
@@ -498,7 +577,7 @@ p {
     height: 48px;
     background: var(--color-primary);
     color: var(--color-text-inverse);
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -516,15 +595,19 @@ p {
 }
 
 .step-card p {
-    font-size: 16px;
-    color: var(--text-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
+    margin-bottom: 0;
+    /* Last element in card */
 }
 
 /* ============================================
    TESTIMONIALS SECTION
    ============================================ */
 #testimonials {
-    padding: 100px 0;
+    padding: 120px 0;
+    /* Increased from 100px for more breathing room */
     background-color: var(--color-surface-alt);
 }
 
@@ -532,27 +615,34 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
-    margin-top: 48px;
+    margin-top: 64px;
+    /* Increased from 48px for better spacing */
 }
 
 .testimonial-card {
     background: var(--color-surface);
     padding: 32px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
-    border-left: 4px solid var(--color-primary);
-    transition: transform 0.3s ease;
+    border-radius: var(--radius-md);
+    box-shadow: var(--elevation-2);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .testimonial-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(var(--hover-lift));
+    box-shadow: var(--elevation-3);
+}
+
+.testimonial-card:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .testimonial-card p {
-    font-size: 16px;
-    line-height: 1.65;
-    color: var(--text-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body-loose);
+    color: var(--color-text-body);
     margin-bottom: 24px;
+    /* Consistent 16px scale (24px = 16px * 1.5) */
     font-style: italic;
 }
 
@@ -565,7 +655,7 @@ p {
 .testimonial-author img {
     height: 60px;
     width: 60px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     object-fit: cover;
 }
 
@@ -591,14 +681,29 @@ p {
    FAQ SECTION (NEW)
    ============================================ */
 #faq {
-    padding: 100px 0;
+    padding: 120px 0;
+    /* Increased from 100px for more breathing room */
 }
 
 .faq-item {
-    margin-bottom: 24px;
-    padding: 24px;
+    margin-bottom: 32px;
+    /* Increased from 24px for better spacing */
+    padding: 32px;
+    /* Increased from 24px for more breathing room */
     background: var(--color-surface-alt);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    cursor: pointer;
+}
+
+.faq-item:hover {
+    transform: translateY(var(--hover-lift-small));
+    box-shadow: var(--elevation-1);
+}
+
+.faq-item:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .faq-item h5 {
@@ -610,8 +715,9 @@ p {
 }
 
 .faq-item p {
-    font-size: 16px;
-    color: var(--text-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text-body);
     margin-bottom: 0;
 }
 
@@ -621,15 +727,16 @@ p {
 #social-media {
     background-color: var(--color-surface-alt);
     padding: 80px 0;
-    text-align: center;
 }
 
-#social-media p {
-    font-size: var(--fs-h4);
-    font-weight: var(--fw-medium);
-    line-height: var(--lh-label);
-    margin-bottom: 32px;
-    color: var(--text-dark);
+#social-media .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+#social-media .section-header h2,
+#social-media .section-header .title {
+    text-align: center;
 }
 
 .social-icons {
@@ -637,21 +744,28 @@ p {
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
+    margin-top: 32px;
 }
 
 .social-icons a {
     display: inline-block;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-smooth);
 }
 
 .social-icons img {
     width: 48px;
     height: 48px;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-smooth);
 }
 
 .social-icons a:hover img {
-    transform: translateY(-8px);
+    transform: translateY(var(--hover-lift-small));
+}
+
+.social-icons a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
 }
 
 /* ============================================
@@ -660,7 +774,8 @@ p {
 #footer {
     background: var(--gradient-primary);
     color: var(--color-text-inverse);
-    padding: 60px 0 40px;
+    padding: 50px 0 30px;
+    /* Reduced from 60px/40px for better proportions */
 }
 
 .footer-img {
@@ -700,29 +815,88 @@ p {
     color: var(--color-text-inverse-muted);
 }
 
+/* Standardized form input styling */
+.form-control,
+input[type="email"],
+input[type="text"],
+input[type="password"],
+textarea {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text);
+    background: var(--color-surface);
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    width: 100%;
+}
+
+.form-control:focus,
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--focus-ring-primary);
+}
+
+.form-control:focus-visible,
+input[type="email"]:focus-visible,
+input[type="text"]:focus-visible,
+input[type="password"]:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
 .footer-box .form-control {
-    box-shadow: none !important;
-    border: none;
-    border-radius: 8px;
+    box-shadow: var(--elevation-0) !important;
+    border: 1px solid var(--color-border-inverse);
+    border-radius: var(--radius-sm);
     margin-top: 16px;
     max-width: 300px;
     padding: 12px 16px;
+    background: var(--color-surface-overlay);
+    color: var(--color-text-inverse);
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.footer-box .form-control::placeholder {
+    color: var(--color-text-inverse-muted);
+}
+
+.footer-box .form-control:focus {
+    box-shadow: 0 0 0 3px var(--focus-ring-inverse) !important;
+    border-color: var(--border-inverse-light);
+    outline: none;
+}
+
+.footer-box .form-control:focus-visible {
+    outline: 2px solid var(--color-text-inverse);
+    outline-offset: 2px;
 }
 
 .footer-box .btn-primary {
-    box-shadow: none !important;
+    box-shadow: var(--elevation-0) !important;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     margin-top: 16px;
     background: var(--color-surface-overlay);
     color: var(--color-text-inverse);
     padding: 12px 24px;
     font-weight: var(--fw-medium);
-    transition: background 0.3s ease;
+    transition: background var(--transition-smooth);
 }
 
 .footer-box .btn-primary:hover {
     background: var(--color-surface-overlay-hover);
+}
+
+.footer-box .btn-primary:focus-visible {
+    outline: 2px solid var(--color-text-inverse);
+    outline-offset: 2px;
 }
 
 hr {
@@ -806,8 +980,66 @@ hr {
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .fade-in {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Scroll-triggered animations */
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Responsive adjustments */
