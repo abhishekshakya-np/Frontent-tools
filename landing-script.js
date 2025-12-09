@@ -87,7 +87,7 @@ const projectData = {
             'Google Fonts integration'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 4', 'Font Awesome'],
-        demoUrl: 'Books-bootstrap-4-website/src/Index.html'
+        demoUrl: 'projects/books-bootstrap-4/src/Index.html'
     },
     books5: {
         title: 'Books Platform - Bootstrap 5',
@@ -102,7 +102,7 @@ const projectData = {
             'CSS custom properties'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Font Awesome'],
-        demoUrl: 'Books-bootstrap-5-website/index.html'
+        demoUrl: 'projects/books-bootstrap-5/index.html'
     },
     bootstrap4master: {
         title: 'Portfolio Landing Page',
@@ -117,7 +117,7 @@ const projectData = {
             'Orange color theme'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 4', 'jQuery'],
-        demoUrl: 'bootstrap4-website-master/index.html'
+        demoUrl: 'projects/bootstrap-4-website/index.html'
     },
     nuno: {
         title: 'Nuno Theme Collection',
@@ -177,7 +177,7 @@ const projectData = {
             'Custom SVG icons'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'SVG'],
-        demoUrl: 'Bootstrap-Accordion-Frontend Mentor/index.html'
+        demoUrl: 'component-snippets/bootstrap-accordion/index.html'
     },
     navigation: {
         title: 'Modern Navigation Component',
@@ -192,7 +192,7 @@ const projectData = {
             'Cross-browser compatibility'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Google Fonts'],
-        demoUrl: 'Navigation/index.html'
+        demoUrl: 'component-snippets/navigation/index.html'
     },
     dashboard: {
         title: 'Responsive Admin Dashboard',
@@ -207,7 +207,7 @@ const projectData = {
             'Theme persistence'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'CSS Grid', 'Flexbox'],
-        demoUrl: 'Responsive Dashboard  LightDark UI/indexB.html'
+        demoUrl: 'component-snippets/responsive-dashboard-lightdark-ui/indexB.html'
     },
     qrcode: {
         title: 'QR Code Component - CSS Flexbox',
@@ -223,7 +223,7 @@ const projectData = {
             'Accessibility-friendly design'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'CSS Flexbox', 'Google Fonts'],
-        demoUrl: 'CSS-Flexbox-main/index.html'
+        demoUrl: 'component-snippets/css-flexbox/index.html'
     },
     aichatbot: {
         title: 'AI Chatbot - Intelligent Assistant',
@@ -239,7 +239,7 @@ const projectData = {
             'Keyboard navigation support'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Google Gemini API', 'Emoji Mart', 'Material Icons'],
-        demoUrl: 'AI-Chatbot-main/index.html'
+        demoUrl: 'component-snippets/ai-chatbot/index.html'
     },
     nova: {
         title: 'Nova - Professional Bootstrap Business Template',
@@ -259,7 +259,7 @@ const projectData = {
             'Easy customization options'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'AOS', 'Swiper', 'GLightbox'],
-        demoUrl: 'nova-new-1.0.0/index.html'
+        demoUrl: 'projects/nova/index.html'
     },
     wedding: {
         title: 'Wedding Template - Elegant Event Website',
@@ -277,7 +277,7 @@ const projectData = {
             'Social media sharing'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Font Awesome'],
-        demoUrl: 'Projects/SF_SAMPLE_BootstrapWeddingTemplate_mufOle/index.html'
+        demoUrl: 'projects/bootstrap-wedding-template/index.html'
     },
     webview: {
         title: 'Portfolio WebView - Professional Showcase',
@@ -295,7 +295,7 @@ const projectData = {
             'Easy customization'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Portfolio Design'],
-        demoUrl: 'Portfolio/webView/webView/index.html'
+        demoUrl: 'portfolio/web-view/webView/index.html'
     },
     clevercow: {
         title: 'CleverCow - Sustainability Business Platform',
@@ -313,7 +313,7 @@ const projectData = {
             'Corporate eco-solutions'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Sustainability Tech'],
-        demoUrl: 'office-work/Clevercow/index.html'
+        demoUrl: 'office-work/clevercow/index.html'
     },
     clevercowbootstrap: {
         title: 'CleverCow Bootstrap - Sustainability Platform',
@@ -333,7 +333,7 @@ const projectData = {
             'Eco-certification tracking'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Sustainability Tech', 'Analytics'],
-        demoUrl: 'office-work/CleverCowBootstrap/index.html'
+        demoUrl: 'office-work/clevercow-bootstrap/index.html'
     },
     clevercowscss: {
         title: 'CleverCow SCSS - Advanced Sustainability Platform',
@@ -353,7 +353,7 @@ const projectData = {
             'Development workflow optimization'
         ],
         technologies: ['HTML5', 'SCSS', 'JavaScript', 'Node.js', 'Build Tools', 'Custom Framework'],
-        demoUrl: 'office-work/CleverCowSCSS/index.html'
+        demoUrl: 'office-work/clevercow-scss/index.html'
     },
     mindsmirror: {
         title: 'Mind\'s Mirror - Mental Health Tracking Platform',
@@ -375,7 +375,7 @@ const projectData = {
             'Personalized wellness recommendations'
         ],
         technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Healthcare Tech', 'Mental Health'],
-        demoUrl: 'office-work/Mind\'s Mirror - Mental Health Tracking Landing Page/static-demo.html'
+        demoUrl: 'office-work/minds-mirror-mental-health-tracking-landing-page/static-demo.html'
     },
     magz: {
         title: 'Magz - Professional Magazine & Blog Template',
@@ -401,7 +401,7 @@ const projectData = {
             'Magazine-style layout design'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 3', 'SCSS', 'PHP', 'jQuery', 'Ion Icons'],
-        demoUrl: 'Projects/Magz-master/index.html'
+        demoUrl: 'projects/magz/index.html'
     },
     moviewebsite: {
         title: 'Movie Search Website - React Application',
@@ -419,7 +419,7 @@ const projectData = {
             'Performance optimized search'
         ],
         technologies: ['React 18', 'React Router', 'Context API', 'OMDB API', 'Custom Hooks', 'Debounced Search'],
-        demoUrl: 'Projects/moviewebsite-master/static-demo.html'
+        demoUrl: 'projects/movie-website/static-demo.html'
     },
     clevercowprod: {
         title: 'CleverCow Production - Sustainability Website',
@@ -437,7 +437,7 @@ const projectData = {
             'Environmental sustainability focus'
         ],
         technologies: ['HTML5', 'Bootstrap 5', 'Sass/SCSS', 'Gulp 4', 'JavaScript', 'Bootstrap Icons'],
-        demoUrl: 'office-work/CleverCow-Production/index.html'
+        demoUrl: 'office-work/clevercow-production/index.html'
     },
     skywebsite: {
         title: 'SKY - Sewa Ko Yatra Service Website',
@@ -455,7 +455,7 @@ const projectData = {
             'Service showcase sections'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'ScrollReveal', 'Responsive Design', 'SVG Graphics'],
-        demoUrl: 'office-work/SKY_website/index.html'
+        demoUrl: 'office-work/sky-website/index.html'
     },
     mrmarket: {
         title: 'MrMarket NEPSE - Trading Platform Website',
@@ -473,7 +473,7 @@ const projectData = {
             'Trading automation feature highlights'
         ],
         technologies: ['HTML5', 'SASS/SCSS', 'JavaScript', 'Responsive Design', 'Form Validation', 'SVG Icons'],
-        demoUrl: 'office-work/MrMarket/index.html'
+        demoUrl: 'office-work/mr-market/index.html'
     },
     muktinath: {
         title: 'Muktinath Krishi - Agricultural Business Website',
@@ -562,7 +562,7 @@ const snippetData = {
             'Accessibility features'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
-        demoUrl: 'snippets/Navigation/index.html'
+        demoUrl: 'component-snippets/navigation/index.html'
     },
     emailtemplates: {
         title: 'Professional Email Templates',
@@ -578,7 +578,7 @@ const snippetData = {
             'Easy customization'
         ],
         technologies: ['HTML Email', 'CSS Inline Styles', 'Responsive Tables', 'Outlook Compatible'],
-        demoUrl: 'snippets/mail web/verify-email.html'
+        demoUrl: 'email-templates/mail-web/verify-email.html'
     },
     emailtemplatesv1: {
         title: 'Email Templates V1 - Enhanced',
@@ -594,7 +594,7 @@ const snippetData = {
             'Accessibility improvements'
         ],
         technologies: ['HTML Email', 'Advanced CSS', 'Media Queries', 'Dark Mode Support'],
-        demoUrl: 'snippets/mail web V1/verify-email.html'
+        demoUrl: 'email-templates/mail-web-v1/verify-email.html'
     },
     emailtemplatesv2: {
         title: 'Email Templates V2 - Latest',
@@ -610,7 +610,7 @@ const snippetData = {
             'Analytics-ready structure'
         ],
         technologies: ['HTML Email', 'Modern CSS', 'Progressive Enhancement', 'Performance Optimized'],
-        demoUrl: 'snippets/mail web V2/verify-email.html'
+        demoUrl: 'email-templates/mail-web-v2/verify-email.html'
     },
     pdftemplates: {
         title: 'PDF & Invoice Templates',
@@ -1038,18 +1038,18 @@ function filterByCategory(category, origin = 'projects') {
         // Hide loading state
         hideFilteringLoader();
 
-    // Scroll to the relevant section
-    const scrollTarget = origin === 'snippets'
-        ? document.querySelector('#snippets')
-        : document.querySelector('#projects');
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        // Scroll to the relevant section
+        const scrollTarget = origin === 'snippets'
+            ? document.querySelector('#snippets')
+            : document.querySelector('#projects');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (scrollTarget) {
-        scrollTarget.scrollIntoView({
-            behavior: prefersReducedMotion ? 'auto' : 'smooth',
-            block: 'start'
-        });
-    }
+        if (scrollTarget) {
+            scrollTarget.scrollIntoView({
+                behavior: prefersReducedMotion ? 'auto' : 'smooth',
+                block: 'start'
+            });
+        }
 
         // Update URL without page reload
         const url = new URL(window.location);

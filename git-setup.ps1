@@ -56,19 +56,19 @@ git add "Projects/the-rosa/the-rosa/style.css"
 git add "Projects/SF_SAMPLE_BootstrapWeddingTemplate_mufOle/index.html"
 
 # Add component snippets (main files only)
-git add "Component Snippets/*/index.html"
-git add "Component Snippets/*/style.css"
-git add "Component Snippets/*/README.md"
+git add "component-snippets/*/index.html"
+git add "component-snippets/*/style.css"
+git add "component-snippets/*/README.md"
 
 # Add email templates
-git add "Email Templates/*/index.html"
-git add "Email Templates/*/*.html"
+git add "email-templates/*/index.html"
+git add "email-templates/*/*.html"
 
 # Add office work projects (main files)
-git add "Office Work/Clevercow/index.html"
-git add "Office Work/CleverCowBootstrap/index.html"
-git add "Office Work/CleverCowSCSS/index.html"
-git add "Office Work/Mind's Mirror - Mental Health Tracking Landing Page/index.html"
+git add "office-work/Clevercow/index.html"
+git add "office-work/CleverCowBootstrap/index.html"
+git add "office-work/CleverCowSCSS/index.html"
+git add "office-work/minds-mirror/index.html"
 
 # Add portfolio projects
 git add "Portfolio/*/index.html"

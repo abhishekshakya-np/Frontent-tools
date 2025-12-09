@@ -33,5 +33,13 @@
   "homepage": "https://your-username.github.io/frontend-collection/",
   "engines": {
     "node": ">=12.0.0"
-  }
+  },
+  "workspaces": [
+    "projects/*",
+    "office-work/*",
+    "component-snippets/*",
+    "email-templates/*",
+    "portfolio/*",
+    "website/*"
+  ]
 }

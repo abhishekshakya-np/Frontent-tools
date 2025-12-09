@@ -36,9 +36,9 @@ git add "Projects/the-rosa/the-rosa/index.html"
 git add "Projects/SF_SAMPLE_BootstrapWeddingTemplate_mufOle/index.html"
 
 REM Add office work projects
-git add "Office Work/Clevercow/index.html"
-git add "Office Work/CleverCowBootstrap/index.html"
-git add "Office Work/CleverCowSCSS/index.html"
+git add "office-work/Clevercow/index.html"
+git add "office-work/CleverCowBootstrap/index.html"
+git add "office-work/CleverCowSCSS/index.html"
 
 echo ✅ Essential files staged!
 echo.
