@@ -24,18 +24,28 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Smooth scroll for navigation links
+// Smooth scroll for in-page navigation links (skip empty "#")
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (!href || href === '#') return;
+
+        const target = document.querySelector(href);
+        if (!target) return;
+
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
+        const offsetTop = target.offsetTop - 80;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
+
+        // Ensure keyboard focus moves to the target (especially for skip link)
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+        target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
     });
 });
 
@@ -746,12 +756,18 @@ function typeWriter(element, text, speed = 100) {
 // Initialize typing effect when page loads
 window.addEventListener('load', function () {
     const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
-        setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
-        }, 500);
-    }
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const allowTypewriter = heroTitle && heroTitle.dataset.allowTypewriter === 'true';
+
+    // Keep the main heading instantly readable; opt-in only via data-allow-typewriter
+    if (!heroTitle || prefersReducedMotion || !allowTypewriter) return;
+
+    const originalText = heroTitle.innerHTML;
+    if (!originalText.trim()) return;
+
+    setTimeout(() => {
+        typeWriter(heroTitle, originalText, 50);
+    }, 500);
 });
 
 // Add loading animation
@@ -781,17 +797,35 @@ window.addEventListener('scroll', function () {
 });
 
 // Counter animation
-function animateCounter(element, target, duration = 2000) {
+function animateCounter(element, duration = 2000) {
+    const originalText = element.dataset.originalText || element.textContent.trim();
+    element.dataset.originalText = originalText;
+
+    const match = originalText.match(/^(\d+(?:\.\d+)?)(.*)$/);
+    if (!match) {
+        element.textContent = originalText;
+        return;
+    }
+
+    const target = Number(match[1]);
+    const suffix = match[2] || '';
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (Number.isNaN(target) || prefersReducedMotion) {
+        element.textContent = originalText;
+        return;
+    }
+
     let start = 0;
     const increment = target / (duration / 16);
 
     function updateCounter() {
         start += increment;
         if (start < target) {
-            element.textContent = Math.floor(start);
+            element.textContent = `${Math.floor(start)}${suffix}`;
             requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = target;
+            element.textContent = `${target}${suffix}`;
         }
     }
 
@@ -809,10 +843,7 @@ const counterObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const counters = entry.target.querySelectorAll('.stat-item h3, .stat-box h3');
             counters.forEach(counter => {
-                const target = parseInt(counter.textContent) || 7;
-                if (!isNaN(target)) {
-                    animateCounter(counter, target);
-                }
+                animateCounter(counter);
             });
             counterObserver.unobserve(entry.target);
         }
