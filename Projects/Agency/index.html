@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- Bootstrap Icons (optional) -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 
@@ -21,7 +21,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <title>My first bootstrap page</title>
+    <title>Stock Screener - Advanced Stock Analysis for Nepal</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="images/demo-logo.png" alt="">
+                    <img src="images/demo-logo.png" alt="Stock Screener Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#top">Home</a>
+                            <a class="nav-link" href="#banner">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#features">Features</a>
@@ -60,190 +60,254 @@
         </nav>
     </section>
 
-    <!-- banner section -->
+    <!-- Hero Section -->
     <section id="banner">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-md-start text-center align-center-on-medium">
-                    <p class="promo-title">
-                        STOCK SCREENER!
-                    </p>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start text-center">
+                    <h1 class="promo-title">Stock Screener</h1>
                     <p>
-                        Stock analysis and screening tool for investors in Nepal.
+                        Analyze stocks with customizable filters designed for Nepali investors. Make informed investment
+                        decisions with real-time data and advanced screening tools.
                     </p>
-                    <a href="#"><img src="images/play.png" class="play-btn"> Watch Video</a>
+                    <a href="#"><img src="images/play.png" class="play-btn" alt="Play"> Watch Video</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="images/home2.png" class="img-fluid">
+                    <img src="images/home2.png" class="img-fluid" alt="Stock Screener Dashboard">
                 </div>
             </div>
         </div>
-        <img src="images/wave1.png" class="bottom-img">
+        <img src="images/wave1.png" class="bottom-img" alt="">
     </section>
 
-    <!-- Features -->
-    <section id="features">
-        <div class="container text-center">
-            <h1 class="title">Features</h1>
-            <div class="row text-center">
-                <div class="col-md-4 features">
-                    <img src="images/service1.png" class="features-img">
-                    <h4>STOCK SCREENER</h4>
-                    <p>
-                        Stock analysis and screening tool for investors in Nepal.
-                        Stock analysis and screening tool for investors in Nepal.
-                    </p>
-                </div>
-                <div class="col-md-4 features">
-                    <img src="images/service2.png" class="features-img">
-                    <h4>STOCK2 SCREENER</h4>
-                    <p>
-                        Stock analysis and screening tool for investors in Nepal.
-                        Stock analysis and screening tool for investors in Nepal.
-                        Stock analysis and screening tool for investors in Nepal.
-                    </p>
-                </div>
-                <div class="col-md-4 features">
-                    <img src="images/service3.png" class="features-img">
-                    <h4>STOCK3 SCREENER</h4>
-                    <p>
-                        Stock analysis and screening tool for investors in Nepal.
-                        Stock analysis and screening tool for investors in Nepal.
-                        Stock analysis and screening tool for investors in Nepal.
-                        Stock analysis and screening tool for investors in Nepal.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center mt-4">
-            <button type="button" class="btn btn-primary">All Features </button>
-        </div>
-        </div>
-    </section>
-
-    <!-- About Us -->
-    <section id="about-us">
+    <!-- Features Section -->
+    <section id="features" class="section">
         <div class="container">
-            <h1 class="title text-center">
-                Why Choose Us
-            </h1>
-            <div class="row">
-                <div class="col-md-6 about-us">
-                    <p class="about-title">Why were doing this?</p>
-                    <ul>
-                        <li>We are making bootstrap with css.</li>
-                        <li>We are making bootstrap with css.</li>
-                        <li>We are making bootstrap with css.</li>
-                        <li>We are making bootstrap with css.</li>
-                        <li>We are making bootstrap with css.</li>
-                        <li>We are making bootstrap with css.</li>
-                        <li>We are making bootstrap with css.</li>
-                    </ul>
+            <div class="section-header">
+                <span class="section-label">Core Features</span>
+                <h2 class="title">Everything You Need to Screen Stocks</h2>
+                <p>Powerful tools designed to help Nepali investors find the best investment opportunities.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <img src="images/service1.png" alt="Stock Screener Icon">
+                    </div>
+                    <h4>Stock Screener</h4>
+                    <p>
+                        Filter stocks by market cap, P/E ratio, dividend yield, and more. Built specifically for the
+                        Nepali stock market with real-time data updates.
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <img src="images/service2.png" alt="Advanced Filters Icon">
+                    </div>
+                    <h4>Advanced Filters</h4>
+                    <p>
+                        Create custom screening criteria with multiple parameters. Save your favorite filters and get
+                        instant alerts when stocks match your criteria.
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <img src="images/service3.png" alt="Portfolio Insights Icon">
+                    </div>
+                    <h4>Portfolio Insights</h4>
+                    <p>
+                        Track your investments with detailed analytics. Monitor performance, risk metrics, and get
+                        personalized recommendations based on your portfolio.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary">View All Features</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about-us" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="text-content">
+                        <span class="section-label">Why We Built This</span>
+                        <h2 class="about-title">Why We're Doing This</h2>
+                        <p>We believe every investor deserves access to professional-grade tools. Our platform is
+                            designed to democratize stock analysis for the Nepali market.</p>
+                        <ul>
+                            <li>Empower individual investors with institutional-quality tools</li>
+                            <li>Provide accurate, real-time data for the Nepali stock market</li>
+                            <li>Simplify complex financial analysis for better decision-making</li>
+                            <li>Build a community of informed investors in Nepal</li>
+                            <li>Offer transparent, unbiased stock screening capabilities</li>
+                            <li>Support financial literacy and investment education</li>
+                            <li>Create tools that adapt to local market conditions</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/network.png" class="img-fluid">
+                    <img src="images/network.png" class="img-fluid" alt="Network Illustration">
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials">
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section">
         <div class="container">
-            <h1 class="title text-center">Why bootstrap with css</h1>
-            <div class="row justify-content-center">
-                <div class="col-md-5 testimonials">
-                    <p>Why were doing this Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam
-                        reprehenderit sit illum officia porro aliquam molestiae tempora harum facilis numquam,
-                        repudiandae quo, natus sint fuga corporis ipsa, eaque necessitatibus?</p>
-                    <img src="images/user1.jpg" alt="User image">
-                    <p class="user-details"><b>Name</b><br>Lorem ipsum dolor sit</p>
+            <div class="section-header">
+                <span class="section-label">How It Works</span>
+                <h2 class="title">Get Started in Three Simple Steps</h2>
+                <p>Start screening stocks and making better investment decisions today.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-number">1</div>
+                    <h5>Create Your Account</h5>
+                    <p>Sign up for free and get instant access to our stock screening tools.</p>
                 </div>
-                <div class="col-md-5 testimonials">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est culpa quam iure labore dolores,
-                        cumque suscipit porro, officia repellat nesciunt fuga temporibus possimus unde aut ab
-                        reprehenderit eligendi voluptates tenetur.</p>
-                    <img src="images/user2.jpg" alt="User image">
-                    <p class="user-details"><b>Name</b><br>Lorem ipsum dolor sit</p>
+                <div class="step-card fade-in">
+                    <div class="step-number">2</div>
+                    <h5>Set Your Filters</h5>
+                    <p>Choose your screening criteria based on financial metrics and market indicators.</p>
                 </div>
-                <div class="col-md-5 testimonials">
-                    <p>Why were doing this Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam
-                        reprehenderit sit illum officia porro aliquam molestiae tempora harum facilis numquam,
-                        repudiandae quo, natus sint fuga corporis ipsa, eaque necessitatibus?</p>
-                    <img src="images/user1.jpg" alt="User image">
-                    <p class="user-details"><b>Name</b><br>Lorem ipsum dolor sit</p>
-                </div>
-                <div class="col-md-5 testimonials">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est culpa quam iure labore dolores,
-                        cumque suscipit porro, officia repellat nesciunt fuga temporibus possimus unde aut ab
-                        reprehenderit eligendi voluptates tenetur.</p>
-                    <img src="images/user2.jpg" alt="User image">
-                    <p class="user-details"><b>Name</b><br>Lorem ipsum dolor sit</p>
-                </div>
-                <div class="col-md-5 testimonials">
-                    <p>Why were doing this Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam
-                        reprehenderit sit illum officia porro aliquam molestiae tempora harum facilis numquam,
-                        repudiandae quo, natus sint fuga corporis ipsa, eaque necessitatibus?</p>
-                    <img src="images/user1.jpg" alt="User image">
-                    <p class="user-details"><b>Name</b><br>Lorem ipsum dolor sit</p>
-                </div>
-                <div class="col-md-5 testimonials">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est culpa quam iure labore dolores,
-                        cumque suscipit porro, officia repellat nesciunt fuga temporibus possimus unde aut ab
-                        reprehenderit eligendi voluptates tenetur.</p>
-                    <img src="images/user2.jpg" alt="User image">
-                    <p class="user-details"><b>Name</b><br>Lorem ipsum dolor sit</p>
+                <div class="step-card fade-in">
+                    <div class="step-number">3</div>
+                    <h5>Analyze Results</h5>
+                    <p>Review matched stocks with detailed analytics and make informed decisions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Media -->
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Customer Feedback</span>
+                <h2 class="title">What Our Users Say</h2>
+                <p>Join thousands of investors who trust our platform for their stock analysis needs.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p>"This platform has completely transformed how I screen stocks. The filters are intuitive and the
+                        data is always up-to-date. Highly recommended for any serious investor in Nepal."</p>
+                    <div class="testimonial-author">
+                        <img src="images/user1.jpg" alt="User testimonial">
+                        <div class="user-details">
+                            <b>Rajesh Shrestha</b>
+                            <span>Portfolio Manager</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p>"As someone new to stock investing, this tool made it so much easier to understand which stocks
+                        match my investment goals. The interface is clean and the insights are valuable."</p>
+                    <div class="testimonial-author">
+                        <img src="images/user2.jpg" alt="User testimonial">
+                        <div class="user-details">
+                            <b>Priya Karki</b>
+                            <span>Individual Investor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p>"The advanced filtering options help me find opportunities I would have missed otherwise. The
+                        real-time updates ensure I'm always working with current data."</p>
+                    <div class="testimonial-author">
+                        <img src="images/user1.jpg" alt="User testimonial">
+                        <div class="user-details">
+                            <b>Anil Thapa</b>
+                            <span>Financial Analyst</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Frequently Asked Questions</span>
+                <h2 class="title">Common Questions</h2>
+                <p>Find answers to the most common questions about our stock screening platform.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="faq-item fade-in">
+                        <h5>How often is the stock data updated?</h5>
+                        <p>Our platform provides real-time data updates throughout trading hours. Historical data is
+                            updated daily after market close.</p>
+                    </div>
+                    <div class="faq-item fade-in">
+                        <h5>Is there a free version available?</h5>
+                        <p>Yes, we offer a free tier with basic screening features. Premium plans unlock advanced
+                            filters and portfolio analytics.</p>
+                    </div>
+                    <div class="faq-item fade-in">
+                        <h5>Which stock exchanges are supported?</h5>
+                        <p>Currently, we support all stocks listed on the Nepal Stock Exchange (NEPSE). We're working on
+                            expanding to other regional markets.</p>
+                    </div>
+                    <div class="faq-item fade-in">
+                        <h5>Can I save my custom filters?</h5>
+                        <p>Absolutely! Premium users can save unlimited custom filters and set up alerts for when stocks
+                            match their criteria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
     <section id="social-media">
         <div class="container text-center">
-            <p> Find us on Google</p>
+            <p>Find Us on Social Media</p>
             <div class="social-icons">
-                <a href="#"><img src="images/facebook-icon.png" alt=""></a>
-                <a href="#"><img src="images/linkedin-icon.png" alt=""></a>
-                <a href="#"><img src="images/twitter-icon.png" alt=""></a>
-                <a href="#"><img src="images/snapchat-icon.png" alt=""></a>
-                <a href="#"><img src="images/instagram-icon.png" alt=""></a>
-                <a href="#"><img src="images/whatsapp-icon.png" alt=""></a>
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/snapchat-icon.png" alt="Snapchat"></a>
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="images/whatsapp-icon.png" alt="WhatsApp"></a>
             </div>
         </div>
     </section>
 
-
-    <!-- footer -->
+    <!-- Footer -->
     <section id="footer">
-        <img src="images/wave2.png" class="footer-img">
+        <img src="images/wave2.png" class="footer-img" alt="">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 footer-box">
-                    <img src="images/demo-logo.png">
+                    <img src="images/demo-logo.png" alt="Stock Screener Logo">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magni.
+                        Advanced stock screening and analysis tools designed for Nepali investors. Make informed
+                        decisions with real-time data and powerful filters.
                     </p>
                 </div>
                 <div class="col-md-4 footer-box">
-                    <p><b>CONTACT US</b></p>
-                    <p><i class="bi bi-geo-alt" aria-hidden="true"></i> 1234k, India</p>
-                    <p><i class="bi bi-telephone" aria-hidden="true"></i> 123456789</p>
-                    <p><i class="bi bi-envelope" aria-hidden="true"></i> 0K5vV@example.com</p>
+                    <p><b>Contact Us</b></p>
+                    <p><i class="bi bi-geo-alt" aria-hidden="true"></i> Kathmandu, Nepal</p>
+                    <p><i class="bi bi-telephone" aria-hidden="true"></i> +977-1-XXXXXXX</p>
+                    <p><i class="bi bi-envelope" aria-hidden="true"></i> info@stockscreener.com</p>
                 </div>
                 <div class="col-md-4 footer-box">
-                    <p><b>SUBSCRIBE NEWSLETTER</b></p>
+                    <p><b>Subscribe Newsletter</b></p>
                     <input type="email" class="form-control" placeholder="Your Email">
                     <button type="button" class="btn btn-primary">Subscribe</button>
                 </div>
             </div>
             <hr>
-            <p class="copyright">Made with <i class="fa fa-heart-o"></i> by Bootstrap</p>
+            <p class="copyright">Made with <i class="bi bi-heart-fill"></i> for Nepali Investors</p>
         </div>
     </section>
 
-    <!-- smooth scroll -->
+    <!-- Smooth Scroll -->
     <script src="smooth-scroll.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
