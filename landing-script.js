@@ -313,7 +313,7 @@ const projectData = {
             'Corporate eco-solutions'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Sustainability Tech'],
-        demoUrl: 'Office Work/Clevercow/index.html'
+        demoUrl: 'office-work/Clevercow/index.html'
     },
     clevercowbootstrap: {
         title: 'CleverCow Bootstrap - Sustainability Platform',
@@ -333,7 +333,7 @@ const projectData = {
             'Eco-certification tracking'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Sustainability Tech', 'Analytics'],
-        demoUrl: 'Office Work/CleverCowBootstrap/index.html'
+        demoUrl: 'office-work/CleverCowBootstrap/index.html'
     },
     clevercowscss: {
         title: 'CleverCow SCSS - Advanced Sustainability Platform',
@@ -353,7 +353,7 @@ const projectData = {
             'Development workflow optimization'
         ],
         technologies: ['HTML5', 'SCSS', 'JavaScript', 'Node.js', 'Build Tools', 'Custom Framework'],
-        demoUrl: 'Office Work/CleverCowSCSS/index.html'
+        demoUrl: 'office-work/CleverCowSCSS/index.html'
     },
     mindsmirror: {
         title: 'Mind\'s Mirror - Mental Health Tracking Platform',
@@ -375,7 +375,7 @@ const projectData = {
             'Personalized wellness recommendations'
         ],
         technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Healthcare Tech', 'Mental Health'],
-        demoUrl: 'Office Work/Mind\'s Mirror - Mental Health Tracking Landing Page/static-demo.html'
+        demoUrl: 'office-work/Mind\'s Mirror - Mental Health Tracking Landing Page/static-demo.html'
     },
     magz: {
         title: 'Magz - Professional Magazine & Blog Template',
@@ -437,7 +437,7 @@ const projectData = {
             'Environmental sustainability focus'
         ],
         technologies: ['HTML5', 'Bootstrap 5', 'Sass/SCSS', 'Gulp 4', 'JavaScript', 'Bootstrap Icons'],
-        demoUrl: 'Office Work/CleverCow-Production/index.html'
+        demoUrl: 'office-work/CleverCow-Production/index.html'
     },
     skywebsite: {
         title: 'SKY - Sewa Ko Yatra Service Website',
@@ -455,7 +455,7 @@ const projectData = {
             'Service showcase sections'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'ScrollReveal', 'Responsive Design', 'SVG Graphics'],
-        demoUrl: 'Office Work/SKY_website/index.html'
+        demoUrl: 'office-work/SKY_website/index.html'
     },
     mrmarket: {
         title: 'MrMarket NEPSE - Trading Platform Website',
@@ -473,7 +473,7 @@ const projectData = {
             'Trading automation feature highlights'
         ],
         technologies: ['HTML5', 'SASS/SCSS', 'JavaScript', 'Responsive Design', 'Form Validation', 'SVG Icons'],
-        demoUrl: 'Office Work/MrMarket/index.html'
+        demoUrl: 'office-work/MrMarket/index.html'
     },
     muktinath: {
         title: 'Muktinath Krishi - Agricultural Business Website',
@@ -491,7 +491,7 @@ const projectData = {
             'Agricultural service showcase'
         ],
         technologies: ['HTML5', 'Bootstrap', 'CSS3', 'JavaScript', 'Owl Carousel', 'FontAwesome', 'Animate.css'],
-        demoUrl: 'Office Work/muktinath/muktinath/public/index.html'
+        demoUrl: 'office-work/muktinath/muktinath/public/index.html'
     }
 };
 
@@ -966,7 +966,7 @@ if ('PerformanceObserver' in window) {
 // Category filtering functionality
 let currentFilter = 'all';
 
-function filterByCategory(category) {
+function filterByCategory(category, origin = 'projects') {
     currentFilter = category;
 
     // Update active state of category buttons
@@ -989,6 +989,15 @@ function filterByCategory(category) {
         } else {
             btn.classList.remove('active');
         }
+    });
+
+    // Update snippet category tiles
+    const snippetCategoryItems = document.querySelectorAll('.snippet-categories .category-item[aria-pressed]');
+    snippetCategoryItems.forEach(item => {
+        const filterValue = item.getAttribute('data-category');
+        const isActive = filterValue === category;
+        item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        item.classList.toggle('active', isActive);
     });
 
     // Show loading state
@@ -1029,11 +1038,18 @@ function filterByCategory(category) {
         // Hide loading state
         hideFilteringLoader();
 
-        // Scroll to projects section
-        document.querySelector('#projects').scrollIntoView({
-            behavior: 'smooth',
+    // Scroll to the relevant section
+    const scrollTarget = origin === 'snippets'
+        ? document.querySelector('#snippets')
+        : document.querySelector('#projects');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (scrollTarget) {
+        scrollTarget.scrollIntoView({
+            behavior: prefersReducedMotion ? 'auto' : 'smooth',
             block: 'start'
         });
+    }
 
         // Update URL without page reload
         const url = new URL(window.location);
