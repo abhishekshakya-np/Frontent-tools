@@ -239,6 +239,29 @@ p {
 }
 
 /* ============================================
+   SKIP TO CONTENT (Accessibility)
+   ============================================ */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+    font-size: var(--fs-body);
+    font-weight: var(--fw-medium);
+}
+
+.skip-to-content:focus {
+    top: 0;
+    outline: 2px solid var(--color-text-inverse);
+    outline-offset: 2px;
+}
+
+/* ============================================
    NAVBAR
    ============================================ */
 #nav-bar {
@@ -253,6 +276,12 @@ p {
     height: 70px;
     padding: 0 36px;
     color: var(--color-text-inverse);
+}
+
+.navbar .container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Match footer container max-width */
 }
 
 .navbar-brand img {
@@ -296,8 +325,8 @@ p {
 #banner {
     background: var(--gradient-primary);
     color: var(--color-text-inverse);
-    padding: 120px 0 80px;
-    /* Standardized: 120px top for hero section */
+    padding: 120px 0 0;
+    /* Standardized: 120px top, bottom padding removed */
 }
 
 .promo-title {
@@ -377,7 +406,7 @@ p {
 }
 
 .section-header {
-    text-align: left;
+    text-align: center;
     margin-bottom: 64px;
     /* 16px * 4 = consistent with vertical rhythm */
 }
@@ -385,6 +414,8 @@ p {
 .section-header p {
     max-width: 650px;
     /* 45-75 characters per line */
+    margin: 0 auto;
+    /* Center the paragraph */
     margin-bottom: 0;
     /* Paragraph margin handled by p element */
 }
@@ -396,7 +427,7 @@ p {
 
 .section-header h2,
 .section-header .title {
-    text-align: left;
+    text-align: center;
     margin-bottom: 24px;
     /* Fixed: align with H2 margin (8px scale) */
     font-size: var(--fs-h2);
@@ -498,13 +529,23 @@ p {
     background-color: var(--color-surface-alt);
 }
 
+/* About Us section now uses section-header class, so about-title is no longer needed */
 .about-title {
     font-size: var(--fs-h3);
     font-weight: var(--fw-semibold);
-    /* Fixed: was 500, now 600 for consistency */
     line-height: var(--lh-subheading);
     margin-bottom: 32px;
     color: var(--text-dark);
+}
+
+#about-us .text-content {
+    text-align: left;
+    /* Keep content left-aligned for readability */
+}
+
+#about-us .text-content p {
+    text-align: left;
+    /* Keep paragraph left-aligned */
 }
 
 #about-us ul {
@@ -774,8 +815,8 @@ p {
 #footer {
     background: var(--gradient-primary);
     color: var(--color-text-inverse);
-    padding: 50px 0 30px;
-    /* Reduced from 60px/40px for better proportions */
+    padding: 0 0 30px;
+    /* Top padding removed, bottom padding maintained */
 }
 
 .footer-img {
