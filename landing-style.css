@@ -654,42 +654,9 @@ html {
     position: relative;
 }
 
+/* Website Projects - inherits base project-card styles */
 .website-projects::before {
     display: none;
-}
-
-.website-projects .section-title {
-    color: var(--gray-900);
-}
-
-.website-projects .section-subtitle {
-    color: var(--gray-500);
-}
-
-.website-projects .project-card {
-    background: white;
-    border: 1px solid var(--border-color);
-}
-
-.website-projects .project-card:hover {
-    border-color: var(--gray-300);
-    box-shadow: var(--shadow-lg);
-}
-
-.website-projects .project-title {
-    color: var(--gray-900);
-}
-
-.website-projects .project-description {
-    color: var(--gray-500);
-}
-
-.website-projects .project-category {
-    color: var(--gray-400);
-}
-
-.website-projects .project-category .dot {
-    background: var(--gray-300);
 }
 
 /* Features Section - Minimal */
@@ -769,9 +736,9 @@ html {
 
 .snippet-preview {
     position: relative;
-    height: 250px;
+    height: 200px;
     overflow: hidden;
-    background: #f8f9fa;
+    background: var(--gray-100);
 }
 
 .snippet-preview iframe {
@@ -784,25 +751,26 @@ html {
     height: 125%;
 }
 
+/* Code Preview - Minimal Light Theme */
 .code-preview {
     height: 100%;
-    background: #1a1a1a;
-    color: #f8f8f2;
+    background: var(--gray-100);
+    color: var(--gray-700);
     display: flex;
     flex-direction: column;
 }
 
 .code-header {
-    background: #2d2d2d;
+    background: var(--gray-200);
     padding: 12px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .code-lang {
-    color: #61dafb;
+    color: var(--gray-600);
     font-size: 12px;
     font-weight: 500;
 }
@@ -813,18 +781,18 @@ html {
 }
 
 .code-dots span {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background: #ff5f56;
+    background: var(--gray-300);
 }
 
 .code-dots span:nth-child(2) {
-    background: #ffbd2e;
+    background: var(--gray-300);
 }
 
 .code-dots span:nth-child(3) {
-    background: #27ca3f;
+    background: var(--gray-300);
 }
 
 .code-content {
@@ -835,81 +803,66 @@ html {
 
 .code-content pre {
     margin: 0;
-    font-family: 'Fira Code', 'Monaco', monospace;
-    font-size: 12px;
-    line-height: 1.4;
-    color: #f8f8f2;
+    font-family: 'Inter', monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--gray-600);
 }
 
+/* Snippet styles hidden - using project-card instead */
 .snippet-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.3s ease;
+    display: none;
 }
 
 .snippet-card:hover .snippet-overlay {
-    opacity: 1;
+    display: none;
 }
 
 .snippet-actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
 }
 
 .snippet-info {
-    padding: 25px;
+    padding: 1.25rem;
 }
 
 .snippet-meta {
-    margin-bottom: 15px;
+    display: none;
 }
 
 .snippet-meta .badge {
-    font-size: 11px;
-    padding: 5px 10px;
-    margin-right: 8px;
-    border-radius: 12px;
+    display: none;
 }
 
 .snippet-title {
-    font-size: 1.4rem;
+    font-size: 1.125rem;
     font-weight: 600;
-    margin-bottom: 10px;
-    color: var(--dark-color);
-    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+    color: var(--gray-900);
+    font-family: 'Inter', sans-serif;
 }
 
 .snippet-description {
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    line-height: 1.6;
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.875rem;
 }
 
 .snippet-tech {
     display: flex;
-    gap: 15px;
+    gap: 0.5rem;
     align-items: center;
 }
 
 .snippet-tech span {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    transition: all 0.3s ease;
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    transition: all var(--transition-fast);
 }
 
 .snippet-tech span:hover {
-    color: var(--primary-color);
-    transform: scale(1.2);
+    color: var(--gray-600);
 }
 
 /* Snippet Categories - Minimal */
