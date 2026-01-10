@@ -72,7 +72,7 @@ const projectData = {
             'Mobile-first approach'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Font Awesome'],
-        demoUrl: 'Agency/index.html'
+        demoUrl: 'projects/agency/index.html'
     },
     books4: {
         title: 'Books Platform - Bootstrap 4',
@@ -132,7 +132,7 @@ const projectData = {
             'Complete documentation'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 4 & 5', 'PHP', 'jQuery'],
-        demoUrl: 'Nuno/nuno/index.html'
+        demoUrl: 'projects/nuno/nuno/index.html'
     },
     tours: {
         title: 'Adventure Tours Website',
@@ -147,7 +147,7 @@ const projectData = {
             'Ion Icons integration'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Ion Icons', 'Custom CSS'],
-        demoUrl: 'outdoors-website/tours/index.html'
+        demoUrl: 'projects/outdoors-website/tours/index.html'
     },
     rosa: {
         title: 'The Rosa Restaurant',
@@ -162,7 +162,7 @@ const projectData = {
             'Gold accent theme'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'ScrollReveal', 'Font Awesome'],
-        demoUrl: 'the-rosa/the-rosa/index.html'
+        demoUrl: 'projects/the-rosa/the-rosa/index.html'
     },
     accordion: {
         title: 'FAQ Accordion Component',
@@ -626,7 +626,7 @@ const snippetData = {
             'Legal compliance ready'
         ],
         technologies: ['HTML5', 'Print CSS', 'PDF Generation', 'Business Templates'],
-        demoUrl: 'snippets/web pdf/invoice.html'
+        demoUrl: 'email-templates/web-pdf/invoice.html'
     },
     reactcomponents: {
         title: 'React Components with SCSS',
@@ -642,7 +642,7 @@ const snippetData = {
             'Developer-friendly structure'
         ],
         technologies: ['React', 'TypeScript', 'SCSS', 'Modern JavaScript'],
-        demoUrl: 'snippets/nev-code/'
+        demoUrl: '#' // Placeholder - folder not found
     }
 };
 
@@ -775,7 +775,7 @@ window.addEventListener('load', function () {
     document.body.classList.add('loaded');
 });
 
-// Project card hover effects
+// Project card hover effects and click handlers
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-10px) scale(1.02)';
@@ -784,6 +784,23 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) scale(1)';
     });
+
+    // Make entire card clickable - find the external link and open it
+    card.addEventListener('click', function (e) {
+        // Don't trigger if clicking on the external link button itself (it has its own handler)
+        if (e.target.closest('.project-external-link')) {
+            return;
+        }
+
+        // Find the external link in this card
+        const externalLink = this.querySelector('.project-external-link');
+        if (externalLink && externalLink.href) {
+            window.open(externalLink.href, externalLink.target || '_blank');
+        }
+    });
+
+    // Add cursor pointer to indicate clickability
+    card.style.cursor = 'pointer';
 });
 
 // Parallax effect for hero section
