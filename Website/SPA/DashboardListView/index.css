@@ -46,6 +46,22 @@ body {
   border: 1px solid #d2d6dc;
   box-sizing: border-box;
   height: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-button:hover {
+  background-color: #f9fafb;
+  box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.main-button:focus {
+  outline: 2px solid #6777ef;
+  outline-offset: 2px;
+}
+
+.main-button:active {
+  background-color: #f3f4f6;
 }
 .dropdown-icon {
   right: -0.16rem;
@@ -207,9 +223,18 @@ body {
   height: 3.75rem;
   flex-shrink: 0;
 }
+
+/* Text truncation for reason column */
+.reason-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12.5rem;
+  cursor: help;
+}
 .os94b {
   color: var(--rock);
-  display: none;
+  display: inline-block;
 }
 .horem-ipsum-dolor-sit-amet-co-parent {
   position: absolute;
@@ -271,7 +296,7 @@ body {
   left: calc(50% - 206px);
   border-radius: var(--br-lg);
   overflow: hidden;
-  display: none;
+  display: flex;
   flex-direction: row;
   padding: 0 var(--padding-md);
   align-items: center;
@@ -354,7 +379,8 @@ body {
   position: relative;
   line-height: 1.25rem;
 }
-.submitted2 {
+.submitted2,
+.update-button {
   position: absolute;
   height: 47.22%;
   top: 26.39%;
@@ -370,6 +396,25 @@ body {
   align-items: center;
   justify-content: flex-start;
   font-size: var(--font-size-sm);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  color: var(--white1);
+}
+
+.update-button:hover {
+  background-color: #3aad5a;
+  transform: translateY(-1px);
+}
+
+.update-button:focus {
+  outline: 2px solid var(--color-mediumseagreen);
+  outline-offset: 2px;
+}
+
+.update-button:active {
+  transform: translateY(0);
+  background-color: #2d8a47;
 }
 .list-item {
   position: relative;
@@ -445,7 +490,7 @@ body {
   bottom: 33.33%;
   left: calc(50% - 206.25px);
   background-color: var(--warning);
-  display: none;
+  display: flex;
   box-sizing: border-box;
 }
 .allocated2 {
@@ -459,7 +504,7 @@ body {
   left: calc(50% - 206.25px);
   border-radius: var(--br-lg);
   overflow: hidden;
-  display: none;
+  display: flex;
   flex-direction: row;
   padding: 0 var(--padding-md);
   align-items: center;
@@ -536,6 +581,24 @@ body {
   justify-content: flex-start;
   font-size: var(--font-size-sm);
   color: var(--white1);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submitted5:hover {
+  background-color: #3aad5a;
+  transform: translateY(-1px);
+}
+
+.submitted5:focus {
+  outline: 2px solid var(--color-mediumseagreen);
+  outline-offset: 2px;
+}
+
+.submitted5:active {
+  transform: translateY(0);
+  background-color: #2d8a47;
 }
 .list-item1 {
   position: relative;
@@ -596,16 +659,20 @@ body {
   box-shadow: 0 0.75px 3px rgba(0, 0, 0, 0.2);
   flex-direction: column;
 }
-.list,
-.list-inner {
+.list {
   position: absolute;
   height: 20.5rem;
+}
+.list-inner-wrapper {
+  width: 100%;
+  position: relative;
 }
 .list-inner {
   width: 100%;
   top: 0;
   right: 0;
   left: 0;
+  position: relative;
 }
 .list {
   top: 8.25rem;
@@ -623,4 +690,34 @@ body {
   font-size: var(--font-size-base);
   color: var(--charcoal);
   font-family: var(--font-source-sans-pro);
+}
+
+/* Status badge improvements */
+.status-badge {
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.status-badge:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Accessibility improvements */
+.referred-users {
+  margin: 0;
+}
+
+/* Focus styles for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #6777ef;
+  outline-offset: 2px;
+}
+
+/* Improve color contrast for better accessibility */
+.rock {
+  color: #666;
+}
+
+.stone {
+  color: #555;
 }
