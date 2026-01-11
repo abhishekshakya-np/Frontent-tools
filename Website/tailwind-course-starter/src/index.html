@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <header class="text-zinc-200">
+        <nav
+          class="sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500"
+        >
+          <div class="flex items-center gap-2 p-2">
+            <img src="./assets/images/logo-inverted.png" width="50" />
+            <div class="text-2xl font-bold">
+              tw:<span class="text-sky-900">mf</span>
+            </div>
+          </div>
+          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="hidden flex-1 items-center justify-end md:flex">
+            <div class="menu-item">
+              <span>Home</span>
+            </div>
+            <div class="menu-item">
+              <span>Lineup</span>
+            </div>
+            <div class="menu-item group">
+              <span>Tickets</span>
+              <div
+                class="absolute top-full right-0 hidden whitespace-nowrap rounded-b-md bg-pink-500 text-right group-hover:block"
+              >
+                <div
+                  class="cursor-pointer p-4 font-bold text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200"
+                >
+                  <span>Single day Tickets</span>
+                </div>
+                <div
+                  class="cursor-pointer p-4 font-bold text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200"
+                >
+                  <span>7 day Tickets</span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <span>Support</span>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </main>
+  </body>
+</html>
