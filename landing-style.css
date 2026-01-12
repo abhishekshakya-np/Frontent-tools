@@ -682,34 +682,24 @@ html {
     overflow: hidden;
     margin: 0;
     border-radius: 12px 12px 0 0;
-    background:
-        linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: var(--gray-100);
     isolation: isolate;
 }
 
-/* Modern Grid Pattern Background */
+/* When project-logo exists with gradient, use it as background */
+.project-preview:has(.project-logo[style*="linear-gradient"]) {
+    background: transparent;
+}
+
 .project-preview::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-    z-index: 1;
-    opacity: 0.3;
-    transition: opacity 0.4s ease;
+    display: none;
 }
 
 .project-card:hover .project-preview::before {
-    opacity: 0.5;
-    background-size: 15px 15px;
+    display: none;
 }
 
-/* Featured Badge - Modern Glassmorphism */
+/* Featured Badge - Minimal Gray Style */
 .project-badge {
     position: absolute;
     top: 12px;
@@ -718,18 +708,14 @@ html {
     display: inline-flex;
     align-items: center;
     gap: 0;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.8);
     padding: 0.5rem 0.875rem;
     border-radius: 8px;
     font-size: 0.75rem;
-    font-weight: 600;
-    color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    box-shadow:
-        0 4px 16px rgba(0, 0, 0, 0.15),
-        0 0 0 1px rgba(255, 255, 255, 0.3) inset;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-weight: 500;
+    color: var(--gray-700);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-base);
     letter-spacing: 0.5px;
 }
 
@@ -738,14 +724,11 @@ html {
 }
 
 .project-card:hover .project-badge {
-    transform: translateY(-3px) scale(1.05);
-    background: rgba(255, 255, 255, 0.35);
-    box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* External Link Icon - Clean and Visible */
+/* External Link Icon - Minimal Gray Style */
 .project-external-link {
     position: absolute;
     top: 12px;
@@ -753,8 +736,7 @@ html {
     z-index: 30 !important;
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     display: flex !important;
     align-items: center;
@@ -764,20 +746,17 @@ html {
     visibility: visible !important;
     transform: scale(1);
     transition: all 0.3s ease;
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.15),
-        0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     pointer-events: auto !important;
 }
 
 .project-external-link i {
-    color: white !important;
+    color: var(--gray-600) !important;
     font-size: 14px !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     position: relative;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     line-height: 1;
     transition: all 0.3s ease;
 }
@@ -786,44 +765,74 @@ html {
     opacity: 1 !important;
     visibility: visible !important;
     transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.35);
-    box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 30 !important;
 }
 
 .project-card:hover .project-external-link i {
-    color: white !important;
+    color: var(--gray-700) !important;
     opacity: 1 !important;
     visibility: visible !important;
     font-size: 15px !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .project-external-link:hover {
-    background: rgba(255, 255, 255, 0.45) !important;
+    background: rgba(255, 255, 255, 1) !important;
     opacity: 1 !important;
     visibility: visible !important;
     transform: scale(1.15);
-    box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.25),
-        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     z-index: 30 !important;
 }
 
 .project-external-link:hover i {
-    color: white !important;
+    color: var(--gray-800) !important;
     opacity: 1 !important;
     visibility: visible !important;
     transform: scale(1.1);
     font-size: 16px !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Project Logo - Hidden for minimal design */
+/* Project Logo - Full preview background with icon and text (like placeholders) */
 .project-logo {
-    display: none;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    margin: 0;
+}
+
+.project-logo i {
+    font-size: 2rem;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    margin-bottom: 0.5rem;
+}
+
+/* Title text below icon */
+.project-logo .project-title-text {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+}
+
+.project-card:hover .project-logo {
+    transform: scale(1);
+    transition: all 0.3s ease;
 }
 
 .project-preview iframe {
@@ -834,57 +843,14 @@ html {
     pointer-events: none;
 }
 
-/* Project Thumbnail Styles - Modern Glassmorphism Design */
+/* Project Thumbnail Styles - Hidden, using icons instead */
 .project-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    border-radius: 0;
-    filter: brightness(0.95) contrast(1.1);
-    position: relative;
-    z-index: 2;
-    transform-origin: center;
-    mix-blend-mode: overlay;
-    pointer-events: none;
+    display: none;
 }
 
-/* Glassmorphism Overlay Effect */
-.project-thumbnail::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        linear-gradient(180deg,
-            rgba(255, 255, 255, 0.2) 0%,
-            rgba(255, 255, 255, 0.05) 30%,
-            transparent 60%,
-            rgba(0, 0, 0, 0.1) 100%);
-    backdrop-filter: blur(1px);
-    z-index: 3;
-    pointer-events: none;
-    transition: all 0.5s ease;
-}
-
-/* Modern Accent Border */
+.project-thumbnail::before,
 .project-thumbnail::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid transparent;
-    background:
-        linear-gradient(white, white) padding-box,
-        linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)) border-box;
-    z-index: 3;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    display: none;
 }
 
 
@@ -911,26 +877,9 @@ html {
     opacity: 0.9;
 }
 
-/* Modern Hover Effects */
-.project-card:hover .project-thumbnail {
-    transform: scale(1.08) translateY(-5px);
-    filter: brightness(1.1) contrast(1.15);
-    mix-blend-mode: normal;
-}
-
-.project-card:hover .project-thumbnail::before {
-    background:
-        linear-gradient(180deg,
-            rgba(255, 255, 255, 0.3) 0%,
-            rgba(255, 255, 255, 0.1) 30%,
-            transparent 60%,
-            rgba(0, 0, 0, 0.15) 100%);
-    backdrop-filter: blur(2px);
-}
-
-.project-card:hover .project-thumbnail::after {
-    opacity: 1;
-    border-color: rgba(255, 255, 255, 0.6);
+/* Hover Effects */
+.project-card:hover .project-preview:has(.project-logo) {
+    background: transparent;
 }
 
 /* CSS-based placeholder thumbnails - Minimal */
