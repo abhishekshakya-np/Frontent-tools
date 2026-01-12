@@ -275,6 +275,7 @@ html {
 .hero-image {
     position: relative;
     height: 400px;
+    overflow: visible;
 }
 
 .floating-card {
@@ -287,41 +288,270 @@ html {
     align-items: center;
     gap: 0.75rem;
     box-shadow: var(--shadow-md);
-    animation: float 4s ease-in-out infinite;
     color: var(--gray-700);
     font-size: 0.875rem;
     font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.floating-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 10;
 }
 
 .floating-card i {
     color: var(--gray-400);
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.floating-card:nth-child(1) {
-    top: 15%;
-    left: 5%;
+.floating-card:hover i {
+    color: var(--gray-600);
+}
+
+/* Card 1 - Float Up/Down */
+.float-1 {
+    top: 8%;
+    left: 3%;
+    animation: floatVertical 3.5s ease-in-out infinite;
     animation-delay: 0s;
 }
 
-.floating-card:nth-child(2) {
-    top: 45%;
-    right: 5%;
-    animation-delay: 1.5s;
+/* Card 2 - Float with Rotation */
+.float-2 {
+    top: 40%;
+    right: 3%;
+    animation: floatRotate 4s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
 
-.floating-card:nth-child(3) {
-    bottom: 15%;
-    left: 15%;
-    animation-delay: 3s;
+/* Card 3 - Float with Scale Pulse */
+.float-3 {
+    bottom: 12%;
+    left: 12%;
+    animation: floatPulse 3.8s ease-in-out infinite;
+    animation-delay: 1s;
 }
 
-@keyframes float {
+/* Card 4 - Float Diagonal */
+.float-4 {
+    top: 20%;
+    right: 20%;
+    animation: floatDiagonal 4.2s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+/* Card 5 - Float with Horizontal Movement */
+.float-5 {
+    top: 60%;
+    left: 8%;
+    animation: floatHorizontal 3.6s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+
+/* Card 6 - Float with Rotation and Scale */
+.float-6 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatRotateScale 4.5s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+/* Card 7 - Float Circular */
+.float-7 {
+    bottom: 25%;
+    right: 15%;
+    animation: floatCircular 4.8s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+/* Card 8 - Float Zigzag */
+.float-8 {
+    top: 30%;
+    left: 25%;
+    animation: floatZigzag 3.9s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+/* Card 9 - Float with Bounce */
+.float-9 {
+    bottom: 8%;
+    right: 8%;
+    animation: floatBounce 4.3s ease-in-out infinite;
+    animation-delay: 0.9s;
+}
+
+/* Card 10 - Float Wave */
+.float-10 {
+    top: 50%;
+    left: 40%;
+    animation: floatWave 4.1s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+
+/* Animation Keyframes */
+@keyframes floatVertical {
     0%, 100% {
         transform: translateY(0px);
     }
     50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes floatRotate {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-12px) rotate(-2deg);
+    }
+}
+
+@keyframes floatPulse {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-18px) scale(1.08);
+    }
+}
+
+@keyframes floatDiagonal {
+    0%, 100% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(8px, -10px);
+    }
+    50% {
+        transform: translate(0px, -18px);
+    }
+    75% {
+        transform: translate(-8px, -10px);
+    }
+}
+
+@keyframes floatHorizontal {
+    0%, 100% {
+        transform: translateX(0px) translateY(0px);
+    }
+    25% {
+        transform: translateX(10px) translateY(-8px);
+    }
+    50% {
+        transform: translateX(0px) translateY(-15px);
+    }
+    75% {
+        transform: translateX(-10px) translateY(-8px);
+    }
+}
+
+@keyframes floatRotateScale {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0px) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translateX(-50%) translateY(-10px) rotate(3deg) scale(1.05);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px) rotate(0deg) scale(1.1);
+    }
+    75% {
+        transform: translateX(-50%) translateY(-10px) rotate(-3deg) scale(1.05);
+    }
+}
+
+@keyframes floatCircular {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    25% {
+        transform: translate(12px, -10px) rotate(90deg);
+    }
+    50% {
+        transform: translate(0px, -20px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-12px, -10px) rotate(270deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(360deg);
+    }
+}
+
+@keyframes floatZigzag {
+    0%, 100% {
+        transform: translate(0px, 0px);
+    }
+    20% {
+        transform: translate(8px, -8px);
+    }
+    40% {
+        transform: translate(-8px, -15px);
+    }
+    60% {
+        transform: translate(8px, -20px);
+    }
+    80% {
+        transform: translate(-8px, -15px);
+    }
+}
+
+@keyframes floatBounce {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(-5px);
+    }
+    20% {
         transform: translateY(-10px);
+    }
+    30% {
+        transform: translateY(-15px);
+    }
+    40% {
+        transform: translateY(-18px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-18px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    90% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes floatWave {
+    0%, 100% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(10px, -8px);
+    }
+    50% {
+        transform: translate(0px, -16px);
+    }
+    75% {
+        transform: translate(-10px, -8px);
     }
 }
 
