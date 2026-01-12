@@ -646,22 +646,6 @@ const snippetData = {
         ],
         technologies: ['HTML5', 'Print CSS', 'PDF Generation', 'Business Templates'],
         demoUrl: 'email-templates/web-pdf/invoice.html'
-    },
-    reactcomponents: {
-        title: 'React Components with SCSS',
-        description: 'Modern React components built with TypeScript and SCSS, featuring header components, home sections, and modular architecture for scalable web applications.',
-        features: [
-            'TypeScript support',
-            'SCSS modular styling',
-            'Component-based architecture',
-            'Reusable UI components',
-            'Modern React patterns',
-            'Responsive design',
-            'Performance optimized',
-            'Developer-friendly structure'
-        ],
-        technologies: ['React', 'TypeScript', 'SCSS', 'Modern JavaScript'],
-        demoUrl: '#' // Placeholder - folder not found
     }
 };
 
