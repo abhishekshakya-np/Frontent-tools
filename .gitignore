@@ -208,36 +208,36 @@ Projects/moviewebsite-master/package.json
 Office Work/CC/
 
 # MrMarket exclusions
-Office Work/MrMarket/node_modules/
-Office Work/MrMarket/package-lock.json
-Office Work/MrMarket/package.json
-Office Work/MrMarket/vite.config.js
-Office Work/MrMarket/styles/
+office-work/mr-market/node_modules/
+office-work/mr-market/package-lock.json
+office-work/mr-market/package.json
+office-work/mr-market/vite.config.js
+office-work/mr-market/styles/
 
 # Muktinath exclusions (keep only public folder)
-Office Work/muktinath/muktinath/src/
-Office Work/muktinath/muktinath/workspace.code-workspace
-Office Work/muktinath/site/node_modules/
-Office Work/muktinath/site/package-lock.json
-Office Work/muktinath/site/package.json
-Office Work/muktinath/site/scss/
+office-work/muktinath/muktinath/src/
+office-work/muktinath/muktinath/workspace.code-workspace
+office-work/muktinath/site/node_modules/
+office-work/muktinath/site/package-lock.json
+office-work/muktinath/site/package.json
+office-work/muktinath/site/scss/
 
 # SKY Website exclusions (keep only main files)
-Office Work/SKY_website/src/
-Office Work/SKY_website/package-sample.json
-Office Work/SKY_website/CHANGELOG.md
-Office Work/SKY_website/LICENSE
+office-work/sky-website/src/
+office-work/sky-website/package-sample.json
+office-work/sky-website/CHANGELOG.md
+office-work/sky-website/LICENSE
 
 # Include only essential files for Office Work projects
-!Office Work/SKY_website/index.html
-!Office Work/SKY_website/dist/
-!Office Work/SKY_website/README.md
-!Office Work/MrMarket/index.html
-!Office Work/MrMarket/README.md
-!Office Work/MrMarket/assets/
-!Office Work/MrMarket/js/
-!Office Work/muktinath/muktinath/public/
-!Office Work/muktinath/site/index.html
+!office-work/sky-website/index.html
+!office-work/sky-website/dist/
+!office-work/sky-website/README.md
+!office-work/mr-market/index.html
+!office-work/mr-market/README.md
+!office-work/mr-market/assets/
+!office-work/mr-market/js/
+!office-work/muktinath/muktinath/public/
+!office-work/muktinath/site/index.html
 
 # Keep main project files but exclude development artifacts
 !index.html
