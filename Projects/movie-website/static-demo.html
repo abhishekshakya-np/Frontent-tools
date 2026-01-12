@@ -134,6 +134,24 @@
             height: 30rem;
             object-fit: cover;
             margin: 0;
+            display: block;
+            background-color: #f2f4fc;
+        }
+        
+        .card img[src=""],
+        .card img:not([src]) {
+            background: linear-gradient(135deg, #f2f4fc 0%, #e8ecf1 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card img::after {
+            content: attr(alt);
+            display: block;
+            padding: 2rem;
+            text-align: center;
+            color: #4a5c6c;
         }
 
         .title {
@@ -327,17 +345,31 @@
 
             container.innerHTML = movies.map(movie => {
                 const movieName = movie.Title.length > 15 ? movie.Title.substring(0, 15) + '...' : movie.Title;
-                const poster = movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x400/f2f4fc/4a5c6c?text=No+Image';
+                const fallbackImage = 'https://via.placeholder.com/300x400/f2f4fc/4a5c6c?text=' + encodeURIComponent(movieName.substring(0, 20));
+                const poster = movie.Poster && movie.Poster !== 'N/A' && movie.Poster.startsWith('http') ? movie.Poster : fallbackImage;
                 
                 return `
-                    <div class="card" onclick="showMovieDetails('${movie.imdbID}', '${movie.Title}')">
+                    <div class="card" onclick="showMovieDetails('${movie.imdbID}', '${movie.Title.replace(/'/g, "\\'")}')">
                         <div class="card-info">
-                            <img src="${poster}" alt="${movie.Title}" onerror="this.src='https://via.placeholder.com/300x400/f2f4fc/4a5c6c?text=No+Image'" />
+                            <img 
+                                src="${poster}" 
+                                alt="${movie.Title}" 
+                                loading="lazy"
+                                onerror="handleImageError(this, '${fallbackImage}')"
+                            />
                             <h3 class="title">${movieName}</h3>
                         </div>
                     </div>
                 `;
             }).join('');
+        }
+        
+        // Handle image loading errors
+        function handleImageError(img, fallback) {
+            if (img.src !== fallback) {
+                img.src = fallback;
+                img.onerror = null; // Prevent infinite loop
+            }
         }
 
         // Setup search functionality with debouncing
