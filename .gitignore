@@ -3,7 +3,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
+# package-lock.json - removed from root ignore, should be tracked
 yarn.lock
 .pnpm-debug.log*
 
@@ -120,39 +120,18 @@ __pycache__/
 # images/
 # img/
 
-# Specific large directories to exclude
-Code Utilities/css/
-Code Utilities/Lesson/css/
-Component Snippets/carousel-20/
-Website/snippetsdevelop.github.io-master/
-Office Work/CleverCowSCSS/node_modules/
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/node_modules/
-
-# Office Work project files (keep only main index.html)
-
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/.gitignore
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/src/
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/package.json
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/package-lock.json
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/eslint.config.js
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/postcss.config.js
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/tailwind.config.js
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/tsconfig.*.json
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/tsconfig.json
-Office Work/Mind's Mirror - Mental Health Tracking Landing Page/vite.config.ts
-
-# Magz project files (keep only main index.html and README.md)
-Projects/Magz-master/.gitignore
-Projects/Magz-master/css/
-Projects/Magz-master/js/
-Projects/Magz-master/scripts/
-Projects/Magz-master/images/
-Projects/Magz-master/src/
-Projects/Magz-master/*.html
-Projects/Magz-master/changelogs.md
-Projects/Magz-master/LICENSE
-!Projects/Magz-master/index.html
-!Projects/Magz-master/README.md
+# Minds Mirror exclusions (using correct path: office-work/)
+office-work/minds-mirror-mental-health-tracking-landing-page/.gitignore
+office-work/minds-mirror-mental-health-tracking-landing-page/src/
+office-work/minds-mirror-mental-health-tracking-landing-page/package.json
+office-work/minds-mirror-mental-health-tracking-landing-page/package-lock.json
+office-work/minds-mirror-mental-health-tracking-landing-page/eslint.config.js
+office-work/minds-mirror-mental-health-tracking-landing-page/postcss.config.js
+office-work/minds-mirror-mental-health-tracking-landing-page/tailwind.config.js
+office-work/minds-mirror-mental-health-tracking-landing-page/tsconfig.*.json
+office-work/minds-mirror-mental-health-tracking-landing-page/tsconfig.json
+office-work/minds-mirror-mental-health-tracking-landing-page/vite.config.ts
+office-work/minds-mirror-mental-health-tracking-landing-page/node_modules/
 
 # Keep only essential files from large projects
 # Exclude development files but keep demos
@@ -168,27 +147,27 @@ Projects/Magz-master/LICENSE
 *.css.map
 *.js.map
 
-# Exclude large documentation folders
+# Exclude large documentation folders (but keep document/ folder)
 **/documentation/
 **/docs/build/
-**/site/
+# Note: **/site/ removed - might exclude important project sites
 
-# Exclude server-side files (keep for demo but exclude from git)
+# Exclude server-side files (but allow if needed for demos)
 **/server/
-**/*.php
+# **/*.php - removed, might be needed for some projects
 
-# Movie Website exclusions
-Projects/moviewebsite-master/node_modules/
-Projects/moviewebsite-master/build/
-Projects/moviewebsite-master/package-lock.json
-Projects/moviewebsite-master/.gitignore
-Projects/moviewebsite-master/src/
-Projects/moviewebsite-master/public/
-Projects/moviewebsite-master/package.json
+# Movie Website exclusions (using correct path: projects/)
+projects/movie-website/node_modules/
+projects/movie-website/build/
+projects/movie-website/package-lock.json
+projects/movie-website/.gitignore
+projects/movie-website/src/
+projects/movie-website/public/
+projects/movie-website/package.json
 
 # Include only the static demo and README for Movie Website
-!Projects/moviewebsite-master/static-demo.html
-!Projects/moviewebsite-master/README.md
+!projects/movie-website/static-demo.html
+!projects/movie-website/README.md
 
 
 
