@@ -190,8 +190,7 @@ Projects/moviewebsite-master/package.json
 !Projects/moviewebsite-master/static-demo.html
 !Projects/moviewebsite-master/README.md
 
-# CC Development folder exclusions (keep only production build)
-Office Work/CC/
+
 
 # MrMarket exclusions
 office-work/mr-market/node_modules/
