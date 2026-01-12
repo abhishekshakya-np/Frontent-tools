@@ -211,12 +211,15 @@ button {
 
 /* header */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
-  align-items: center;
-  padding: 1rem 0;
+  padding: 1.5rem 2rem;
   z-index: 11;
   background: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header-left {
@@ -412,4 +415,124 @@ tr:last-child td {
 .card-holder {
   font-weight: 500;
   letter-spacing: 0.15rem;
+}
+
+/* Navigation Component Styles */
+.logo img {
+  width: auto;
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__links li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav__links li a:hover {
+  color: var(--color-text-light);
+}
+
+.cta {
+  padding: 0.5rem 1.5rem;
+  background: var(--color-text);
+  color: var(--color-bg-dark);
+  border-radius: var(--rounded);
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.cta:hover {
+  opacity: 0.9;
+}
+
+.menu.cta {
+  display: none;
+}
+
+/* Overlay Menu */
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: var(--color-bg-dark);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: height 0.5s ease;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: var(--color-text);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.overlay .close:hover {
+  color: var(--color-text-light);
+}
+
+.overlay__content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.overlay__content a {
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--color-text);
+  display: block;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.overlay__content a:hover,
+.overlay__content a:focus {
+  color: var(--color-text-light);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .nav__links,
+  .cta:not(.menu) {
+    display: none;
+  }
+
+  .menu.cta {
+    display: block;
+  }
+
+  header {
+    padding: 1rem;
+  }
 }
