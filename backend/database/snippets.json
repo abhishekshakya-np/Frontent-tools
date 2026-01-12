@@ -1,0 +1,230 @@
+[
+  {
+    "id": "f1ebfd74-7cf2-4b10-9026-02d7cd5d3618",
+    "title": "Modern Navigation Bar",
+    "description": "Responsive navigation with smooth animations and mobile\n                                    overlay menu.",
+    "category": "ui-components",
+    "badge": "Component",
+    "url": "component-snippets/navigation-v2/index.html",
+    "thumbnail": "thumbnails/navigation.svg",
+    "icon": "fas fa-bars",
+    "gradient": "linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%)",
+    "tags": [
+      "Navigation",
+      "Component"
+    ],
+    "order": 1,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.077684",
+    "updatedAt": ""
+  },
+  {
+    "id": "c86b16f4-6536-4be2-bf3e-71f8386061f6",
+    "title": "Email Templates",
+    "description": "Professional email templates for verification, reminders,\n                                    and\n                                    notifications.",
+    "category": "email-templates",
+    "badge": "Template",
+    "url": "email-templates/mail-web/verify-email.html",
+    "thumbnail": "",
+    "icon": "fas fa-envelope",
+    "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    "tags": [
+      "Email",
+      "Templates"
+    ],
+    "order": 2,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.077684",
+    "updatedAt": ""
+  },
+  {
+    "id": "aaad8c73-969b-44dd-b0db-268e7bc69fa0",
+    "title": "Email Templates V1",
+    "description": "Enhanced email templates with improved styling and better\n                                    compatibility.",
+    "category": "email-templates",
+    "badge": "Template",
+    "url": "email-templates/mail-web-v1/verify-email.html",
+    "thumbnail": "",
+    "icon": "fas fa-envelope",
+    "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    "tags": [
+      "Email",
+      "V1"
+    ],
+    "order": 3,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.078690",
+    "updatedAt": ""
+  },
+  {
+    "id": "ad8e4412-842c-4544-9d6d-af2a5294ce75",
+    "title": "Email Templates V2",
+    "description": "Latest version with modern design patterns and mobile\n                                    optimization.",
+    "category": "email-templates",
+    "badge": "Template",
+    "url": "email-templates/mail-web-v2/verify-email.html",
+    "thumbnail": "",
+    "icon": "fas fa-envelope",
+    "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    "tags": [
+      "Email",
+      "V2"
+    ],
+    "order": 4,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.078690",
+    "updatedAt": ""
+  },
+  {
+    "id": "94306f6c-cb67-42a8-a833-a3006dada8b1",
+    "title": "PDF & Invoice Templates",
+    "description": "Professional invoice and document templates ready for PDF\n                                    generation.",
+    "category": "pdf-templates",
+    "badge": "Template",
+    "url": "email-templates/web-pdf/invoice.html",
+    "thumbnail": "",
+    "icon": "fas fa-file-pdf",
+    "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    "tags": [
+      "PDF",
+      "Invoice"
+    ],
+    "order": 5,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.078690",
+    "updatedAt": ""
+  },
+  {
+    "id": "c1c485f6-b1d6-4e80-bb08-340b55d18d9a",
+    "title": "Hover.css Library",
+    "description": "Complete collection of CSS3 powered hover effects for\n                                    buttons, links, and images.",
+    "category": "ui-components",
+    "badge": "Library",
+    "url": "component-snippets/hover/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-magic",
+    "gradient": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+    "tags": [
+      "Hover Effects",
+      "Library"
+    ],
+    "order": 6,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.079680",
+    "updatedAt": ""
+  },
+  {
+    "id": "f4253af9-5c59-479e-9ec3-0b39fcf04736",
+    "title": "Loading Animations",
+    "description": "Beautiful CSS loading animations and spinners for modern\n                                    web\n                                    applications.",
+    "category": "ui-components",
+    "badge": "Component",
+    "url": "component-snippets/animation/loader.html",
+    "thumbnail": "",
+    "icon": "fas fa-spinner",
+    "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    "tags": [
+      "Animations",
+      "Loaders"
+    ],
+    "order": 7,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.079680",
+    "updatedAt": ""
+  },
+  {
+    "id": "9153a3e4-253d-4ec2-9993-bb67dfca46d4",
+    "title": "Carousel Gallery",
+    "description": "Responsive carousel components with Owl Carousel and\n                                    Bootstrap integration.",
+    "category": "ui-components",
+    "badge": "Component",
+    "url": "component-snippets/carousel-06/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-images",
+    "gradient": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    "tags": [
+      "Carousel",
+      "Bootstrap"
+    ],
+    "order": 8,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.079680",
+    "updatedAt": ""
+  },
+  {
+    "id": "bf95ffa6-7fdd-4a6e-91ac-ad00a11cbf6b",
+    "title": "Cycle Loader",
+    "description": "Animated cycle loader with highway background, perfect\n                                    for\n                                    loading screens and transitions.",
+    "category": "ui-components animation",
+    "badge": "Animation",
+    "url": "component-snippets/cycle/loadercycl.html",
+    "thumbnail": "",
+    "icon": "fas fa-bicycle",
+    "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    "tags": [
+      "Animation",
+      "Loader"
+    ],
+    "order": 9,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.079680",
+    "updatedAt": ""
+  },
+  {
+    "id": "e876f9d3-ea4a-4bff-8f64-0f0907fabab7",
+    "title": "Payment Success Page",
+    "description": "Beautiful success page with animated bubbles, checkmark\n                                    icon, and modern design.",
+    "category": "ui-components",
+    "badge": "Page",
+    "url": "component-snippets/cycle/payment-success.html",
+    "thumbnail": "",
+    "icon": "fas fa-check-circle",
+    "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    "tags": [
+      "Page",
+      "Payment"
+    ],
+    "order": 10,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.080679",
+    "updatedAt": ""
+  },
+  {
+    "id": "ec04e867-7dda-4c51-9481-8cfafd55e6d0",
+    "title": "Payment Fail Page",
+    "description": "Elegant payment failure page with error icon, animated\n                                    background, and user-friendly messaging.",
+    "category": "ui-components",
+    "badge": "Page",
+    "url": "component-snippets/cycle/payment-fail.html",
+    "thumbnail": "",
+    "icon": "fas fa-times-circle",
+    "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    "tags": [
+      "Page",
+      "Payment"
+    ],
+    "order": 11,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.080679",
+    "updatedAt": ""
+  },
+  {
+    "id": "bc3eb3c3-5f73-4a1c-82b6-0f286e17bf5e",
+    "title": "Redirect Page",
+    "description": "Clean redirect page with bouncing ball animation and\n                                    loading indicator for page transitions.",
+    "category": "ui-components animation",
+    "badge": "Animation",
+    "url": "component-snippets/cycle/redirect.html",
+    "thumbnail": "",
+    "icon": "fas fa-redo",
+    "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    "tags": [
+      "Animation",
+      "Redirect"
+    ],
+    "order": 12,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.080679",
+    "updatedAt": ""
+  }
+]

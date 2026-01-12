@@ -1,0 +1,192 @@
+[
+  {
+    "id": "6805222c-6a65-4477-aa81-e64cd00f1a70",
+    "title": "Filmo Study",
+    "description": "Educational platform with modern SCSS architecture,\n                                    responsive design, and interactive components.",
+    "category": "learning practice",
+    "badge": "Learning",
+    "url": "website/filmo.study/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-graduation-cap",
+    "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    "tags": [
+      "Learning",
+      "SCSS"
+    ],
+    "order": 1,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.038675",
+    "updatedAt": ""
+  },
+  {
+    "id": "7ad8eb23-8a0a-46dd-a1e7-5de137f0d858",
+    "title": "Sass Website",
+    "description": "Modern website built with Sass preprocessor, featuring\n                                    variables, mixins, and organized SCSS architecture.",
+    "category": "learning practice",
+    "badge": "Learning",
+    "url": "website/sass-website/index.html",
+    "thumbnail": "",
+    "icon": "fab fa-sass",
+    "gradient": "linear-gradient(135deg, #cc6699 0%, #bf4080 100%)",
+    "tags": [
+      "Learning",
+      "Sass"
+    ],
+    "order": 2,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.038675",
+    "updatedAt": ""
+  },
+  {
+    "id": "abdd7b17-81e3-4517-b636-9d1f19032bab",
+    "title": "Star Wars Product Slider",
+    "description": "Interactive product slider component with Star Wars\n                                    theme, featuring smooth animations and modern design.",
+    "category": "component practice",
+    "badge": "Component",
+    "url": "website/star-wars-imperial-armys-product-slider/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-jedi",
+    "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    "tags": [
+      "Component",
+      "JavaScript"
+    ],
+    "order": 3,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.038675",
+    "updatedAt": ""
+  },
+  {
+    "id": "3972995d-25f4-4928-9da8-fb85be36cb79",
+    "title": "Survey Form",
+    "description": "Responsive survey form with validation, multiple input\n                                    types, and clean modern design.",
+    "category": "form practice",
+    "badge": "Form",
+    "url": "component-snippets/Forms (Reusable)/survey-form/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-clipboard-list",
+    "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    "tags": [
+      "Form",
+      "HTML/CSS"
+    ],
+    "order": 4,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.039675",
+    "updatedAt": ""
+  },
+  {
+    "id": "eb29f617-1252-483b-bee7-0b1a12136676",
+    "title": "Huddle Landing Page",
+    "description": "Frontend Mentor challenge - responsive landing page with\n                                    modern design and clean code structure.",
+    "category": "challenge practice",
+    "badge": "Challenge",
+    "url": "website/challenge-frontend-mentor/Huddle/Index.html",
+    "thumbnail": "",
+    "icon": "fas fa-trophy",
+    "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    "tags": [
+      "Challenge",
+      "Frontend Mentor"
+    ],
+    "order": 5,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.039675",
+    "updatedAt": ""
+  },
+  {
+    "id": "4ebae31a-6746-4cae-8144-b67554f1657a",
+    "title": "Newsletter Signup",
+    "description": "Frontend Mentor challenge with success message, form\n                                    validation, and responsive design.",
+    "category": "challenge practice",
+    "badge": "Challenge",
+    "url": "website/challenge-frontend-mentor/newsletter-sign-up-with-success-message-main/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-envelope",
+    "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    "tags": [
+      "Challenge",
+      "Frontend Mentor"
+    ],
+    "order": 6,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.039675",
+    "updatedAt": ""
+  },
+  {
+    "id": "e4ee1bad-43c0-41a1-94e7-a71ff593b455",
+    "title": "Web Hero Banner",
+    "description": "Animated hero banner component with modern design,\n                                    perfect for portfolio and landing pages.",
+    "category": "component practice",
+    "badge": "Component",
+    "url": "website/portfolio/WebHeroBanner/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-image",
+    "gradient": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+    "tags": [
+      "Component",
+      "CSS/JS"
+    ],
+    "order": 7,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.039675",
+    "updatedAt": ""
+  },
+  {
+    "id": "e4da965b-4259-4b67-bbcd-944caece86be",
+    "title": "SPA Beer Application",
+    "description": "Single Page Application for beer catalog with dynamic\n                                    content loading and interactive features.",
+    "category": "spa practice",
+    "badge": "SPA",
+    "url": "website/spa/SPA-beer/AssignmentHouzz/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-beer",
+    "gradient": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    "tags": [
+      "SPA",
+      "JavaScript"
+    ],
+    "order": 8,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.040674",
+    "updatedAt": ""
+  },
+  {
+    "id": "dddb6a56-a715-492f-9bf6-be334a0eba9c",
+    "title": "Cat Photo App",
+    "description": "FreeCodeCamp learning project - simple HTML/CSS\n                                    application for practicing web development basics.",
+    "category": "learning practice",
+    "badge": "Learning",
+    "url": "website/freecodecamp/CatPhotoApp-freeCodeCamp/index.html",
+    "thumbnail": "",
+    "icon": "fas fa-cat",
+    "gradient": "linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%)",
+    "tags": [
+      "Learning",
+      "FreeCodeCamp"
+    ],
+    "order": 9,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.040674",
+    "updatedAt": ""
+  },
+  {
+    "id": "41c03c90-cb3f-4ce0-82d3-684c9c5996f4",
+    "title": "Tailwind CSS Starter Template",
+    "description": "⚠️ Starter/Template Project: Incomplete\n                                    Tailwind CSS learning project for a music festival website. Only navigation\n                                    structure exists - needs completion.",
+    "category": "learning practice starter",
+    "badge": "Starter",
+    "url": "component-snippets/Sections (Landing Pages)/starter-template/src/index.html",
+    "thumbnail": "",
+    "icon": "fab fa-css3-alt",
+    "gradient": "linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)",
+    "tags": [
+      "Starter",
+      "Tailwind CSS"
+    ],
+    "order": 10,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.040674",
+    "updatedAt": ""
+  }
+]

@@ -1,0 +1,477 @@
+[
+  {
+    "id": "7893bbc0-f016-49bc-857f-f3c31c083cad",
+    "title": "MrMarket NEPSE",
+    "description": "Professional trading platform website with modern UI,\n                                    pricing\n                                    plans, and comprehensive feature showcase.",
+    "category": "office-work trading finance",
+    "badge": "Featured",
+    "url": "office-work/mr-market/index.html",
+    "thumbnail": "thumbnails/mrmarket.svg",
+    "icon": "fas fa-chart-line",
+    "gradient": "linear-gradient(135deg, #0172CE 0%, #005bb5 100%)",
+    "tags": [
+      "Trading",
+      "SASS"
+    ],
+    "order": 1,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.993701",
+    "updatedAt": ""
+  },
+  {
+    "id": "7ced8545-9d6d-40c2-879f-c3de59d0b1ae",
+    "title": "Muktinath Krishi",
+    "description": "Agricultural business website with Bootstrap framework,\n                                    responsive design, and comprehensive content management.",
+    "category": "office-work agriculture bootstrap",
+    "badge": "Featured",
+    "url": "office-work/muktinath/muktinath/public/index.html",
+    "thumbnail": "thumbnails/muktinath.svg",
+    "icon": "fas fa-seedling",
+    "gradient": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    "tags": [
+      "Agriculture",
+      "Bootstrap"
+    ],
+    "order": 2,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.994677",
+    "updatedAt": ""
+  },
+  {
+    "id": "363c7b8a-2073-4718-973d-884d770597dc",
+    "title": "Digital Agency",
+    "description": "Modern business website with gradient design,\n                                    testimonials,\n                                    and contact forms.",
+    "category": "business",
+    "badge": "Featured",
+    "url": "projects/agency/index.html",
+    "thumbnail": "thumbnails/agency.svg",
+    "icon": "fas fa-building",
+    "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    "tags": [
+      "Business",
+      "Bootstrap 5"
+    ],
+    "order": 3,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.994677",
+    "updatedAt": ""
+  },
+  {
+    "id": "55efa981-612c-446c-8c3b-3ed82dfda997",
+    "title": "Books Platform v4",
+    "description": "Educational platform with course selling, pricing tables,\n                                    and\n                                    testimonials.",
+    "category": "e-commerce education",
+    "badge": "Featured",
+    "url": "projects/books-bootstrap-4/src/Index.html",
+    "thumbnail": "thumbnails/books4.svg",
+    "icon": "fas fa-book",
+    "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    "tags": [
+      "E-commerce",
+      "Bootstrap 4"
+    ],
+    "order": 4,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.994677",
+    "updatedAt": ""
+  },
+  {
+    "id": "20f8222e-7a5d-466d-87f1-af6b8fc1c622",
+    "title": "Books Platform v5",
+    "description": "Updated version with Bootstrap 5, improved accessibility\n                                    and\n                                    modern components.",
+    "category": "e-commerce education",
+    "badge": "Featured",
+    "url": "projects/books-bootstrap-5/index.html",
+    "thumbnail": "thumbnails/books5.svg",
+    "icon": "fas fa-book",
+    "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    "tags": [
+      "E-commerce",
+      "Bootstrap 5"
+    ],
+    "order": 5,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.995678",
+    "updatedAt": ""
+  },
+  {
+    "id": "34c53690-1bcc-4e04-a31e-bc0a04e868b3",
+    "title": "Portfolio Landing",
+    "description": "Professional portfolio website with smooth scrolling and\n                                    project showcase.",
+    "category": "portfolio",
+    "badge": "Featured",
+    "url": "projects/bootstrap-4-website/index.html",
+    "thumbnail": "thumbnails/bootstrap4master.svg",
+    "icon": "fas fa-laptop-code",
+    "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    "tags": [
+      "Portfolio",
+      "Bootstrap 4"
+    ],
+    "order": 6,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.995678",
+    "updatedAt": ""
+  },
+  {
+    "id": "fbee4c07-6967-4b34-9d5f-eddcd2408c73",
+    "title": "Nuno Theme - Production",
+    "description": "Complete production-ready Bootstrap 4 theme with all\n                                    features and functionality.",
+    "category": "business portfolio",
+    "badge": "Featured",
+    "url": "projects/nuno/nuno/index.html",
+    "thumbnail": "thumbnails/nuno.svg",
+    "icon": "fas fa-palette",
+    "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    "tags": [
+      "Bootstrap 4",
+      "Production"
+    ],
+    "order": 7,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.995678",
+    "updatedAt": ""
+  },
+  {
+    "id": "01c2e866-ed63-4b8f-951b-3efbcff4413c",
+    "title": "Nuno Bootstrap 4 Fullsite",
+    "description": "Full Bootstrap 4 implementation with complete sections,\n                                    portfolio, and contact form.",
+    "category": "business portfolio",
+    "badge": "Featured",
+    "url": "projects/nuno/Nuno-bootstrap-4-fullsite-website/index.html",
+    "thumbnail": "thumbnails/nuno.svg",
+    "icon": "fas fa-layer-group",
+    "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    "tags": [
+      "Bootstrap 4",
+      "Fullsite"
+    ],
+    "order": 8,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.995678",
+    "updatedAt": ""
+  },
+  {
+    "id": "93e76ec1-18df-408a-a87c-cee17db4d802",
+    "title": "Nuno Bootstrap 5 Modern",
+    "description": "Modern Bootstrap 5 version (Xabickx theme) with updated\n                                    components and enhanced styling.",
+    "category": "business portfolio",
+    "badge": "Featured",
+    "url": "projects/nuno/Nuno-bootstrap-5-creating/index.html",
+    "thumbnail": "thumbnails/nuno.svg",
+    "icon": "fas fa-rocket",
+    "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    "tags": [
+      "Bootstrap 5",
+      "Modern"
+    ],
+    "order": 9,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.995678",
+    "updatedAt": ""
+  },
+  {
+    "id": "40aff52a-0252-4453-9f80-5b578ff7dd34",
+    "title": "Adventure Tours",
+    "description": "Nature tours website with beautiful imagery, responsive\n                                    design, and booking features.",
+    "category": "tourism business",
+    "badge": "Featured",
+    "url": "projects/outdoors-website/tours/index.html",
+    "thumbnail": "thumbnails/tours.svg",
+    "icon": "fas fa-mountain",
+    "gradient": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    "tags": [
+      "Tourism",
+      "Custom CSS"
+    ],
+    "order": 10,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.996678",
+    "updatedAt": ""
+  },
+  {
+    "id": "74ddc7b6-aebc-455f-85c8-44d90b00a2f8",
+    "title": "The Rosa Restaurant",
+    "description": "Elegant restaurant website with smooth animations, menu\n                                    showcase, and reservation system.",
+    "category": "restaurant business",
+    "badge": "Featured",
+    "url": "projects/the-rosa/the-rosa/index.html",
+    "thumbnail": "thumbnails/rosa.svg",
+    "icon": "fas fa-utensils",
+    "gradient": "linear-gradient(135deg, #c59d5f 0%, #8B7355 100%)",
+    "tags": [
+      "Restaurant",
+      "Custom CSS"
+    ],
+    "order": 11,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.996678",
+    "updatedAt": ""
+  },
+  {
+    "id": "fbd269b2-a94e-40a9-adaa-ebe89558b524",
+    "title": "FAQ Accordion",
+    "description": "Frontend Mentor challenge featuring smooth accordion\n                                    animations and modern design.",
+    "category": "ui-components",
+    "badge": "Featured",
+    "url": "component-snippets/bootstrap-accordion/index.html",
+    "thumbnail": "thumbnails/accordion.svg",
+    "icon": "fas fa-list",
+    "gradient": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+    "tags": [
+      "Component",
+      "Bootstrap 5"
+    ],
+    "order": 12,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.996678",
+    "updatedAt": ""
+  },
+  {
+    "id": "31ad27fd-11b5-4376-a42f-ce897e3c7647",
+    "title": "Modern Navigation",
+    "description": "Sleek navigation bar with smooth animations and mobile\n                                    overlay menu.",
+    "category": "ui-components",
+    "badge": "Featured",
+    "url": "component-snippets/navigation/index.html",
+    "thumbnail": "thumbnails/navigation.svg",
+    "icon": "fas fa-bars",
+    "gradient": "linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%)",
+    "tags": [
+      "Component",
+      "Vanilla CSS"
+    ],
+    "order": 13,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.997679",
+    "updatedAt": ""
+  },
+  {
+    "id": "84ff4444-8e2a-4e88-921f-3ccd8337fa44",
+    "title": "Admin Dashboard",
+    "description": "Comprehensive dashboard with light/dark theme toggle and\n                                    responsive design.",
+    "category": "ui-components dashboard",
+    "badge": "Featured",
+    "url": "component-snippets/responsive-dashboard-lightdark-ui/indexB.html",
+    "thumbnail": "thumbnails/dashboard.svg",
+    "icon": "fas fa-chart-bar",
+    "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    "tags": [
+      "Dashboard",
+      "Light/Dark"
+    ],
+    "order": 14,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.997679",
+    "updatedAt": ""
+  },
+  {
+    "id": "3dde27f0-8058-443f-944d-789f47927e71",
+    "title": "QR Code Component",
+    "description": "Responsive QR code card built with pure CSS Flexbox and\n                                    modern layout techniques.",
+    "category": "ui-components",
+    "badge": "Featured",
+    "url": "component-snippets/css-flexbox/index.html",
+    "thumbnail": "thumbnails/qrcode.svg",
+    "icon": "fas fa-qrcode",
+    "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    "tags": [
+      "Component",
+      "CSS Flexbox"
+    ],
+    "order": 15,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.997679",
+    "updatedAt": ""
+  },
+  {
+    "id": "4f69d164-5a9a-4925-927e-afc6f5c18644",
+    "title": "AI Chatbot Assistant",
+    "description": "Intelligent conversational AI powered by Google Gemini\n                                    with\n                                    image upload and emoji picker.",
+    "category": "ui-components ai",
+    "badge": "Featured",
+    "url": "component-snippets/ai-chatbot/index.html",
+    "thumbnail": "thumbnails/aichatbot.svg",
+    "icon": "fas fa-robot",
+    "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    "tags": [
+      "AI Tools",
+      "Gemini API"
+    ],
+    "order": 16,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.997679",
+    "updatedAt": ""
+  },
+  {
+    "id": "989b66ae-ab53-44ed-935f-7b4dfbb84573",
+    "title": "Nova Business Template",
+    "description": "Professional Bootstrap 5 business template with multiple\n                                    pages, portfolio, blog, and modern design.",
+    "category": "business portfolio",
+    "badge": "Featured",
+    "url": "projects/nova/index.html",
+    "thumbnail": "thumbnails/nova.svg",
+    "icon": "fas fa-briefcase",
+    "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    "tags": [
+      "Business",
+      "Bootstrap 5"
+    ],
+    "order": 17,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.998702",
+    "updatedAt": ""
+  },
+  {
+    "id": "43f32d8d-5150-4697-91e5-f71d4e46d63c",
+    "title": "Wedding Template",
+    "description": "Elegant wedding website template with RSVP, gallery, and\n                                    event details.",
+    "category": "wedding event",
+    "badge": "Featured",
+    "url": "projects/bootstrap-wedding-template/index.html",
+    "thumbnail": "thumbnails/wedding.svg",
+    "icon": "fas fa-heart",
+    "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    "tags": [
+      "Wedding",
+      "Bootstrap"
+    ],
+    "order": 18,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.998702",
+    "updatedAt": ""
+  },
+  {
+    "id": "58ece645-8630-418a-8f75-ab2e37fd4bf8",
+    "title": "Portfolio WebView",
+    "description": "Comprehensive portfolio showcase with project gallery and\n                                    professional presentation.",
+    "category": "portfolio",
+    "badge": "Featured",
+    "url": "portfolio/web-view/webView/index.html",
+    "thumbnail": "thumbnails/webview.svg",
+    "icon": "fas fa-user-tie",
+    "gradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+    "tags": [
+      "Portfolio",
+      "Personal"
+    ],
+    "order": 19,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.998702",
+    "updatedAt": ""
+  },
+  {
+    "id": "25d1e2ad-68e9-4d3d-97d6-5e9a40e05be9",
+    "title": "CleverCow SCSS",
+    "description": "Advanced SCSS version with modular architecture and\n                                    custom\n                                    build system.",
+    "category": "office-work business scss",
+    "badge": "Featured",
+    "url": "office-work/clevercow-scss/index.html",
+    "thumbnail": "thumbnails/clevercowscss.svg",
+    "icon": "fab fa-sass",
+    "gradient": "linear-gradient(135deg, #cc6699 0%, #bf4080 100%)",
+    "tags": [
+      "SCSS",
+      "Sustainability"
+    ],
+    "order": 20,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.998702",
+    "updatedAt": ""
+  },
+  {
+    "id": "59b7b1e3-5192-4124-a0b2-8ef9e5683be8",
+    "title": "Mind's Mirror",
+    "description": "Mental health tracking and goal management system for\n                                    bipolar\n                                    disorder and wellness.",
+    "category": "office-work healthcare react",
+    "badge": "Featured",
+    "url": "office-work/minds-mirror-mental-health-tracking-landing-page/static-demo.html",
+    "thumbnail": "thumbnails/mindsmirror.svg",
+    "icon": "fas fa-brain",
+    "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    "tags": [
+      "React",
+      "Healthcare"
+    ],
+    "order": 21,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.999716",
+    "updatedAt": ""
+  },
+  {
+    "id": "ff9676a1-b50a-4c8e-bdcb-a72436300492",
+    "title": "Magz Magazine",
+    "description": "Professional magazine and blog template with 14+ pages,\n                                    multiple skins, and advanced features.",
+    "category": "magazine blog bootstrap",
+    "badge": "Featured",
+    "url": "projects/magz/index.html",
+    "thumbnail": "thumbnails/magz.svg",
+    "icon": "fas fa-newspaper",
+    "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    "tags": [
+      "Magazine",
+      "Bootstrap 3"
+    ],
+    "order": 22,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.999716",
+    "updatedAt": ""
+  },
+  {
+    "id": "5f1116d4-76fa-42a4-b6fc-4289784a0d4c",
+    "title": "Movie Search Website",
+    "description": "React-based movie search with OMDB API integration,\n                                    debounced\n                                    search, and Context API state management.",
+    "category": "react entertainment api",
+    "badge": "Featured",
+    "url": "projects/movie-website/static-demo.html",
+    "thumbnail": "thumbnails/moviewebsite.svg",
+    "icon": "fas fa-film",
+    "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    "tags": [
+      "React",
+      "API"
+    ],
+    "order": 23,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.999716",
+    "updatedAt": ""
+  },
+  {
+    "id": "161cdf8b-c168-4e79-8ee8-a28f48de8013",
+    "title": "CleverCow Production",
+    "description": "Professional sustainability website with Gulp build\n                                    system,\n                                    SASS compilation, and optimized production assets.",
+    "category": "office-work sustainability bootstrap",
+    "badge": "Featured",
+    "url": "office-work/clevercow-production/index.html",
+    "thumbnail": "thumbnails/clevercowprod.svg",
+    "icon": "fas fa-cogs",
+    "gradient": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    "tags": [
+      "Sustainability",
+      "Bootstrap 5"
+    ],
+    "order": 24,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:49.999716",
+    "updatedAt": ""
+  },
+  {
+    "id": "6d50db1a-3926-40c0-a56e-f98aa4ba31b1",
+    "title": "SKY - Sewa Ko Yatra",
+    "description": "Modern service-oriented landing page with smooth\n                                    animations,\n                                    responsive design, and professional branding.",
+    "category": "office-work service landing",
+    "badge": "Featured",
+    "url": "office-work/sky-website/index.html",
+    "thumbnail": "thumbnails/skywebsite.svg",
+    "icon": "fas fa-globe",
+    "gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    "tags": [
+      "Service",
+      "Landing Page"
+    ],
+    "order": 25,
+    "visible": true,
+    "createdAt": "2026-01-13T00:30:50.000750",
+    "updatedAt": ""
+  }
+]
