@@ -48,7 +48,7 @@
             </form>
 
             <div class="text-center">
-                <small class="text-muted">Default: admin / admin123</small>
+                <small class="text-muted">Contact administrator for credentials</small>
             </div>
         </div>
     </div>
@@ -74,12 +74,19 @@
         // Handle login form
         document.getElementById('loginForm').addEventListener('submit', async function (e) {
             e.preventDefault();
-            const username = document.getElementById('username').value;
+            const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value;
             const errorDiv = document.getElementById('errorMessage');
 
+            // Basic client-side validation
+            if (!username || !password) {
+                errorDiv.textContent = 'Please enter both username and password';
+                errorDiv.classList.remove('d-none');
+                return;
+            }
+
             try {
-                const response = await fetch('http://localhost:5001/api/auth/login', {
+                const response = await fetch(`${API_BASE_URL}/auth/login`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

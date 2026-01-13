@@ -3,6 +3,8 @@ Authentication utilities for the admin panel
 """
 import json
 import bcrypt
+import secrets
+import os
 from pathlib import Path
 from functools import wraps
 from flask import jsonify, request
@@ -12,15 +14,38 @@ from config import DATABASE_DIR
 USERS_FILE = DATABASE_DIR / "users.json"
 
 
+def generate_secure_password(length=16):
+    """Generate a cryptographically secure random password"""
+    alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*'
+    return ''.join(secrets.choice(alphabet) for _ in range(length))
+
+
 def init_users():
     """Initialize users.json if it doesn't exist"""
     if not USERS_FILE.exists():
-        # Default admin user (password: admin123)
-        default_password = bcrypt.hashpw("admin123".encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+        # Check for admin password from environment variable first
+        admin_password = os.environ.get('ADMIN_PASSWORD')
+
+        if not admin_password:
+            # Generate a secure random password
+            admin_password = generate_secure_password()
+            print("=" * 60)
+            print("IMPORTANT: Auto-generated admin credentials")
+            print("=" * 60)
+            print(f"Username: admin")
+            print(f"Password: {admin_password}")
+            print("=" * 60)
+            print("SAVE THIS PASSWORD! It will not be shown again.")
+            print("Or set ADMIN_PASSWORD environment variable before first run.")
+            print("=" * 60)
+        else:
+            print("Admin user created with password from ADMIN_PASSWORD env var.")
+
+        hashed_password = bcrypt.hashpw(admin_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
         default_user = {
             "admin": {
                 "username": "admin",
-                "password": default_password,
+                "password": hashed_password,
                 "email": "admin@example.com",
                 "role": "admin"
             }
@@ -28,8 +53,6 @@ def init_users():
         USERS_FILE.parent.mkdir(parents=True, exist_ok=True)
         with open(USERS_FILE, 'w') as f:
             json.dump(default_user, f, indent=2)
-        print(f"✅ Created default admin user (username: admin, password: admin123)")
-        print(f"⚠️  Please change the default password after first login!")
 
 
 def verify_password(username, password):

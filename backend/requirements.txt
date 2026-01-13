@@ -1,5 +1,9 @@
+# Core Flask dependencies
 Flask==3.0.0
 flask-cors==4.0.0
 flask-jwt-extended==4.6.0
 bcrypt==4.1.1
 python-dotenv==1.0.0
+
+# Optional: Rate limiting (recommended for production)
+flask-limiter==3.5.0

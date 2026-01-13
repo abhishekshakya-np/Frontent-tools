@@ -1,5 +1,9 @@
 // Admin Panel JavaScript
-const API_BASE_URL = 'http://localhost:5001/api';
+// Configuration - API URL can be overridden via global variable or defaults based on environment
+const API_BASE_URL = window.ADMIN_API_URL ||
+    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://localhost:5001/api'
+        : '/api');
 
 // Get auth token
 function getAuthToken() {

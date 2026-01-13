@@ -1,7 +1,11 @@
 // API Integration for Frontend Collection
 // This file handles fetching data from the API and rendering cards dynamically
 
-const API_BASE_URL = 'http://localhost:5000/api';
+// Configuration - API URL can be overridden via global variable or defaults to relative path
+const API_BASE_URL = window.FRONTEND_COLLECTION_API_URL ||
+    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://localhost:5001/api'
+        : '/api');
 
 // Render a single project card
 function renderProjectCard(project, index) {
@@ -94,111 +98,106 @@ function renderSnippetCard(snippet, index) {
     `;
 }
 
-// Load projects from API
-async function loadProjects() {
+/**
+ * Generic function to load data from API and render cards
+ * @param {string} endpoint - API endpoint (projects, websites, snippets)
+ * @param {string[]} containerSelectors - Array of CSS selectors to find the container
+ * @param {Function} renderFunction - Function to render individual cards
+ * @param {boolean} addLogoText - Whether to add logo text overlay
+ */
+async function loadData(endpoint, containerSelectors, renderFunction, addLogoText = false) {
     try {
-        const response = await fetch(`${API_BASE_URL}/projects`);
-        if (!response.ok) throw new Error('Failed to load projects');
-        
-        const projects = await response.json();
-        const container = document.querySelector('#projectsContainer') || 
-                         document.querySelector('#projects .row.g-4') ||
-                         document.querySelector('section#projects .row.g-4');
-        
-        if (container) {
-            container.innerHTML = projects
-                .filter(p => p.visible !== false)
-                .sort((a, b) => (a.order || 0) - (b.order || 0))
-                .map((project, index) => renderProjectCard(project, index))
-                .join('');
-            
-            // Reinitialize AOS for new elements
-            if (typeof AOS !== 'undefined') {
-                AOS.refresh();
-            }
-            
-            // Re-run the title text addition script
-            document.querySelectorAll('.project-logo').forEach(function (logo) {
-                const projectCard = logo.closest('.project-card');
-                if (projectCard) {
-                    const projectTitle = projectCard.querySelector('.project-title');
-                    if (projectTitle && !logo.querySelector('.project-logo-text')) {
-                        const titleText = document.createElement('span');
-                        titleText.className = 'project-logo-text';
-                        titleText.textContent = projectTitle.textContent.trim();
-                        logo.appendChild(titleText);
-                    }
-                }
-            });
+        const response = await fetch(`${API_BASE_URL}/${endpoint}`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${endpoint}: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // Find container using multiple selectors
+        let container = null;
+        for (const selector of containerSelectors) {
+            container = document.querySelector(selector);
+            if (container) break;
+        }
+
+        if (!container) {
+            console.warn(`Container not found for ${endpoint}`);
+            return;
+        }
+
+        // Filter visible items, sort by order, and render
+        const html = data
+            .filter(item => item.visible !== false)
+            .sort((a, b) => (a.order || 0) - (b.order || 0))
+            .map((item, index) => renderFunction(item, index))
+            .join('');
+
+        container.innerHTML = html;
+
+        // Reinitialize AOS for new elements
+        if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+        }
+
+        // Add logo text overlay if needed
+        if (addLogoText) {
+            addLogoTextOverlay(container);
         }
     } catch (error) {
-        console.error('Error loading projects:', error);
-        // Fallback: show error message or keep static content
+        console.error(`Error loading ${endpoint}:`, error);
+        // Keep static content as fallback
     }
+}
+
+/**
+ * Add text overlay to project logos
+ * @param {Element} container - Container element to search within
+ */
+function addLogoTextOverlay(container) {
+    const logos = container.querySelectorAll('.project-logo');
+    logos.forEach(function (logo) {
+        const projectCard = logo.closest('.project-card');
+        if (projectCard) {
+            const projectTitle = projectCard.querySelector('.project-title');
+            if (projectTitle && !logo.querySelector('.project-logo-text')) {
+                const titleText = document.createElement('span');
+                titleText.className = 'project-logo-text';
+                titleText.textContent = projectTitle.textContent.trim();
+                logo.appendChild(titleText);
+            }
+        }
+    });
+}
+
+// Load projects from API
+async function loadProjects() {
+    await loadData(
+        'projects',
+        ['#projectsContainer', '#projects .row.g-4', 'section#projects .row.g-4'],
+        renderProjectCard,
+        true
+    );
 }
 
 // Load websites from API
 async function loadWebsites() {
-    try {
-        const response = await fetch(`${API_BASE_URL}/websites`);
-        if (!response.ok) throw new Error('Failed to load websites');
-        
-        const websites = await response.json();
-        const container = document.querySelector('#websitesContainer') || document.querySelector('#website-projects .row.g-4');
-        
-        if (container) {
-            container.innerHTML = websites
-                .filter(w => w.visible !== false)
-                .sort((a, b) => (a.order || 0) - (b.order || 0))
-                .map((website, index) => renderWebsiteCard(website, index))
-                .join('');
-            
-            if (typeof AOS !== 'undefined') {
-                AOS.refresh();
-            }
-        }
-    } catch (error) {
-        console.error('Error loading websites:', error);
-    }
+    await loadData(
+        'websites',
+        ['#websitesContainer', '#website-projects .row.g-4'],
+        renderWebsiteCard,
+        false
+    );
 }
 
 // Load snippets from API
 async function loadSnippets() {
-    try {
-        const response = await fetch(`${API_BASE_URL}/snippets`);
-        if (!response.ok) throw new Error('Failed to load snippets');
-        
-        const snippets = await response.json();
-        const container = document.querySelector('#snippetsContainer') || document.querySelector('#snippets .row.g-4');
-        
-        if (container) {
-            container.innerHTML = snippets
-                .filter(s => s.visible !== false)
-                .sort((a, b) => (a.order || 0) - (b.order || 0))
-                .map((snippet, index) => renderSnippetCard(snippet, index))
-                .join('');
-            
-            if (typeof AOS !== 'undefined') {
-                AOS.refresh();
-            }
-            
-            // Re-run the title text addition script
-            document.querySelectorAll('.project-logo').forEach(function (logo) {
-                const projectCard = logo.closest('.project-card');
-                if (projectCard) {
-                    const projectTitle = projectCard.querySelector('.project-title');
-                    if (projectTitle && !logo.querySelector('.project-logo-text')) {
-                        const titleText = document.createElement('span');
-                        titleText.className = 'project-logo-text';
-                        titleText.textContent = projectTitle.textContent.trim();
-                        logo.appendChild(titleText);
-                    }
-                }
-            });
-        }
-    } catch (error) {
-        console.error('Error loading snippets:', error);
-    }
+    await loadData(
+        'snippets',
+        ['#snippetsContainer', '#snippets .row.g-4'],
+        renderSnippetCard,
+        true
+    );
 }
 
 // Load all data when DOM is ready

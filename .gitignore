@@ -40,6 +40,12 @@ Thumbs.db
 **/google-api-key*
 **/gmap-key*
 
+# Backend security - user database should not be tracked (contains hashed passwords)
+backend/database/users.json
+
+# Backend environment file
+backend/.env
+
 # Windows reserved filenames (CRITICAL)
 nul
 CON

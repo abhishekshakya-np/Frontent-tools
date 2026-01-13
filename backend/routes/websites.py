@@ -4,8 +4,10 @@ API routes for Websites CRUD operations
 from flask import Blueprint, jsonify, request
 from pathlib import Path
 import json
+import uuid
 from auth import admin_required
 from config import DATABASE_DIR
+from validation import validate_website_data, filter_allowed_fields, ALLOWED_WEBSITE_FIELDS
 
 websites_bp = Blueprint('websites', __name__)
 WEBSITES_FILE = DATABASE_DIR / "websites.json"
@@ -49,65 +51,75 @@ def get_website(website_id):
 @websites_bp.route('/', methods=['POST'])
 @admin_required
 def create_website():
-    """Create a new website"""
+    """Create a new website with input validation"""
     data = request.get_json()
-    
-    # Validate required fields
-    required_fields = ['title', 'description', 'url']
-    for field in required_fields:
-        if field not in data:
-            return jsonify({"error": f"Missing required field: {field}"}), 400
-    
+
+    if not data:
+        return jsonify({"error": "Invalid request body"}), 400
+
+    # Validate and sanitize input
+    errors, sanitized_data = validate_website_data(data, is_update=False)
+    if errors:
+        return jsonify({"error": errors[0], "errors": errors}), 400
+
     websites = load_websites()
-    
-    # Generate ID
-    import uuid
-    website_id = data.get('id', str(uuid.uuid4()))
-    
-    # Check if ID already exists
-    if any(w.get('id') == website_id for w in websites):
-        return jsonify({"error": "Website ID already exists"}), 400
-    
-    # Create website object
+
+    # Generate ID (don't accept ID from client for security)
+    website_id = str(uuid.uuid4())
+
+    # Create website object with sanitized data
     website = {
         "id": website_id,
-        "title": data['title'],
-        "description": data.get('description', ''),
-        "category": data.get('category', ''),
-        "badge": data.get('badge', ''),
-        "url": data['url'],
-        "icon": data.get('icon', 'fas fa-globe'),
-        "gradient": data.get('gradient', 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'),
-        "tags": data.get('tags', []),
-        "order": data.get('order', len(websites) + 1),
-        "visible": data.get('visible', True),
-        "createdAt": data.get('createdAt', ''),
-        "updatedAt": data.get('updatedAt', '')
+        "title": sanitized_data.get('title', ''),
+        "description": sanitized_data.get('description', ''),
+        "category": sanitized_data.get('category', ''),
+        "badge": sanitized_data.get('badge', ''),
+        "url": sanitized_data.get('url', ''),
+        "icon": sanitized_data.get('icon', 'fas fa-globe'),
+        "gradient": sanitized_data.get('gradient', 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'),
+        "tags": sanitized_data.get('tags', []),
+        "order": sanitized_data.get('order', len(websites) + 1),
+        "visible": sanitized_data.get('visible', True),
+        "createdAt": sanitized_data.get('createdAt', ''),
+        "updatedAt": sanitized_data.get('updatedAt', '')
     }
-    
+
     websites.append(website)
     save_websites(websites)
-    
+
     return jsonify(website), 201
 
 
 @websites_bp.route('/<website_id>', methods=['PUT'])
 @admin_required
 def update_website(website_id):
-    """Update an existing website"""
+    """Update an existing website with input validation"""
     data = request.get_json()
+
+    if not data:
+        return jsonify({"error": "Invalid request body"}), 400
+
+    # Validate and sanitize input
+    errors, sanitized_data = validate_website_data(data, is_update=True)
+    if errors:
+        return jsonify({"error": errors[0], "errors": errors}), 400
+
     websites = load_websites()
-    
+
     website_index = next((i for i, w in enumerate(websites) if w.get('id') == website_id), None)
     if website_index is None:
         return jsonify({"error": "Website not found"}), 404
-    
-    # Update website
-    websites[website_index].update(data)
-    websites[website_index]['id'] = website_id  # Ensure ID doesn't change
-    
+
+    # Update only allowed and validated fields (whitelist approach)
+    for key, value in sanitized_data.items():
+        if key in ALLOWED_WEBSITE_FIELDS:
+            websites[website_index][key] = value
+
+    # Ensure ID doesn't change
+    websites[website_index]['id'] = website_id
+
     save_websites(websites)
-    
+
     return jsonify(websites[website_index]), 200
 
 
