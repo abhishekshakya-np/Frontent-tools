@@ -821,7 +821,11 @@ html {
 }
 
 /* Title text below icon */
-.project-logo .project-title-text {
+/* Logo text overlay removed per user request */
+.project-logo .project-title-text,
+.project-logo .project-logo-text {
+    display: none !important;
+}
     color: white;
     font-size: 0.875rem;
     font-weight: 500;

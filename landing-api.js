@@ -135,40 +135,22 @@ async function loadData(endpoint, containerSelectors, renderFunction, addLogoTex
 
         container.innerHTML = html;
 
+        // Remove any existing logo text overlays
+        container.querySelectorAll('.project-logo-text, .project-title-text').forEach(el => el.remove());
+
         // Reinitialize AOS for new elements
         if (typeof AOS !== 'undefined') {
             AOS.refresh();
         }
 
-        // Add logo text overlay if needed
-        if (addLogoText) {
-            addLogoTextOverlay(container);
-        }
+        // Logo text overlay removed per user request
     } catch (error) {
         console.error(`Error loading ${endpoint}:`, error);
         // Keep static content as fallback
     }
 }
 
-/**
- * Add text overlay to project logos
- * @param {Element} container - Container element to search within
- */
-function addLogoTextOverlay(container) {
-    const logos = container.querySelectorAll('.project-logo');
-    logos.forEach(function (logo) {
-        const projectCard = logo.closest('.project-card');
-        if (projectCard) {
-            const projectTitle = projectCard.querySelector('.project-title');
-            if (projectTitle && !logo.querySelector('.project-logo-text')) {
-                const titleText = document.createElement('span');
-                titleText.className = 'project-logo-text';
-                titleText.textContent = projectTitle.textContent.trim();
-                logo.appendChild(titleText);
-            }
-        }
-    });
-}
+// Logo text overlay function removed per user request
 
 // Load projects from API
 async function loadProjects() {
@@ -176,7 +158,7 @@ async function loadProjects() {
         'projects',
         ['#projectsContainer', '#projects .row.g-4', 'section#projects .row.g-4'],
         renderProjectCard,
-        true
+        false  // Logo text overlay disabled
     );
 }
 
@@ -196,7 +178,7 @@ async function loadSnippets() {
         'snippets',
         ['#snippetsContainer', '#snippets .row.g-4'],
         renderSnippetCard,
-        true
+        false  // Logo text overlay disabled
     );
 }
 

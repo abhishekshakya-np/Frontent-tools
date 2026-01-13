@@ -9,24 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
         offset: 100
     });
 
-    // Add title text to project-logo elements (for thumbnail cards)
-    document.querySelectorAll('.project-logo').forEach(function (logo) {
-        // Check if this logo is in a preview with a thumbnail (not a placeholder)
-        const preview = logo.closest('.project-preview');
-        if (preview && preview.querySelector('.project-thumbnail')) {
-            // Get the project title from the next sibling project-info
-            const projectCard = logo.closest('.project-card');
-            if (projectCard) {
-                const projectTitle = projectCard.querySelector('.project-title');
-                if (projectTitle && !logo.querySelector('.project-title-text')) {
-                    const titleText = document.createElement('div');
-                    titleText.className = 'project-title-text';
-                    titleText.textContent = projectTitle.textContent.trim();
-                    logo.appendChild(titleText);
-                }
-            }
-        }
-    });
+    // Logo text overlay removed per user request
+    // Remove any existing logo text overlays
+    document.querySelectorAll('.project-logo-text, .project-title-text').forEach(el => el.remove());
 });
 
 // Navbar scroll effect
