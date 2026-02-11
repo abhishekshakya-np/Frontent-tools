@@ -121,6 +121,52 @@ def admin_files(filename):
     return send_from_directory(admin_dir, filename)
 
 
+# Project root (for homepage and root-level assets)
+# Resolve to absolute path so it works regardless of current working directory
+ROOT_DIR = Path(__file__).resolve().parent.parent
+
+
+def _serve_homepage():
+    """Send index.html with correct content type."""
+    index_path = ROOT_DIR / 'index.html'
+    if not index_path.is_file():
+        return jsonify({"error": "Homepage not found", "root": str(ROOT_DIR)}), 404
+    response = send_from_directory(ROOT_DIR, 'index.html')
+    response.headers['Content-Type'] = 'text/html; charset=utf-8'
+    return response
+
+
+@app.route('/')
+def home():
+    """Serve the homepage (index.html) at exactly /"""
+    return _serve_homepage()
+
+
+@app.route('/<path:filename>')
+def root_static(filename):
+    """Serve root URL as homepage; otherwise root-level static files (CSS, JS)."""
+    # Treat empty path or bare "index.html" as homepage
+    if not filename or filename.strip() in ('', 'index.html'):
+        return _serve_homepage()
+    if filename.startswith(('api/', 'admin/', 'thumbnails/')) or '..' in filename or '\\' in filename:
+        abort(404)
+    # Only allow files directly in project root (no slashes)
+    if '/' in filename:
+        abort(404)
+    path = ROOT_DIR / filename
+    if not path.is_file():
+        abort(404)
+    return send_from_directory(ROOT_DIR, filename)
+
+
+# If 404 was for the root path, serve homepage (failsafe in case route order varies)
+@app.errorhandler(404)
+def handle_404(e):
+    if request.path in ('/', '') or request.path.rstrip('/') == '':
+        return _serve_homepage()
+    return jsonify({"error": "Not found"}), 404
+
+
 # Serve static files (thumbnails, etc.)
 @app.route('/thumbnails/<path:filename>')
 def thumbnails(filename):
@@ -143,9 +189,13 @@ def thumbnails(filename):
 
 
 if __name__ == '__main__':
+    index_path = ROOT_DIR / 'index.html'
     print("Starting Frontend Collection Admin API...")
+    print(f"Project root: {ROOT_DIR}")
+    print(f"Homepage (index.html) exists: {index_path.is_file()}")
     print(f"Database directory: {DATABASE_DIR}")
     print(f"Environment: {'PRODUCTION' if IS_PRODUCTION else 'DEVELOPMENT'}")
+    print(f"Homepage at: http://{HOST}:{PORT}/")
     print(f"API running at: http://{HOST}:{PORT}")
     print(f"Admin panel at: http://{HOST}:{PORT}/admin/login.html")
     print(f"Debug mode: {DEBUG}")

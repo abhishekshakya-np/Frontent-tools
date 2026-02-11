@@ -1,11 +1,8 @@
 // API Integration for Frontend Collection
 // This file handles fetching data from the API and rendering cards dynamically
 
-// Configuration - API URL can be overridden via global variable or defaults to relative path
-const API_BASE_URL = window.FRONTEND_COLLECTION_API_URL ||
-    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:5001/api'
-        : '/api');
+// Configuration - use same origin as current page so homepage and admin work from one server
+const API_BASE_URL = window.FRONTEND_COLLECTION_API_URL || `${window.location.origin}/api`;
 
 // Render a single project card
 function renderProjectCard(project, index) {
