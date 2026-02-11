@@ -73,8 +73,11 @@ def login():
     if not data:
         return jsonify({"error": "Invalid request body"}), 400
 
-    username = data.get('username', '').strip()
-    password = data.get('password', '')
+    # Coerce to str so None or non-string values don't crash .strip() or len()
+    raw_username = data.get('username')
+    raw_password = data.get('password')
+    username = (raw_username.strip() if isinstance(raw_username, str) else '')
+    password = raw_password if isinstance(raw_password, str) else ''
 
     # Input validation
     if not username or not password:
