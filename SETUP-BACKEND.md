@@ -78,7 +78,7 @@ fetch('http://localhost:5000/api/projects', {
   body: JSON.stringify({
     title: 'My Project',
     description: 'Project description',
-    url: 'projects/my-project/index.html',
+    url: 'showcase/projects/my-project/index.html',
     category: 'web-development',
     badge: 'Featured',
     icon: 'fas fa-code',

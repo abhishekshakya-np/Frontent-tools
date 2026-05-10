@@ -131,25 +131,34 @@
         const username = localStorage.getItem('admin_username');
         document.getElementById('usernameDisplay').textContent = username || 'Admin';
 
-        // Load stats
+        // Load stats: fetch counts (with auth when available) and always update numbers
         async function loadStats() {
-            try {
-                const [projectsRes, websitesRes, snippetsRes] = await Promise.all([
-                    fetch(`${API_BASE_URL}/projects`),
-                    fetch(`${API_BASE_URL}/websites`),
-                    fetch(`${API_BASE_URL}/snippets`)
-                ]);
+            const count = (arr) => (Array.isArray(arr) ? arr.length : 0);
+            const token = getAuthToken();
+            const headers = { 'Content-Type': 'application/json' };
+            if (token) headers['Authorization'] = 'Bearer ' + token;
 
-                const projects = await projectsRes.json();
-                const websites = await websitesRes.json();
-                const snippets = await snippetsRes.json();
-
-                document.getElementById('projectsCount').textContent = projects.length;
-                document.getElementById('websitesCount').textContent = websites.length;
-                document.getElementById('snippetsCount').textContent = snippets.length;
-            } catch (error) {
-                console.error('Error loading stats:', error);
+            async function getCount(endpoint) {
+                try {
+                    const url = `${API_BASE_URL}${endpoint}`;
+                    const res = await fetch(url, { headers });
+                    if (!res.ok) return 0;
+                    const data = await res.json();
+                    return count(data);
+                } catch (e) {
+                    return 0;
+                }
             }
+
+            const [p, w, s] = await Promise.all([
+                getCount('/projects/'),
+                getCount('/websites/'),
+                getCount('/snippets/')
+            ]);
+
+            document.getElementById('projectsCount').textContent = p;
+            document.getElementById('websitesCount').textContent = w;
+            document.getElementById('snippetsCount').textContent = s;
         }
 
         loadStats();

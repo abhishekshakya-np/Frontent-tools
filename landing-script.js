@@ -76,7 +76,7 @@ const projectData = {
             'Mobile-first approach'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Font Awesome'],
-        demoUrl: 'projects/agency/index.html'
+        demoUrl: 'showcase/projects/agency/index.html'
     },
     books4: {
         title: 'Books Platform - Bootstrap 4',
@@ -91,7 +91,7 @@ const projectData = {
             'Google Fonts integration'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 4', 'Font Awesome'],
-        demoUrl: 'projects/books-bootstrap-4/src/Index.html'
+        demoUrl: 'showcase/projects/books-bootstrap-4/src/Index.html'
     },
     books5: {
         title: 'Books Platform - Bootstrap 5',
@@ -106,7 +106,7 @@ const projectData = {
             'CSS custom properties'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Font Awesome'],
-        demoUrl: 'projects/books-bootstrap-5/index.html'
+        demoUrl: 'showcase/projects/books-bootstrap-5/index.html'
     },
     bootstrap4master: {
         title: 'Portfolio Landing Page',
@@ -121,7 +121,7 @@ const projectData = {
             'Orange color theme'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 4', 'jQuery'],
-        demoUrl: 'projects/bootstrap-4-website/index.html'
+        demoUrl: 'showcase/projects/bootstrap-4-website/index.html'
     },
     nuno: {
         title: 'Nuno Theme Collection',
@@ -136,7 +136,7 @@ const projectData = {
             'Complete documentation'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 4 & 5', 'PHP', 'jQuery'],
-        demoUrl: 'projects/nuno/nuno/index.html'
+        demoUrl: 'showcase/projects/nuno/nuno/index.html'
     },
     tours: {
         title: 'Adventure Tours Website',
@@ -151,7 +151,7 @@ const projectData = {
             'Ion Icons integration'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Ion Icons', 'Custom CSS'],
-        demoUrl: 'projects/outdoors-website/tours/index.html'
+        demoUrl: 'showcase/projects/outdoors-website/tours/index.html'
     },
     rosa: {
         title: 'The Rosa Restaurant',
@@ -166,7 +166,7 @@ const projectData = {
             'Gold accent theme'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'ScrollReveal', 'Font Awesome'],
-        demoUrl: 'projects/the-rosa/the-rosa/index.html'
+        demoUrl: 'showcase/projects/the-rosa/the-rosa/index.html'
     },
     accordion: {
         title: 'FAQ Accordion Component',
@@ -181,7 +181,7 @@ const projectData = {
             'Custom SVG icons'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'SVG'],
-        demoUrl: 'component-snippets/bootstrap-accordion/index.html'
+        demoUrl: 'showcase/component-snippets/bootstrap-accordion/index.html'
     },
     navigation: {
         title: 'Modern Navigation Component',
@@ -196,7 +196,7 @@ const projectData = {
             'Cross-browser compatibility'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Google Fonts'],
-        demoUrl: 'component-snippets/navigation/index.html'
+        demoUrl: 'showcase/component-snippets/navigation/index.html'
     },
     dashboard: {
         title: 'Responsive Admin Dashboard',
@@ -211,7 +211,7 @@ const projectData = {
             'Theme persistence'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'CSS Grid', 'Flexbox'],
-        demoUrl: 'component-snippets/responsive-dashboard-lightdark-ui/indexB.html'
+        demoUrl: 'showcase/component-snippets/responsive-dashboard-lightdark-ui/indexB.html'
     },
     qrcode: {
         title: 'QR Code Component - CSS Flexbox',
@@ -227,7 +227,7 @@ const projectData = {
             'Accessibility-friendly design'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'CSS Flexbox', 'Google Fonts'],
-        demoUrl: 'component-snippets/css-flexbox/index.html'
+        demoUrl: 'showcase/component-snippets/css-flexbox/index.html'
     },
     aichatbot: {
         title: 'AI Chatbot - Intelligent Assistant',
@@ -243,7 +243,7 @@ const projectData = {
             'Keyboard navigation support'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Google Gemini API', 'Emoji Mart', 'Material Icons'],
-        demoUrl: 'component-snippets/ai-chatbot/index.html'
+        demoUrl: 'showcase/component-snippets/ai-chatbot/index.html'
     },
     nova: {
         title: 'Nova - Professional Bootstrap Business Template',
@@ -263,7 +263,7 @@ const projectData = {
             'Easy customization options'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'AOS', 'Swiper', 'GLightbox'],
-        demoUrl: 'projects/nova/index.html'
+        demoUrl: 'showcase/projects/nova/index.html'
     },
     wedding: {
         title: 'Wedding Template - Elegant Event Website',
@@ -281,7 +281,7 @@ const projectData = {
             'Social media sharing'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Font Awesome'],
-        demoUrl: 'projects/bootstrap-wedding-template/index.html'
+        demoUrl: 'showcase/projects/bootstrap-wedding-template/index.html'
     },
     webview: {
         title: 'Portfolio WebView - Professional Showcase',
@@ -299,7 +299,7 @@ const projectData = {
             'Easy customization'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Portfolio Design'],
-        demoUrl: 'portfolio/web-view/webView/index.html'
+        demoUrl: 'showcase/portfolio/web-view/webView/index.html'
     },
     clevercow: {
         title: 'CleverCow - Sustainability Business Platform',
@@ -317,7 +317,7 @@ const projectData = {
             'Corporate eco-solutions'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Sustainability Tech'],
-        demoUrl: 'office-work/clevercow/index.html'
+        demoUrl: 'showcase/office-work/clevercow/index.html'
     },
     clevercowbootstrap: {
         title: 'CleverCow Bootstrap - Sustainability Platform',
@@ -337,7 +337,7 @@ const projectData = {
             'Eco-certification tracking'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Sustainability Tech', 'Analytics'],
-        demoUrl: 'office-work/clevercow-bootstrap/index.html'
+        demoUrl: 'showcase/office-work/clevercow-bootstrap/index.html'
     },
     clevercowscss: {
         title: 'CleverCow SCSS - Advanced Sustainability Platform',
@@ -357,7 +357,7 @@ const projectData = {
             'Development workflow optimization'
         ],
         technologies: ['HTML5', 'SCSS', 'JavaScript', 'Node.js', 'Build Tools', 'Custom Framework'],
-        demoUrl: 'office-work/clevercow-scss/index.html'
+        demoUrl: 'showcase/office-work/clevercow-scss/index.html'
     },
     mindsmirror: {
         title: 'Mind\'s Mirror - Mental Health Tracking Platform',
@@ -379,7 +379,7 @@ const projectData = {
             'Personalized wellness recommendations'
         ],
         technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Healthcare Tech', 'Mental Health'],
-        demoUrl: 'office-work/minds-mirror-mental-health-tracking-landing-page/static-demo.html'
+        demoUrl: 'showcase/office-work/minds-mirror-mental-health-tracking-landing-page/static-demo.html'
     },
     magz: {
         title: 'Magz - Professional Magazine & Blog Template',
@@ -405,7 +405,7 @@ const projectData = {
             'Magazine-style layout design'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 3', 'SCSS', 'PHP', 'jQuery', 'Ion Icons'],
-        demoUrl: 'projects/magz/index.html'
+        demoUrl: 'showcase/projects/magz/index.html'
     },
     moviewebsite: {
         title: 'Movie Search Website - React Application',
@@ -423,7 +423,7 @@ const projectData = {
             'Performance optimized search'
         ],
         technologies: ['React 18', 'React Router', 'Context API', 'OMDB API', 'Custom Hooks', 'Debounced Search'],
-        demoUrl: 'projects/movie-website/static-demo.html'
+        demoUrl: 'showcase/projects/movie-website/static-demo.html'
     },
     clevercowprod: {
         title: 'CleverCow Production - Sustainability Website',
@@ -441,7 +441,7 @@ const projectData = {
             'Environmental sustainability focus'
         ],
         technologies: ['HTML5', 'Bootstrap 5', 'Sass/SCSS', 'Gulp 4', 'JavaScript', 'Bootstrap Icons'],
-        demoUrl: 'office-work/clevercow-production/index.html'
+        demoUrl: 'showcase/office-work/clevercow-production/index.html'
     },
     skywebsite: {
         title: 'SKY - Sewa Ko Yatra Service Website',
@@ -459,7 +459,7 @@ const projectData = {
             'Service showcase sections'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'ScrollReveal', 'Responsive Design', 'SVG Graphics'],
-        demoUrl: 'office-work/sky-website/index.html'
+        demoUrl: 'showcase/office-work/sky-website/index.html'
     },
     mrmarket: {
         title: 'MrMarket NEPSE - Trading Platform Website',
@@ -477,7 +477,7 @@ const projectData = {
             'Trading automation feature highlights'
         ],
         technologies: ['HTML5', 'SASS/SCSS', 'JavaScript', 'Responsive Design', 'Form Validation', 'SVG Icons'],
-        demoUrl: 'office-work/mr-market/index.html'
+        demoUrl: 'showcase/office-work/mr-market/index.html'
     },
     muktinath: {
         title: 'Muktinath Krishi - Agricultural Business Website',
@@ -495,7 +495,7 @@ const projectData = {
             'Agricultural service showcase'
         ],
         technologies: ['HTML5', 'Bootstrap', 'CSS3', 'JavaScript', 'Owl Carousel', 'FontAwesome', 'Animate.css'],
-        demoUrl: 'office-work/muktinath/muktinath/public/index.html'
+        demoUrl: 'showcase/office-work/muktinath/muktinath/public/index.html'
     }
 };
 
@@ -566,7 +566,7 @@ const snippetData = {
             'Accessibility features'
         ],
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
-        demoUrl: 'component-snippets/navigation/index.html'
+        demoUrl: 'showcase/component-snippets/navigation/index.html'
     },
     emailtemplates: {
         title: 'Professional Email Templates',
@@ -582,7 +582,7 @@ const snippetData = {
             'Easy customization'
         ],
         technologies: ['HTML Email', 'CSS Inline Styles', 'Responsive Tables', 'Outlook Compatible'],
-        demoUrl: 'email-templates/mail-web/verify-email.html'
+        demoUrl: 'showcase/email-templates/mail-web/verify-email.html'
     },
     emailtemplatesv1: {
         title: 'Email Templates V1 - Enhanced',
@@ -598,7 +598,7 @@ const snippetData = {
             'Accessibility improvements'
         ],
         technologies: ['HTML Email', 'Advanced CSS', 'Media Queries', 'Dark Mode Support'],
-        demoUrl: 'email-templates/mail-web-v1/verify-email.html'
+        demoUrl: 'showcase/email-templates/mail-web-v1/verify-email.html'
     },
     emailtemplatesv2: {
         title: 'Email Templates V2 - Latest',
@@ -614,7 +614,7 @@ const snippetData = {
             'Analytics-ready structure'
         ],
         technologies: ['HTML Email', 'Modern CSS', 'Progressive Enhancement', 'Performance Optimized'],
-        demoUrl: 'email-templates/mail-web-v2/verify-email.html'
+        demoUrl: 'showcase/email-templates/mail-web-v2/verify-email.html'
     },
     pdftemplates: {
         title: 'PDF & Invoice Templates',
@@ -630,7 +630,7 @@ const snippetData = {
             'Legal compliance ready'
         ],
         technologies: ['HTML5', 'Print CSS', 'PDF Generation', 'Business Templates'],
-        demoUrl: 'email-templates/web-pdf/invoice.html'
+        demoUrl: 'showcase/email-templates/web-pdf/invoice.html'
     }
 };
 

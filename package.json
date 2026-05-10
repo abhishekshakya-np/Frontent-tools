@@ -35,11 +35,11 @@
     "node": ">=12.0.0"
   },
   "workspaces": [
-    "projects/*",
-    "office-work/*",
-    "component-snippets/*",
-    "email-templates/*",
-    "portfolio/*",
-    "website/*"
+    "showcase/projects/*",
+    "showcase/office-work/*",
+    "showcase/component-snippets/*",
+    "showcase/email-templates/*",
+    "showcase/portfolio/*",
+    "showcase/website/*"
   ]
 }
